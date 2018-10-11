@@ -11,7 +11,7 @@ description: Never met a sandwich I couldn't be friends with.
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/john02.png
+picture: assets/images/adam.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external orn local).
@@ -34,7 +34,7 @@ disqus:
 # if you don't have any of social below, comment the line
 github: meccaLeccaHi
 linkedin: adam-p-jones
-googlescholar: eGVw-FAAAAAJ&hl=en
+# googlescholar:
 # email:
 # twitter:
 # facebook:
@@ -49,7 +49,7 @@ authors:
         name: Adam
         bio: Never met a sandwich I couldn't be friends with.
         external-image: false
-        picture: assets/images/john02.png
+        picture: assets/images/adam.jpg
         linkedin: adam-p-jones
 
 # do you want a larger site? change the option below
