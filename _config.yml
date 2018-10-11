@@ -1,12 +1,12 @@
 # main text of home
-name: John W. Miller
-bio: I for one welcome our new computer overlords.
+name: Adam P. Jones
+bio: Never met a sandwich I couldn't be friends with.
 
 # Markdown renderer
 markdown: kramdown
 
 # twitter summary info
-description: I for one welcome our new computer overlords.
+description: Never met a sandwich I couldn't be friends with.
 
 # if it's an external image, update below for true
 # better with square images
@@ -17,40 +17,40 @@ picture: assets/images/john02.png
 # and specify source (external orn local).
 resume: true
 resume-external: false
-resume-url: assets/pdfs/JohnWMiller_Resume.pdf
+resume-url: assets/pdfs/resume.pdf
 
-url: https://johnwmillr.github.io
+url: https://meccaleccahi.github.io/
 
 permalink: /:title/
 
-# To enable google analytics, supply your token below
-analytics-google: 'UA-103816553-1'
+## To enable google analytics, supply your token below
+#analytics-google: 'UA-103816553-1'
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: johnwmillr # enter this from your disqus account
+  shortname:  # enter this from your disqus account
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-github: johnwmillr
-linkedin: johnwmillr
-instructables: johnwmillr
+github: meccaLeccaHi
+linkedin: adam-p-jones
 googlescholar: eGVw-FAAAAAJ&hl=en
-twitter: johnwmillr
+# email:
+# twitter:
 # facebook:
 # youtube:
 # spotify:
 # stackoverflow:
 # medium:
-# email:
+# instructables: 
 
 authors:
-    john:
-        name: John
-        bio: I for one welcome our new computer overlords.
+    adam:
+        name: Adam
+        bio: Never met a sandwich I couldn't be friends with.
         external-image: false
         picture: assets/images/john02.png
-        twitter: johnwmillr
+        linkedin: adam-p-jones
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
