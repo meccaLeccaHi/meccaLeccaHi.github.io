@@ -5,13 +5,10 @@ bio: Never met a sandwich I couldn't be friends with.
 # Markdown renderer
 markdown: kramdown
 
-# twitter summary info
-description: Never met a sandwich I couldn't be friends with.
-
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/adam.jpg
+picture: assets/images/adam2.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external orn local).
@@ -29,13 +26,13 @@ permalink: /:title/
 # if you don't want comments in your posts, leave categories empty
 disqus:
   shortname:  # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+  categories: #[blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 github: meccaLeccaHi
 linkedin: adam-p-jones
 # googlescholar:
-# email:
+ email: ajones173@gmail.com
 # twitter:
 # facebook:
 # youtube:
