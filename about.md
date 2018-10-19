@@ -1,9 +1,9 @@
 ---
 title: About
 layout: page
-headerImage: true
+headerImage: false
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
+![Profile Image](/assets/images/adam4.jpg)
 
 Hi there! I'm a former neuroscientist who has recently transplanted to San Francisco to be part of the growing data science industry. Most recently, I've taken a position as Lead Instructor for a Data Science course at General Assembly. One of my main goals with this page is to capture the questions that have come up during multiple iterations of the course, while also refining the answered that I've generated in response to them. Hopefully, this can serve as a resource for future students, among others.
 
