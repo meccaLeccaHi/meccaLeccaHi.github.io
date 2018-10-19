@@ -38,18 +38,12 @@ linkedin: adam-p-jones
 email: ajones173@gmail.com
 
 authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
+    adam:
+        name: Adam
+        bio: Never met a sandwich I couldn't be friends with.
         external-image: false
-        picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
+        picture: assets/images/adam.jpg
+        linkedin: adam-p-jones
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
