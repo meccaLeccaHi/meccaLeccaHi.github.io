@@ -11,14 +11,14 @@ image: {{ site.picture }}
 
 </section>
 
-Hi! I'm a 26-year-old aspiring data scientist currently based in Chicago. I recently completed a masters degree in electrical & computer engineering and am exploring my options for a career in data science and machine learning.
+Hi there! I'm a former neuroscientist who has recently transplanted to San Francisco to be part of the growing data science industry. Most recently, I've taken a position as Lead Instructor for a Data Science course at General Assembly. One of my main goals with this page is to capture the questions that have come up during multiple iterations of the course, while also refining the answered that I've generated in response to them. Hopefully, this can serve as a resource for future students, among others.
 
 {% include figure.html url="/assets/images/John_Defense.jpg" caption="Defending my masters thesis in May 2018." width="650px" %}
 
-I enjoy using data science techniques to pursue fascinating but as-yet unexplored questions, such as, *are country artists who sing about trucks more likely to also [sing about beer?](/trucks-and-beer/)* Or, *are male Sharks [more likely to make deals](/shark-tank-analysis/) with men than women?* I've enjoyed a fair bit of success on the [*Data Is Beautiful*](https://www.reddit.com/r/dataisbeautiful/search?sort=top&q=author%3A%22textureflow%22+title%3A%5BOC%5D&restrict_sr=on) subreddit while pursuing answers to questions like these. I also maintain an active [GitHub](http://github.com/johnwmillr) profile, where I've enjoyed collaborating with various contributors on a number of my personal projects.
+I get excited about data visualizations, and have been known to reference [Edward Tufte](https://www.edwardtufte.com/tufte/) more often than is strictly necessary. I'd like to think this is reflected in my [GitHub](http://github.com/meccaLeccaHi) profile, so please feel free to take a look around.
 
-I earned my masters degree from the [University of Iowa](https://ece.engineering.uiowa.edu/), where I helped develop automated diagnostics for diseases of the retina. Before heading to grad school, I served as a research assistant in the [Human Spinal Cord Research Lab](https://www.healthcare.uiowa.edu/labs/hscrl-neurosurgery/) in Iowa's Department of Neurosurgery. I previously graduated from [Goshen College](https://www.goshen.edu/), where I completed a B.A. in physics with a minor in English, and remained actively involved in music.
+I earned my Phd in 2015 studying in the [Laboratory of Neuropsychology](https://www.nimh.nih.gov/labs-at-nimh/research-areas/clinics-and-labs/ln/index.shtml) at the [NIH](https://www.nih.gov/) in Bethesda, MD. While there, I had the opportunity to investigate the neural encoding of faces in the primate brain via recordings with carefully-implanted electrodes. Previous to this, I was involved in research with a wide variety of model organisms- from honeybees to bats- after graduating in 2007 from the [University of Montana](http://www.umt.edu/) in Missoula, Montana.
 
-Currently applying to data scientist positions, I look forward to joining a company that shares my enthusiasm for wrangling unruly datasets and challenges me to grow as a thoughtful communicator and engineer.
+Currently applying to more senior data scientist positions, through which I intend to join a company with an established data science team, with an environment fostering growth and collaboration with colleagues.
 
-I'd love to chat about data science, open source project ideas, or why *The Great British Baking Show* is the best TV being made today. Feel free to reach out via [Twitter](https://twitter.com/johnwmillr) or [email](mailto:john.w.millr@gmail.com).
+Most people say I'm pretty friendly, so don't hesitate to reach out via [email](mailto:ajones173@gmail.com). I'd love to chat with other bay area data scientists, about projects, suggestions, or _whatever_.
