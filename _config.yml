@@ -8,15 +8,16 @@ markdown: kramdown
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/adam3.jpg
+picture: assets/images/profile.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
 resume: true
-resume-external: false
-resume-url: assets/pdfs/resume.pdf
+resume-external: true
+resume-url: https://google.com/?q=my+resume
 
-url: https://meccaleccahi.github.io/
+url: https://koppl.in/indigo
+# your url: http://USERNAME.github.io
 
 permalink: /:title/
 
@@ -29,29 +30,42 @@ permalink: /:title/
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname:  # enter this from your disqus account
-  categories: #[blog, project] # only show disqus for posts that have these categories
+  shortname: mydisqus # enter this from your disqus account
+  categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-github: meccaLeccaHi
-linkedin: adam-p-jones
-# googlescholar:
- email: ajones173@gmail.com
-# twitter:
-# facebook:
-# youtube:
-# spotify:
-# stackoverflow:
-# medium:
-# instructables: 
+facebook: myfacebook
+twitter: mytwitter
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+# linkedin: mylinkedin
+# youtube: myyoutube
+# spotify: myspotify
+github: mygithub
+# gitlab: mygitlab
+# lastfm: mylastfm
+# stackoverflow: 7044681/mystackoverflow
+# quora: userquora
+# reddit: username
+medium: medium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+email: myemail@gmail.com
 
 authors:
-    adam:
-        name: Adam
-        bio: Never met a sandwich I couldn't be friends with.
+    johndoe:
+        name: John Doe
+        bio: A Man who travels the world eating noodles
         external-image: false
-        picture: assets/images/adam.jpg
-        linkedin: adam-p-jones
+        picture: assets/images/profile.jpg
+        twitter: johndoe
+    jamesfoster:
+        name: James Foster
+        bio: A Man who develops software with coffee
+        external-image: false
+        picture: assets/images/james.jpg
+        twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
