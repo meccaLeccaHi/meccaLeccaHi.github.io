@@ -18,7 +18,6 @@ resume-url: assets/pdfs/resume.pdf
 
 url: https://meccaleccahi.github.io/
 
-
 permalink: /:title/
 
 # To enable google analytics, supply your token below
@@ -34,24 +33,9 @@ permalink: /:title/
 #  categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
-# linkedin: mylinkedin
-# youtube: myyoutube
-# spotify: myspotify
-github: mygithub
-# gitlab: mygitlab
-# lastfm: mylastfm
-# stackoverflow: 7044681/mystackoverflow
-# quora: userquora
-# reddit: username
-medium: medium
-# vimeo: myvimeo
-# lanyrd: mylanyrd
-email: myemail@gmail.com
+github: meccaLeccaHi
+linkedin: adam-p-jones
+email: ajones173@gmail.com
 
 authors:
     johndoe:
