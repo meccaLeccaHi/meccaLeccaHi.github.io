@@ -2,13 +2,13 @@
 name: Adam P. Jones
 bio: Never met a sandwich I couldn't be friends with.
 
-# twitter summary info
-description: A blog about technology and stuff related
+# Markdown renderer
+markdown: kramdown
 
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profile.jpg
+picture: assets/images/adam3.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
