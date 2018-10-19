@@ -13,8 +13,6 @@ image: {{ site.picture }}
 
 Hi there! I'm a former neuroscientist who has recently transplanted to San Francisco to be part of the growing data science industry. Most recently, I've taken a position as Lead Instructor for a Data Science course at General Assembly. One of my main goals with this page is to capture the questions that have come up during multiple iterations of the course, while also refining the answered that I've generated in response to them. Hopefully, this can serve as a resource for future students, among others.
 
-{% include figure.html url="/assets/images/John_Defense.jpg" caption="Defending my masters thesis in May 2018." width="650px" %}
-
 I get excited about data visualizations, and have been known to reference [Edward Tufte](https://www.edwardtufte.com/tufte/) more often than is strictly necessary. I'd like to think this is reflected in my [GitHub](http://github.com/meccaLeccaHi) profile, so please feel free to take a look around.
 
 I earned my Phd in 2015 studying in the [Laboratory of Neuropsychology](https://www.nimh.nih.gov/labs-at-nimh/research-areas/clinics-and-labs/ln/index.shtml) at the [NIH](https://www.nih.gov/) in Bethesda, MD. While there, I had the opportunity to investigate the neural encoding of faces in the primate brain via recordings with carefully-implanted electrodes. Previous to this, I was involved in research with a wide variety of model organisms- from honeybees to bats- after graduating in 2007 from the [University of Montana](http://www.umt.edu/) in Missoula, Montana.
