@@ -1,6 +1,6 @@
 # main text of home
 name: Adam P. Jones
-bio: Never met a sandwich I couldn't be friends with.
+bio: Don't run fast in ski boots.
 
 # Markdown renderer
 markdown: kramdown
@@ -40,7 +40,7 @@ email: ajones173@gmail.com
 authors:
     adam:
         name: Adam
-        bio: Never met a sandwich I couldn't be friends with.
+        bio: Don't run fast in ski boots.
         external-image: false
         picture: assets/images/adam1.jpg
         linkedin: adam-p-jones
