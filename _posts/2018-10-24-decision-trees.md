@@ -12,11 +12,6 @@ description: A Juptyter notebook on Decision Trees
 ---
 
  
-# Decision Trees
- 
-_Author: Adam Jones, PhD (San Francisco)_
- 
----
 
 Adapted from numerous sources, including: 
 - [*An Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/) - Chapter 8
@@ -41,7 +36,6 @@ Adapted from numerous sources, including:
 - Preview some of the 'ensembling methods' available for decision tree models.
 
 ### Lesson Guide
-- [Where Are We Now?](#where-are-we-now)
 - [Recursion Example](#recursion)
 - [Intuition Behind Decision Trees](#intuition)
     - [Why Should I Use A Decision Tree?](#why)
@@ -72,12 +66,6 @@ import pandas as pd
 ## Import dataset
 iris = load_iris()
 ```
-
-<a id="where-are-we-now"></a>
-## Where Are We Now?
-
-<img src='../assets/ml_algo_map.png' style="float: center; height: 500px">
-Source: [machinelearningmastery.com](http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
 
 <a id="recursion"></a>
 ## Recursion Example
@@ -158,7 +146,7 @@ Decision trees are like the game “*20 questions*”:
 - Each questions should reduce the search space as much as possible.
 
 
-<img src='../assets/dec_tree_ex_simple.png' style="float: center; height: 300px">
+<img src='/assets/images/decision_trees/dec_tree_ex_simple.png' style="float: center; height: 300px">
 
 In this notebook, we'll see how we can use _tree-based methods_ for regression and classification, by applying it to problems similar to those we've previously used linear methods to solve. As with other models, decision trees are just another way of _stratifying_ or _segmenting_ a given predictor space into 'meaningful' (_hopefully_) groups.
 
