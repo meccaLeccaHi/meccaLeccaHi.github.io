@@ -418,5 +418,3 @@ Random forest models are one of the most widespread classifiers used.
 - We learned about the application of decision tree models to both classification and regression problems.
 - We saw the limitations of decision tree models, particularly their tendency to become overfit, and learned about 'pruning' methods available to resolve this.
 - We previewed some of the 'ensembling methods' available to overcome the high-variability inherent in decision tree models.
-
-**Any further questions?**
