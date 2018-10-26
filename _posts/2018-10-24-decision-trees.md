@@ -1,5 +1,5 @@
 ---
-title: "First post!"
+title: "Decision Trees"
 date: 2018-10-24
 layout: post
 category: blog
