@@ -1,5 +1,16 @@
+---
+title: "First post!"
+date: 2018-10-24
+layout: post
+category: blog
+tag:
+- recursive function
+- decision trees
+- GraphViz
+author: adam
+description: A Juptyter notebook on Decision Trees
+---
 
-<img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 20px; height: 55px">
  
 # Decision Trees
  
