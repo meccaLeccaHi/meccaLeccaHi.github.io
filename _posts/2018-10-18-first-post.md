@@ -1,5 +1,5 @@
 ---
-title: "First post!"
+title: "Post Numero Uno"
 date: 2018-10-18
 layout: post
 category: blog
