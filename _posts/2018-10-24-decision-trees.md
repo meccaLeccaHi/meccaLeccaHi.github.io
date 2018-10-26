@@ -159,7 +159,7 @@ In this notebook, we'll see how we can use _tree-based methods_ for regression a
 When dealing with _non-linear_ data (and we usually are), non-linear decision trees models can provide a limited advantage over logistic regression.
 
 > A '_linear model_' is one in which a change in an input variable has a constant change on the output variable.
-><img src='../assets/non-linearity.png' style="float: center; height: 175px">
+><img src='/assets/images/decision_trees/non-linearity.png' style="float: center; height: 175px">
 >Image source: [erinshellman.github](http://erinshellman.github.io/data-mining-starter-kit)
 
 Trees automatically contain interaction of features, and so are capable of more complex representations than is possible with linear models alone.
@@ -192,13 +192,13 @@ As useful as tree-based methods are for _interpretation_, they typically are con
 Decision trees tend to be weak models because they can easily memorize or overfit to a dataset.
 - The algorithm will always find _some_ solution to the problem...
 
-<img src='../assets/over-fit.png' style="float: center; height: 300px">
+<img src='/assets/images/decision_trees/over-fit.png' style="float: center; height: 300px">
 
 A model is overfit when it memorizes or bends to a few specific data points rather than picking up general trends in the data.
 
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
 
-<img src='./practice/tree.png' style="float: center; height: 300px">
+<img src='/assets/images/decision_trees/tree.png' style="float: center; height: 300px">
 
 Fortunately, we can limit our decision trees using 'pruning' methods, which are described in the next section.
 
@@ -216,7 +216,7 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
-<img src='../assets/tree_nodes.png' style="float: center; height: 300px">
+<img src='/assets/images/decision_trees/tree_nodes.png' style="float: center; height: 300px">
 
 *Note*: The next question is always dependent on the last.
 
@@ -232,8 +232,8 @@ Effectively, a decision tree contains a question at every node. This is where re
 - How many questions should we ask?
 
 > **For example**, we might ask:  
->    Does it mentions the word 'precipitation'?  
->    If yes, then we predict 'yes'. If not we ask if it mentions 'temperature', etc.
+> Does it mentions the word 'precipitation'?  
+> If yes, then we predict 'yes'. If not we ask if it mentions 'temperature', etc.
 
 But this works for **regression**, too. We could also imagine designing a model to predict a given baseball player's salary.
     
@@ -241,7 +241,7 @@ But this works for **regression**, too. We could also imagine designing a model 
 > - How many hits has the player has this year? Using some cut-off threshold, we decide whether to go left or right from there.  
 > - Subsequently, we ask how many years has the player been on the team, etc.
 
-<img src='../assets/hitters.png' style="float: center; height: 500px">
+<img src='/assets/images/decision_trees/hitters.png' style="float: center; height: 500px">
 Image source: [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
@@ -386,13 +386,13 @@ predictors, when building the random forest. Hence the predictions from the rand
 
 #### Random Forest Algorithm  
 
-1. Take a bootstrap sample of the dataset   
+1. Take a bootstrap sample of the dataset
 
 2. Train a decision tree on the bootstrap sample
 
     - For each split/feature selection, only evaluate a limited number of features to find the best one
 
-3. Repeat this for N trees  
+3. Repeat this for N trees
 
 Random forest models are one of the most widespread classifiers used.
 
