@@ -136,7 +136,9 @@ factorial(4)                   # = 24
 
 We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
 
-<img src='https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg' style="float: center; height: 500px">
+<div style="text-align: center">
+	<img src='https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg' style="float: center; height: 500px">
+</div>
 Image source: [nyt.com](https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg)
 
 Decision trees are like the game “*20 questions*”:
@@ -147,8 +149,9 @@ Decision trees are like the game “*20 questions*”:
 
 - Each questions should reduce the search space as much as possible.
 
-
-<img src='/assets/images/decision_trees/dec_tree_ex_simple.png' style="float: center; height: 300px">
+<div style="text-align: center">
+	<img src='/assets/images/decision_trees/dec_tree_ex_simple.png' style="float: center; height: 300px">
+</div>
 
 In this notebook, we'll see how we can use _tree-based methods_ for regression and classification, by applying it to problems similar to those we've previously used linear methods to solve. As with other models, decision trees are just another way of _stratifying_ or _segmenting_ a given predictor space into 'meaningful' (_hopefully_) groups.
 
@@ -194,13 +197,17 @@ As useful as tree-based methods are for _interpretation_, they typically are con
 Decision trees tend to be weak models because they can easily memorize or overfit to a dataset.
 - The algorithm will always find _some_ solution to the problem...
 
-<img src='/assets/images/decision_trees/over-fit.png' style="float: center; height: 300px">
+<div style="text-align: center">
+	<img src='/assets/images/decision_trees/over-fit.png' style="float: center; height: 300px">
+</div>
 
 A model is overfit when it memorizes or bends to a few specific data points rather than picking up general trends in the data.
 
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
 
-<img src='/assets/images/decision_trees/tree.png' style="float: center; height: 300px">
+<div style="text-align: center">
+	<img src='/assets/images/decision_trees/tree.png' style="float: center; height: 300px">
+</div>
 
 Fortunately, we can limit our decision trees using 'pruning' methods, which are described in the next section.
 
@@ -218,7 +225,9 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
-<img src='/assets/images/decision_trees/tree_nodes.png' style="float: center; height: 300px">
+<div style="text-align: center">
+	<img src='/assets/images/decision_trees/tree_nodes.png' style="float: center; height: 300px">
+</div>
 
 *Note*: The next question is always dependent on the last.
 
@@ -243,7 +252,9 @@ But this works for **regression**, too. We could also imagine designing a model 
 > - How many hits has the player has this year? Using some cut-off threshold, we decide whether to go left or right from there.  
 > - Subsequently, we ask how many years has the player been on the team, etc.
 
-<img src='/assets/images/decision_trees/hitters.png' style="float: center; height: 500px">
+<div style="text-align: center">
+	<img src='/assets/images/decision_trees/hitters.png' style="float: center; height: 500px">
+</div>
 Image source: [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
@@ -376,8 +387,9 @@ Obviously, this isn't practical because we don't usually have access to multiple
 
 ### Random Forests
 
-<img src='https://dsc-spidal.github.io/harp/img/4-5-1.png' style="float: center; height: 275px">
-
+<div style="text-align: center">
+	<img src='https://dsc-spidal.github.io/harp/img/4-5-1.png' style="float: center; height: 275px">
+</div>
 Image source: [dsc-spidal.github](https://dsc-spidal.github.io/harp/img/4-5-1.png)
 
 Random forests provide an improvement over bagged trees in the form of a small tweak that makes the aggregated trees less correlated with each other. Just like in bagging, we build some number of decision trees on bootstrapped training samples. But here, each time a split is considered when building a tree, a random sample of
