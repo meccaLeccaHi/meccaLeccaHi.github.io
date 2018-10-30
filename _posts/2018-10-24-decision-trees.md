@@ -149,7 +149,7 @@ In this notebook, we'll see how we can use _tree-based methods_ for regression a
 
 ### Why Should I Use A Decision Tree?
 
-**Non-linearity**
+####Non-linearity
 
 When dealing with _non-linear_ data (and we usually are), non-linear decision trees models can provide a limited advantage over logistic regression.
 
@@ -159,7 +159,7 @@ When dealing with _non-linear_ data (and we usually are), non-linear decision tr
 
 Trees automatically contain interaction of features, and so are capable of more complex representations than is possible with linear models alone.
 
-**Interpretability**
+####Interpretability
 
 The real benefit of decision tree models are their *interpretability*. They elegantly provide intuitive insights into the decision-making process of a given model.
 - As we've seen, neural networks, SVM’s, etc. ≈ black box
@@ -170,19 +170,20 @@ This makes them very useful for **feature selection***, which can be have a grea
 
 They help us ask: “Which of my features are the most helpful in making predictions about my target variable?”
 
-**Bonus**: It's also included in most ML libraries (including scikit-learn).
+####Bonus: 
+It's also included in most ML libraries (including scikit-learn).
 
 <a id='why-not'></a>
 
 ### Why *Shouldn't* I Use A Decision Tree?
 
-**Braun (or lack-of)**
+####Braun (or lack-of)
 
 As useful as tree-based methods are for _interpretation_, they typically are considered a "weak model" and are **not competitive*** with the best supervised learning approaches available today.
 
 *See [ensembling methods](#ensemble) sections for some solutions to this problem.
 
-**Over-fitting**
+####Over-fitting
 
 Decision trees tend to be weak models because they can easily memorize or overfit to a dataset.
 - The algorithm will always find _some_ solution to the problem...
