@@ -163,8 +163,8 @@ In this notebook, we'll see how we can use _tree-based methods_ for regression a
 
 When dealing with _non-linear_ data (and we usually are), non-linear decision trees models can provide a limited advantage over logistic regression.
 
-> A '_linear model_' is one in which a change in an input variable has a constant change on the output variable.
-><img src='/assets/images/decision_trees/non-linearity.png' style="float: center; height: 175px">
+> A '_linear model_' is one in which a change in an input variable has a constant change on the output variable.  
+><img src='/assets/images/decision_trees/non-linearity.png' style="float: center; height: 175px">  
 >Image source: [erinshellman.github](http://erinshellman.github.io/data-mining-starter-kit)
 
 Trees automatically contain interaction of features, and so are capable of more complex representations than is possible with linear models alone.
