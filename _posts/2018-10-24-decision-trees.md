@@ -128,7 +128,7 @@ factorial(4)                   # = 24
 We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
 
 
-{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="350px" %}
+{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" width="75%" %}
 
 
 Decision trees are like the game “*20 questions*”:
@@ -217,7 +217,7 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
 
-{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." width="40%" %}
+{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." width="45%" %}
 
 
 Effectively, a decision tree contains a question at every node. This is where recursion comes in handy...
@@ -240,9 +240,8 @@ But this works for **regression**, too. We could also imagine designing a model 
 > In this case, we might ask:  
 > - How many hits has the player has this year? Using some cut-off threshold, we decide whether to go left or right from there.  
 > - Subsequently, we ask how many years has the player been on the team, etc.
-
-
-{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" width="50%" %}
+>
+>{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" width="65%" %}
 
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
