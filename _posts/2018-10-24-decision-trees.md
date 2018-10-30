@@ -75,7 +75,7 @@ iris = load_iris()
 </div>
 Image source: [xkcd.com](https://imgs.xkcd.com/comics/fixing_problems.png)
 
-{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png)" caption="Image source: xkcd.com" width="100px" %}
+{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png)" caption="Image source: xkcd.com" height="250px" %}
 
 The most common example people use to describe [recursion](https://en.wikipedia.org/wiki/Recursion) involves the [factorial function](https://en.wikipedia.org/wiki/Factorial). 
 
@@ -143,6 +143,8 @@ We've all been exposed to tree diagrams before, since they are used widely as a 
 </div>
 Image source: [nyt.com](https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg)
 
+{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="500px" %}
+
 Decision trees are like the game “*20 questions*”:
 
 - They make decision by answering a series of questions, most often binary questions (yes or no).
@@ -154,6 +156,8 @@ Decision trees are like the game “*20 questions*”:
 <div style="text-align: center">
 	<img src='/assets/images/decision_trees/dec_tree_ex_simple.png' style="float: center; height: 300px">
 </div>
+
+{% include figure.html url="/assets/images/decision_trees/dec_tree_ex_simple.png" caption="Highly-simplistic decision tree example." height="300px" %}
 
 In this notebook, we'll see how we can use _tree-based methods_ for regression and classification, by applying it to problems similar to those we've previously used linear methods to solve. As with other models, decision trees are just another way of _stratifying_ or _segmenting_ a given predictor space into 'meaningful' (_hopefully_) groups.
 
