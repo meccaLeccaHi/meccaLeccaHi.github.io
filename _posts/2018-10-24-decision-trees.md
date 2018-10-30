@@ -70,12 +70,7 @@ iris = load_iris()
 <a id="recursion"></a>
 ## Recursion Example
 
-<div style="text-align: center">
-	<img src='https://imgs.xkcd.com/comics/fixing_problems.png' style="height: 250px">
-</div>
-Image source: [xkcd.com](https://imgs.xkcd.com/comics/fixing_problems.png)
-
-{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png)" caption="Image source: xkcd.com" height="250px" %}
+{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png" caption="Image source: xkcd.com" height="250px" %}
 
 The most common example people use to describe [recursion](https://en.wikipedia.org/wiki/Recursion) involves the [factorial function](https://en.wikipedia.org/wiki/Factorial). 
 
@@ -138,11 +133,6 @@ factorial(4)                   # = 24
 
 We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
 
-<div style="text-align: center">
-	<img src='https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg' style="float: center; height: 500px">
-</div>
-Image source: [nyt.com](https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg)
-
 {% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="500px" %}
 
 Decision trees are like the game “*20 questions*”:
@@ -152,10 +142,6 @@ Decision trees are like the game “*20 questions*”:
 - We want the smallest set of questions to get to the right answer.
 
 - Each questions should reduce the search space as much as possible.
-
-<div style="text-align: center">
-	<img src='/assets/images/decision_trees/dec_tree_ex_simple.png' style="float: center; height: 300px">
-</div>
 
 {% include figure.html url="/assets/images/decision_trees/dec_tree_ex_simple.png" caption="Highly-simplistic decision tree example." height="300px" %}
 
@@ -171,7 +157,8 @@ When dealing with _non-linear_ data (and we usually are), non-linear decision tr
 
 > A '_linear model_' is one in which a change in an input variable has a constant change on the output variable.  
 ><img src='/assets/images/decision_trees/non-linearity.png' style="float: center; height: 175px">  
->Image source: [erinshellman.github](http://erinshellman.github.io/data-mining-starter-kit)
+>Image source: erinshellman.github(http://erinshellman.github.io/data-mining-starter-kit)  
+>{% include figure_link.html url="/assets/images/decision_trees/non-linearity.png" href="http://erinshellman.github.io/data-mining-starter-kit" caption="Image source: erinshellman.github" height="175px" %}
 
 Trees automatically contain interaction of features, and so are capable of more complex representations than is possible with linear models alone.
 
@@ -203,6 +190,9 @@ As useful as tree-based methods are for _interpretation_, they typically are con
 Decision trees tend to be weak models because they can easily memorize or overfit to a dataset.
 - The algorithm will always find _some_ solution to the problem...
 
+
+{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." height="300px" %}
+
 <div style="text-align: center">
 	<img src='/assets/images/decision_trees/over-fit.png' style="float: center; height: 300px">
 </div>
@@ -210,6 +200,8 @@ Decision trees tend to be weak models because they can easily memorize or overfi
 A model is overfit when it memorizes or bends to a few specific data points rather than picking up general trends in the data.
 
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
+
+{% include figure.html url="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." height="300px" %}
 
 <div style="text-align: center">
 	<img src='/assets/images/decision_trees/tree.png' style="float: center; height: 300px">
@@ -231,11 +223,11 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
+{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." height="300px" %}
+
 <div style="text-align: center">
 	<img src='/assets/images/decision_trees/tree_nodes.png' style="float: center; height: 300px">
 </div>
-
-*Note*: The next question is always dependent on the last.
 
 Effectively, a decision tree contains a question at every node. This is where recursion comes in handy...
 
@@ -262,6 +254,8 @@ But this works for **regression**, too. We could also imagine designing a model 
 	<img src='/assets/images/decision_trees/hitters.png' style="float: center; height: 500px">
 </div>
 Image source: [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
+
+{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" height="500px" %}
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
 - We can use a variety of metrics to quantify the purity of the separation of groups including: *Classification error*, *Entropy*, or the *Gini Coefficient*.
@@ -397,6 +391,8 @@ Obviously, this isn't practical because we don't usually have access to multiple
 	<img src='https://dsc-spidal.github.io/harp/img/4-5-1.png' style="float: center; height: 275px">
 </div>
 Image source: [dsc-spidal.github](https://dsc-spidal.github.io/harp/img/4-5-1.png)
+
+{% include figure_link.html url="https://dsc-spidal.github.io/harp/img/4-5-1.png" href="https://dsc-spidal.github.io/harp/img/4-5-1.png" caption="Image source: dsc-spidal.github" height="275px" %}
 
 Random forests provide an improvement over bagged trees in the form of a small tweak that makes the aggregated trees less correlated with each other. Just like in bagging, we build some number of decision trees on bootstrapped training samples. But here, each time a split is considered when building a tree, a random sample of
 $m$ predictors is chosen as split candidates, rather than the full set of $p$ predictors.
