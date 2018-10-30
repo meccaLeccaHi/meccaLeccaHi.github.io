@@ -18,13 +18,10 @@ Adapted from numerous sources, including:
 
 
 
->This notebook will rely on Numpy, Matplotlib, and GraphViz.*
+>Dependencies: Numpy, Matplotlib, and GraphViz.*
 >
->\* For 'simple' installation: `$ pip install graphviz` 
->
->    Else, try `$ brew install graphviz` (for mac)
->
->For more info, see: https://pypi.org/project/graphviz/
+>* For 'simple' installation: `$ pip install graphviz` 
+>  For more info, see: https://pypi.org/project/graphviz/
 
 
 <a id="learning-objectives"></a>
