@@ -197,7 +197,7 @@ A model is overfit when it memorizes or bends to a few specific data points rath
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
 
 
-{% include figure.html url="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." width="100%" %}
+{% include figure_link.html url="/assets/images/decision_trees/tree.png" href="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." width="100%" %}
 
 
 Fortunately, we can limit our decision trees using 'pruning' methods, which are described in the next section.
