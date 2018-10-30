@@ -16,7 +16,7 @@ resume: true
 resume-external: false
 resume-url: assets/pdfs/resume.pdf
 
-url: https://meccaleccahi.github.io/
+url: https://meccaleccahi.github.io
 
 permalink: /:title/
 

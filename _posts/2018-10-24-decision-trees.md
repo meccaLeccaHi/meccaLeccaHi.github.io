@@ -197,7 +197,7 @@ A model is overfit when it memorizes or bends to a few specific data points rath
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
 
 
-{% include figure_link.html url="/assets/images/decision_trees/tree.png" href="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." width="100%" %}
+{% include figure_link.html url="/assets/images/decision_trees/tree.png" href="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree." width="100%" %}
 
 
 Fortunately, we can limit our decision trees using 'pruning' methods, which are described in the next section.
@@ -241,7 +241,7 @@ But this works for **regression**, too. We could also imagine designing a model 
 > - How many hits has the player has this year? Using some cut-off threshold, we decide whether to go left or right from there.  
 > - Subsequently, we ask how many years has the player been on the team, etc.
 >
->{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" width="65%" %}
+{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" width="65%" %}
 
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
