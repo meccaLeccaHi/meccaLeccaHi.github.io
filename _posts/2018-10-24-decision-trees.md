@@ -75,7 +75,7 @@ iris = load_iris()
 </div>
 Image source: [xkcd.com](https://imgs.xkcd.com/comics/fixing_problems.png)
 
-{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png)" caption="Image source: [xkcd.com](xkcd.com)" width="100%" %}
+{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png)" caption="Image source: xkcd.com" width="100px" %}
 
 The most common example people use to describe [recursion](https://en.wikipedia.org/wiki/Recursion) involves the [factorial function](https://en.wikipedia.org/wiki/Factorial). 
 
