@@ -75,6 +75,8 @@ iris = load_iris()
 </div>
 Image source: [xkcd.com](https://imgs.xkcd.com/comics/fixing_problems.png)
 
+{% include image.html file="https://imgs.xkcd.com/comics/fixing_problems.png" description="This is an image." %}
+
 The most common example people use to describe [recursion](https://en.wikipedia.org/wiki/Recursion) involves the [factorial function](https://en.wikipedia.org/wiki/Factorial). 
 
 $$5! = 5*4*3*2*1 = 120$$
