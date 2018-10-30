@@ -217,7 +217,7 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
 
-{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." height="100px" %}
+{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." width="40%" %}
 
 
 Effectively, a decision tree contains a question at every node. This is where recursion comes in handy...
@@ -242,7 +242,7 @@ But this works for **regression**, too. We could also imagine designing a model 
 > - Subsequently, we ask how many years has the player been on the team, etc.
 
 
-{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" height="400px" %}
+{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" width="50%" %}
 
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
