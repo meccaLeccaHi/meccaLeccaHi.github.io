@@ -71,10 +71,9 @@ iris = load_iris()
 ## Recursion Example
 
 <div style="text-align: center">
-<img src='https://imgs.xkcd.com/comics/fixing_problems.png' style="float: center; height: 250px">
-</div>
-
+<img src='https://imgs.xkcd.com/comics/fixing_problems.png' style="height: 250px">
 Image source: [xkcd.com](https://imgs.xkcd.com/comics/fixing_problems.png)
+</div>
 
 The most common example people use to describe [recursion](https://en.wikipedia.org/wiki/Recursion) involves the [factorial function](https://en.wikipedia.org/wiki/Factorial). 
 
