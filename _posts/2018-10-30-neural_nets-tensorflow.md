@@ -114,7 +114,7 @@ v.dot(w)
 ### Matrix Multiplication
 **Matrix multiplication**, $\mathbf{A}_{mn}$ x $\mathbf{B}_{ij}$, is valid when the left matrix has the same number of columns as the right matrix has rows ($n = i$). Each entry is the dot product of corresponding row and column vectors.
 
-<img src='./assets/matrix_multiply.gif' style="float: center; height: 150px">
+<img src='/assets/images/neural_nets/matrix_multiply.gif' style="float: center; height: 150px">
 (Image source: [mathisfun.com](mathisfun.com))
 
 The dot product illustrated above is: $1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 = 58$. 
@@ -249,7 +249,7 @@ Although these models were structured to behave like neurons, their behavior can
 >So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment. The output has consequently increased and crossed our threshold. We get to go skiing!!!
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 
-><img src="./assets/ski_guy.gif" style="float: center; height: 250px">
+><img src="/assets/images/neural_nets/ski_guy.gif" style="float: center; height: 250px">
 
 <a id='nn-practical'></a>
 ## Practical Considerations
@@ -294,7 +294,7 @@ But, it also leads to some convenient notational simplifications regarding the c
 We've seen how a perceptron can be employed to integrate the influence of many inputs in order to arrive at some decision, but we haven't considered how these same units can perform more 'logical', gate-type functions, as well. As we'll see in the example below, by incorporating a bias into the output of each perceptron, we can evaluate computational functions such as AND, OR, and NAND.
 
 ***Quick* review of logic gates**
-<img src="./assets/logic_gates.png" style="float: center; height: 450px">
+<img src="/assets/images/neural_nets/logic_gates.png" style="float: center; height: 450px">
 
 Image source: [schoolphysics.co.uk](http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html)
 
@@ -441,7 +441,7 @@ Because neurons in these loops undergo sustained bouts of activity, rather than 
 
 The idea is to first train the model on a large number of samples of handwritten digits (see examples below), for which we know the true label (e.g. '7' or '3'). These are known as _training examples_ and _training labels_, respectively.
 
-<img src="./assets/mnist_100_digits.png" style="float: center; height: 375px">
+<img src="/assets/images/neural_nets/mnist_100_digits.png" style="float: center; height: 375px">
 
 
 ```python
@@ -600,7 +600,7 @@ y = tf.nn.softmax(tf.matmul(x,W) + b)
 
 Focusing on the input to `softmax` above: `matmul` is multiplying the matrices `x`(mx784) and `W`(784xn) to get a `m`(number of training examples fed) x `n`(number of classes) matrix.
 
-<img src='./assets/matrix_multiply.gif' style="float: center; height: 150px">
+<img src='/assets/images/neural_nets/matrix_multiply.gif' style="float: center; height: 150px">
 
 
 ```python
