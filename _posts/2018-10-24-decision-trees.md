@@ -127,7 +127,9 @@ factorial(4)                   # = 24
 
 We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
 
-{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="500px" %}
+
+{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="450px" %}
+
 
 Decision trees are like the game “*20 questions*”:
 
@@ -137,7 +139,9 @@ Decision trees are like the game “*20 questions*”:
 
 - Each questions should reduce the search space as much as possible.
 
-{% include figure.html url="/assets/images/decision_trees/dec_tree_ex_simple.png" caption="Highly-simplistic decision tree example." height="300px" %}
+
+{% include figure.html url="/assets/images/decision_trees/dec_tree_ex_simple.png" caption="Highly-simplistic decision tree example." height="280px" %}
+
 
 In this notebook, we'll see how we can use _tree-based methods_ for regression and classification, by applying it to problems similar to those we've previously used linear methods to solve. As with other models, decision trees are just another way of _stratifying_ or _segmenting_ a given predictor space into 'meaningful' (_hopefully_) groups.
 
@@ -151,8 +155,8 @@ When dealing with _non-linear_ data (and we usually are), non-linear decision tr
 
 > A '_linear model_' is one in which a change in an input variable has a constant change on the output variable.  
 ><img src='/assets/images/decision_trees/non-linearity.png' style="float: center; height: 175px">  
->Image source: erinshellman.github(http://erinshellman.github.io/data-mining-starter-kit)  
->{% include figure_link.html url="/assets/images/decision_trees/non-linearity.png" href="http://erinshellman.github.io/data-mining-starter-kit" caption="Image source: erinshellman.github" height="175px" %}
+>{% include figure_link.html url="/assets/images/decision_trees/non-linearity.png" href="http://erinshellman.github.io/data-mining-starter-kit" caption="Image source: erinshellman.github" height="150px" %}  
+>
 
 Trees automatically contain interaction of features, and so are capable of more complex representations than is possible with linear models alone.
 
@@ -185,7 +189,7 @@ Decision trees tend to be weak models because they can easily memorize or overfi
 - The algorithm will always find _some_ solution to the problem...
 
 
-{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." height="150px" %}
+{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." height="100px" %}
 
 
 A model is overfit when it memorizes or bends to a few specific data points rather than picking up general trends in the data.
@@ -193,7 +197,7 @@ A model is overfit when it memorizes or bends to a few specific data points rath
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
 
 
-{% include figure.html url="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." height="350px" %}
+{% include figure.html url="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." width="100%" %}
 
 
 Fortunately, we can limit our decision trees using 'pruning' methods, which are described in the next section.
@@ -213,7 +217,7 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
 
-{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." height="150px" %}
+{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." height="100px" %}
 
 
 Effectively, a decision tree contains a question at every node. This is where recursion comes in handy...
@@ -238,7 +242,7 @@ But this works for **regression**, too. We could also imagine designing a model 
 > - Subsequently, we ask how many years has the player been on the team, etc.
 
 
-{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" height="450px" %}
+{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" height="400px" %}
 
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
@@ -372,7 +376,7 @@ Obviously, this isn't practical because we don't usually have access to multiple
 ### Random Forests
 
 
-{% include figure_link.html url="https://dsc-spidal.github.io/harp/img/4-5-1.png" href="https://dsc-spidal.github.io/harp/img/4-5-1.png" caption="Image source: dsc-spidal.github" height="275px" %}
+{% include figure_link.html url="https://dsc-spidal.github.io/harp/img/4-5-1.png" href="https://dsc-spidal.github.io/harp/img/4-5-1.png" caption="Image source: dsc-spidal.github" height="250px" %}
 
 
 Random forests provide an improvement over bagged trees in the form of a small tweak that makes the aggregated trees less correlated with each other. Just like in bagging, we build some number of decision trees on bootstrapped training samples. But here, each time a split is considered when building a tree, a random sample of
