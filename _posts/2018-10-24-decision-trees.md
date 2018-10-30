@@ -128,7 +128,7 @@ factorial(4)                   # = 24
 We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
 
 
-{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="450px" %}
+{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" height="350px" %}
 
 
 Decision trees are like the game “*20 questions*”:
@@ -189,7 +189,7 @@ Decision trees tend to be weak models because they can easily memorize or overfi
 - The algorithm will always find _some_ solution to the problem...
 
 
-{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." height="100px" %}
+{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." width="50%" %}
 
 
 A model is overfit when it memorizes or bends to a few specific data points rather than picking up general trends in the data.
