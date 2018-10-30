@@ -6,6 +6,7 @@ category: blog
 tag:
 - recursive function
 - decision trees
+- Iris database
 - GraphViz
 author: adam
 description: A Juptyter notebook on Decision Trees
