@@ -191,21 +191,16 @@ Decision trees tend to be weak models because they can easily memorize or overfi
 - The algorithm will always find _some_ solution to the problem...
 
 
-{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." height="300px" %}
+{% include figure.html url="/assets/images/decision_trees/over-fit.png" caption="Example of a highly over-fit model." height="150px" %}
 
-<div style="text-align: center">
-	<img src='/assets/images/decision_trees/over-fit.png' style="float: center; height: 300px">
-</div>
 
 A model is overfit when it memorizes or bends to a few specific data points rather than picking up general trends in the data.
 
 An unconstrained decision tree can learn an extreme tree (e.g. one feature for each word in a news article) -- see example below.
 
-{% include figure.html url="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." height="300px" %}
 
-<div style="text-align: center">
-	<img src='/assets/images/decision_trees/tree.png' style="float: center; height: 300px">
-</div>
+{% include figure.html url="/assets/images/decision_trees/tree.png" caption="Example of a highly over-fit decision tree model." height="350px" %}
+
 
 Fortunately, we can limit our decision trees using 'pruning' methods, which are described in the next section.
 
@@ -223,11 +218,9 @@ Perhaps not surprisingly, trees are data structures that are made up of '*leaves
 
 - Nodes without any children (terminal nodes) are known as '*leaves*', while the '*branches*' correspond to the specific set of rules used by a particular tree to segment the predictor space.
 
-{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." height="300px" %}
 
-<div style="text-align: center">
-	<img src='/assets/images/decision_trees/tree_nodes.png' style="float: center; height: 300px">
-</div>
+{% include figure.html url="/assets/images/decision_trees/tree_nodes.png" caption="Note that the next question is always dependent on the last in a decision tree model." height="150px" %}
+
 
 Effectively, a decision tree contains a question at every node. This is where recursion comes in handy...
 
@@ -250,12 +243,9 @@ But this works for **regression**, too. We could also imagine designing a model 
 > - How many hits has the player has this year? Using some cut-off threshold, we decide whether to go left or right from there.  
 > - Subsequently, we ask how many years has the player been on the team, etc.
 
-<div style="text-align: center">
-	<img src='/assets/images/decision_trees/hitters.png' style="float: center; height: 500px">
-</div>
-Image source: [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
 
-{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" height="500px" %}
+{% include figure_link.html url="/assets/images/decision_trees/hitters.png" href="http://www-bcf.usc.edu/~gareth/ISL/" caption="Image source: An Introduction to Statistical Learning (Gareth, et al.)" height="450px" %}
+
 
 Each questions in intended to increase the '*purity*' of the data segments as much as possible.
 - We can use a variety of metrics to quantify the purity of the separation of groups including: *Classification error*, *Entropy*, or the *Gini Coefficient*.
@@ -387,12 +377,9 @@ Obviously, this isn't practical because we don't usually have access to multiple
 
 ### Random Forests
 
-<div style="text-align: center">
-	<img src='https://dsc-spidal.github.io/harp/img/4-5-1.png' style="float: center; height: 275px">
-</div>
-Image source: [dsc-spidal.github](https://dsc-spidal.github.io/harp/img/4-5-1.png)
 
 {% include figure_link.html url="https://dsc-spidal.github.io/harp/img/4-5-1.png" href="https://dsc-spidal.github.io/harp/img/4-5-1.png" caption="Image source: dsc-spidal.github" height="275px" %}
+
 
 Random forests provide an improvement over bagged trees in the form of a small tweak that makes the aggregated trees less correlated with each other. Just like in bagging, we build some number of decision trees on bootstrapped training samples. But here, each time a split is considered when building a tree, a random sample of
 $m$ predictors is chosen as split candidates, rather than the full set of $p$ predictors.
