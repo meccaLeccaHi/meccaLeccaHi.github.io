@@ -12,12 +12,9 @@ description: A Juptyter notebook on Decision Trees
 ---
 
  
-
-Adapted from numerous sources, including: 
-- [*An Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/) - Chapter 8
-
-
-
+>Adapted from numerous sources, including: 
+>- [*An Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/) - Chapter 8
+>
 >Dependencies: Numpy, Matplotlib, and GraphViz.*
 >
 >* For 'simple' installation: `$ pip install graphviz` 
