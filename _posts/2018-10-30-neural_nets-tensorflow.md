@@ -112,10 +112,11 @@ v.dot(w)
 
 <a id="matrix-multiplication"></a>
 ### Matrix Multiplication
-**Matrix multiplication**, $\mathbf{A}_{mn}$ x $\mathbf{B}_{ij}$, is valid when the left matrix has the same number of columns as the right matrix has rows ($n = i$). Each entry is the dot product of corresponding row and column vectors.
+**Matrix multiplication**, $\mathbf{A}_{mn}$ x $\mathbf{B}_{ij}$, is valid when the left matrix has the same number of columns as the right matrix has rows ($n = i$). 
 
 <img src='/assets/images/neural_nets/matrix_multiply.gif' style="float: center; height: 150px">
 (Image source: [mathisfun.com](mathisfun.com))
+{% include figure_link.html url="/assets/images/neural_nets/matrix_multiply.gif" href="https://www.mathsisfun.com/" caption="Each entry is the dot product of corresponding row and column vectors. Image source: mathisfun.com" width="50%" %}
 
 The dot product illustrated above is: $1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 = 58$. 
 Can you compute the rest of the dot products by hand?
@@ -161,12 +162,9 @@ In general, the further a region is located along the visual pathway, the more c
 
 In other words, our brains must first process an object's 'simple' features (color, texture, etc.) before processing its 'complex' ones (shape, identity, etc.). So, just because we are astoundingly good at it, doesn't make identifying things like hand-written numbers an 'easy' task!
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Lisa_analysis.png" style="float: center; height: 500px">
-Image source: [wikipedia.com](https://en.wikipedia.org/wiki/Visual_system)
-
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/c/cd/Lisa_analysis.png" href="https://en.wikipedia.org/wiki/Visual_system" caption="The visual system processes increasingly abstract features of visual input at each processing stage. Image source: wikipedia.com" height="500px" %}
 
->This becomes even more apparent when we consider the complexity of the potential problem space, which, in this case, happens to include any potential combination of pixel-values in a _mxn_ matrix. Put simply, the rules for reading hand-writing are hard to distill.
+>This becomes even more apparent when we consider the complexity of the potential problem space, which, in this case, happens to include any potential combination of _mxn_ pixel-values. Put simply, the rules for reading hand-writing are hard to distill.
 ><img src="https://i.imgur.com/dDYphPB.png" style="float: center; height: 300px">
 >But, complex, non-linear problems such as character recognition are exactly where the flexibility of **neural networks** start to become the most useful.
 
@@ -178,11 +176,13 @@ Neural networks were initially proposed as a way of understanding how the brain 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png" style="float: center; height: 300px">
 Image source: [wikipedia.com](https://en.wikipedia.org/wiki/Artificial_neural_network)
 
-{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png" href="https://en.wikipedia.org/wiki/Artificial_neural_network" caption="The theoretical basis of the function mapping $X$ inputs (see figure left) to the $Y$ outputs (see figure right). Image source: wikipedia.com" height="300px" %}
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png" href="https://en.wikipedia.org/wiki/Artificial_neural_network" caption="The theoretical basis of the function mapping *X* inputs (see image left) to the *Y* outputs (see image right). Image source: wikipedia.com" width="70%" %}
 
 In the example shown above, the perceptron has three binary inputs, _x<sub>1</sub>_, _x<sub>2</sub>_, and _x<sub>3</sub>_, and produces a single binary output. When the perceptron was proposed in the 1950's by Frank Rosenblatt, he included a relatively simple rule for computing the output. Weights (_w<sub>1</sub>_ to _w<sub>n</sub>_) are assigned to each input to represent their relative importance. 
 
 <img src="http://blogs.bmc.com/wp-content/uploads/2017/11/output.png" style="float: center; height: 200px">
+
+{% include figure.html url="/assets/images/neural_nets/perceptron.png" caption="Basic representation of an artificial neuron (perceptron)." width="50%" %}
 
 Thus, the neuron's output is determined by the weighted sum:
 
@@ -249,7 +249,9 @@ Although these models were structured to behave like neurons, their behavior can
 >So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment. The output has consequently increased and crossed our threshold. We get to go skiing!!!
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 
+
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="float: center; height: 250px">
+
 
 <a id='nn-practical'></a>
 ## Practical Considerations
@@ -258,15 +260,14 @@ Although these models were structured to behave like neurons, their behavior can
 ### Network Structure
 Although the model we just described was useful for illustrating the basic components of the 'decision-making' process in a neural network, it's ultimately not much of an improvement (if any) on the linear models we've seen so far. This is because, as you might have guessed, typical neural networks are of much greater complexity. These networks typically consist of one or more columns of stacked perceptrons (or *'layers'*). 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" style="float: center">
-Image source: [wikipedia.com](https://en.wikipedia.org/wiki/Neural_network)
+
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" href="https://en.wikipedia.org/wiki/Neural_network" caption="Image source: wikipedia.com" width="30%" %}
+
 
 Each perceptron feeds into every perceptron in the layer following its own, and so on until the final output. With all of these decisions going on, it's becomes easier to see now why neural networks are capable of such subtle (and sometimes nuanced) decision-making.
 
 Let's explore some of the practical consequences of the arrangement above-
 The perceptrons in the first layer will learn to make decisions based purely on the 'raw' input to the model. As the output of each is 'fed-forward', the second layer will receive input which has already been transformed somewhat by the decisions made in the first layer. As a result, each layer could be described as learning to use more abstract features than the layer before it.
-
-> It's worth pointing out at this point, that this is another aspect of neural networks that bears a striking resemblance to the way the brain works. [Lots more to say here] 
 
 <a id="function"></a>
 ### Network Function
@@ -298,9 +299,11 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 Image source: [schoolphysics.co.uk](http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html)
 
+{% include figure_link.html url="/assets/images/neural_nets/logic_gates.png" href="http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html" caption="Image source: schoolphysics.co.uk" width="30%" %}
+
 >**Example:**
 > Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
-<img src="http://neuralnetworksanddeeplearning.com/images/tikz2.png" style="float: center; height: 150px">
+<img src="/assets/images/neural_nets/perc_ex.png" style="float: center; height: 150px">
 >
 >We can further imagine that we provide the model with `[0,0]`, and we see:
 >
