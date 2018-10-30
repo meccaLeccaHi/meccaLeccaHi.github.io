@@ -112,11 +112,11 @@ factorial(4)                   # = 24
 
 
 
-**Pros:**
+__Pros:__
 - Recursive functions make the code look neat and clean.
 - A complex task can be performed more elegantly by breaking it down into more manageable parts using recursion.
 
-**Cons:**
+__Cons:__
 - Following the logic behind recursion can be challenging. As a result, recursive functions are often hard to debug.
 - Recursive calls can be computationally expensive (inefficient) as they can take up a lot of space in memory.
 
