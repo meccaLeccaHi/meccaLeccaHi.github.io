@@ -2,6 +2,7 @@
 title: "Decision Trees"
 date: 2018-10-24
 layout: post
+mathjax: true
 category: blog
 tag:
 - recursive function
