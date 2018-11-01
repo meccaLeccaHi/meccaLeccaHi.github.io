@@ -281,7 +281,7 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
-$${
+$${\small
 \begin{equation}
   b=-threshold\\
   output=\left\{
@@ -293,7 +293,7 @@ $${
 }$$
 
 <a id="logic"></a>
-#### Example: Logic Gates
+#### Background: Logic Gates
 We've seen how a perceptron can be employed to integrate the influence of many inputs in order to arrive at some decision, but we haven't considered how these same units can perform more 'logical', gate-type functions, as well. As we'll see in the example below, by incorporating a bias into the output of each perceptron, we can evaluate computational functions such as AND, OR, and NAND.
 
 ***Quick* review of logic gates**
@@ -301,54 +301,56 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 {% include figure_link.html url="/assets/images/neural_nets/logic_gates.png" href="http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html" caption="Image source: schoolphysics.co.uk" width="80%" %}
 
 
->**Example:**
-> Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
-><div style="text-align: center">
+**Example:**
+ Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
+<div style="text-align: center">
 	<img src="/assets/images/neural_nets/perc_example.png" style="height: 150px">
 </div>
->
->We can further imagine that we provide the model with `[0,0]`, and we see:
->
->\begin{equation}
+
+We can further imagine that we provide the model with `[0,0]`, and we see:
+
+\begin{equation}
     (-2)*0+(-2)*0+3=3\\
     \text{so} \ output=1
 \end{equation}
->
->The same process would reveal the following results:
->
-><table style="border: none">
-><tr style="border: none">
+
+The same process would reveal the following results:
+
+<table style="border: none">
+<tr style="border: none">
     <td style=""><b>$x_1$</b></td>
     <td style=""><b>$x_2$</b></td>
     <td style=""><b>$output$</b></td>
 </tr>
-><tr>
+<tr>
     <td style="text-align: center">0</td>
     <td style="text-align: center">0</td>
     <td style="text-align: center">1</td>
 </tr>
-><tr>
+<tr>
     <td style="text-align: center">1</td>
     <td style="text-align: center">0</td>
     <td style="text-align: center">1</td>
 </tr>
-><tr>
+<tr>
     <td style="text-align: center">0</td>
     <td style="text-align: center">1</td>
     <td style="text-align: center">1</td>
 </tr>
-><tr>
+<tr>
     <td style="text-align: center">1</td>
     <td style="text-align: center">1</td>
     <td style="text-align: center">0</td>
 </tr>
 </table>
 >
->It's a **NAND gate**!
+It's a **NAND gate**!
 
 The above is a *very* simple example of how single perceptrons are capable of implementing logical computations. But, in practice, neural networks can collectively compute *any* logical function possible! 
 
 As impressive as this may sound, it actually overlooks the real value neural networks have in helping to solve complex problems. Like your brain, the perceptron is capable of adjusting its weights and biases following experience with external stimuli, in order to improve performance (and thus maximize reward) on a defined task. We shift our focus to this process in the next section.
+
+----
 
 <a id='nn-training'></a>
 ## Neural Network Training
