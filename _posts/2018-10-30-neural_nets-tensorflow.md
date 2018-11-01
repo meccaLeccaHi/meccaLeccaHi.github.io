@@ -281,15 +281,15 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
-$${\large
-\begin{equation*}
+$${
+\begin{equation}
   b=-threshold\\
   output=\left\{
   \begin{array}{@{}ll@{}}
     0 & \text{if}\ w \cdotp x +b \leq 0 \\
     1 & \text{if}\ w \cdotp x +b > 0 \\
   \end{array}\right.\\
-\end{equation*}
+\end{equation}
 }$$
 
 <a id="logic"></a>
@@ -303,8 +303,8 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 >**Example:**
 > Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
-<div style="text-align: center">
-	<img src="/assets/images/neural_nets/perc_ex.png" style="float: center; height: 150px">
+><div style="text-align: center">
+	<img src="/assets/images/neural_nets/perc_example.png" style="height: 150px">
 </div>
 >
 >We can further imagine that we provide the model with `[0,0]`, and we see:
