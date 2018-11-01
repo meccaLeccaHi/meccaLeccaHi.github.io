@@ -250,7 +250,7 @@ Although these models were structured to behave like neurons, their behavior can
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 
 
-><img src="/assets/images/neural_nets/ski_guy.gif" style="float: center; height: 250px">
+><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
 
 
 <a id='nn-practical'></a>
@@ -280,7 +280,7 @@ We should also clarify how we decide what threshold is a good one to use. But be
 The purpose of the bias input is to influence the likelihood of triggering a given perceptron to 'fire', or more specifically, output a one instead of a zero. The greater the bias, the less input is required to trigger a perceptron (and vice-versa).
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
-
+$${\large
 \begin{equation}
   b=-threshold\\
   output=\left\{
@@ -289,6 +289,7 @@ But, it also leads to some convenient notational simplifications regarding the c
     1 & \text{if}\ w \cdotp x +b > 0 \\
   \end{array}\right.\\
 \end{equation}
+}$$
 
 <a id="logic"></a>
 #### Example: Logic Gates
@@ -301,7 +302,9 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 >**Example:**
 > Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
-<img src="/assets/images/neural_nets/perc_ex.png" style="float: center; height: 150px">
+<div style="text-align: center">
+	<img src="/assets/images/neural_nets/perc_ex.png" style="float: center; height: 150px">
+</div>
 >
 >We can further imagine that we provide the model with `[0,0]`, and we see:
 >
