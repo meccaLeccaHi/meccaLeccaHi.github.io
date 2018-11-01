@@ -167,7 +167,7 @@ In other words, our brains must first process an object's 'simple' features (col
 
 >This becomes even more apparent when we consider the complexity of the potential problem space, which, in this case, happens to include any potential combination of _mxn_ pixel-values. Put simply, the rules for reading hand-writing are hard to distill.
 
-><img src="https://i.imgur.com/dDYphPB.png" style="float: center; height: 200px">
+><center><img src="https://i.imgur.com/dDYphPB.png" style="float: center; height: 250px"></center>
 
 >But, complex, non-linear problems such as character recognition are exactly where the flexibility of **neural networks** start to become the most useful.
 
