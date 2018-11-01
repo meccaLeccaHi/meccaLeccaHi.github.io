@@ -283,6 +283,10 @@ But, it also leads to some convenient notational simplifications regarding the c
 
 $$
 	b=-threshold\\
+	\begin{array}{@{}ll@{}}
+	0 & \text{if}\ w \cdotp x +b \leq 0 \\
+	1 & \text{if}\ w \cdotp x +b > 0 \\
+	\end{array}
 $$
 
 	output=\left\{
