@@ -192,6 +192,7 @@ Thus, the neuron's output is determined by the weighted sum:
 
 So, as is often the case, we set a __threshold__ and declare that as the cut-off point for whether to _'fire'_ (output a one), or not (output a zero).
 
+$$
 \begin{equation}
   output=\left\{
   \begin{array}{@{}ll@{}}
@@ -199,6 +200,7 @@ So, as is often the case, we set a __threshold__ and declare that as the cut-off
     1 & \text{if} \sum_{j=1}^n w_j x_j > threshold \\
   \end{array}\right.
 \end{equation}
+$$
 
 <a id="example"></a>
 ### An example
@@ -225,26 +227,22 @@ Although these models were structured to behave like neurons, their behavior can
 
 >I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use 10 as our cut-off for this example.
 >
->$${\large
-\begin{equation*} 
+>$$\begin{equation*} 
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 1 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 10 \\
      \ 10 \leq threshold \\
   output=0
-\end{equation*}
-}$$
+\end{equation*}$$
 
 >
 >One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.
 >
->$${\large
-\begin{equation*}
+>$$\begin{equation*}
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 16 \\
      \ 16 > threshold \\
      output=1
-\end{equation*}
-}$$
+\end{equation*}$$
 >
 >So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment. The output has consequently increased and crossed our threshold. We get to go skiing!!!
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
