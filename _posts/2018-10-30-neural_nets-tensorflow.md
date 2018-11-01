@@ -177,7 +177,7 @@ In other words, our brains must first process an object's 'simple' features (col
 Neural networks were initially proposed as a way of understanding how the brain works. In the case of recognizing handwriting or the identity of faces, artificial neurons (such as the perceptron below) each make a yes or no (or 'binary') decision, before passing their output to the next perceptron in the network for the next decision. 
 
 
-{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png" href="https://en.wikipedia.org/wiki/Artificial_neural_network" caption="The theoretical basis of the function mapping *X* inputs (see image left) to the *Y* outputs (see image right). Image source: wikipedia.com" width="70%" %}
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png" href="https://en.wikipedia.org/wiki/Artificial_neural_network" caption="The theoretical basis of the function mapping $X$ inputs (see image left) to the $Y$ outputs (see image right). Image source: wikipedia.com" width="70%" %}
 
 
 In the example shown above, the perceptron has three binary inputs, _x<sub>1</sub>_, _x<sub>2</sub>_, and _x<sub>3</sub>_, and produces a single binary output. When the perceptron was proposed in the 1950's by Frank Rosenblatt, he included a relatively simple rule for computing the output. Weights (_w<sub>1</sub>_ to _w<sub>n</sub>_) are assigned to each input to represent their relative importance. 
