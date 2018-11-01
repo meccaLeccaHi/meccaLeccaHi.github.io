@@ -194,11 +194,10 @@ So, as is often the case, we set a __threshold__ and declare that as the cut-off
 
 $$
 \begin{equation}
-  output=\left\{
-  \begin{array}{@{}ll@{}}
+  output= \left( \begin{array}{@{}ll@{}}
     0 & \text{if}\ \sum_{j=1}^n w_j x_j \leq threshold \\
     1 & \text{if} \sum_{j=1}^n w_j x_j > threshold \\
-  \end{array}\right.
+  \end{array} \right)
 \end{equation}
 $$
 
