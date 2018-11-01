@@ -78,11 +78,11 @@ import tensorflow as tf
 ### Dot Product
 The **dot product** of two *n*-dimensional vectors is:
 
-$ \vec{v} \cdot \vec{w} =\sum _{i=1}^{n}v_{i}w_{i}=v_{1}w_{1}+v_{2}w_{2}+\cdots +v_{n}w_{n} $
+$$ \vec{v} \cdot \vec{w} =\sum _{i=1}^{n}v_{i}w_{i}=v_{1}w_{1}+v_{2}w_{2}+\cdots +v_{n}w_{n} $$
 
 So, if:
 
-$\vec{v} = \left[ \begin{array}{c}
+$$\vec{v} = \left[ \begin{array}{c}
 1 \\
 3 \\
 7
@@ -90,9 +90,9 @@ $\vec{v} = \left[ \begin{array}{c}
 1 \\
 0 \\
 1
-\end{array} \right]$
+\end{array} \right]$$
 
-$ \vec{v} \cdot \vec{w} = 1 \cdot 1 + 3 \cdot 0 + 7 \cdot 1 = 8 $
+$$ \vec{v} \cdot \vec{w} = 1 \cdot 1 + 3 \cdot 0 + 7 \cdot 1 = 8 $$
 
 
 ```python
