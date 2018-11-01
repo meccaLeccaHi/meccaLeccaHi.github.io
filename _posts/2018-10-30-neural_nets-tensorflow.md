@@ -308,10 +308,10 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 We can further imagine that we provide the model with `[0,0]`, and we see:
 
-$$\
+$$
     (-2)*0+(-2)*0+3=3\\
     \text{so} \ output=1
-\ $$
+$$
 
 The same process would reveal the following results:
 
