@@ -310,19 +310,21 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 We can further imagine that we provide the model with `[0,0]`, and we see:
 
-$$\ \vec{w} \cdotp \vec{x} +b \ $$
-
-$$\ (-2)* \vec{w} \cdotp \vec{x} +b \ $$
+$$\
+    (-2)*0+(-2)*0+3=3\\
+    \text{so} \ output=1
+\ $$
 
 \begin{equation}
 	\(-2)*0+(-2)*0+3=3\\
 	\text{so} \ output=1
 \end{equation}
 
+
 The same process would reveal the following results:
 
-<table style="border: none">
-<tr style="border: none">
+<table style="float: center; border: none">
+<tr>
 	<td style=""><b>$x_1$</b></td>
 	<td style=""><b>$x_2$</b></td>
 	<td style=""><b>$output$</b></td>
