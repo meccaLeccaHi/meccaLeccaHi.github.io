@@ -193,7 +193,7 @@ $$\begin{equation*}
 So, as is often the case, we set a __threshold__ and declare that as the cut-off point for whether to _'fire'_ (output a one), or not (output a zero).
 
 
-{% include figure.html url="/assets/images/neural_nets/perc_function.png" caption="" width="50%" %}
+{% include figure.html url="/assets/images/neural_nets/perc_function.png" caption="" width="40%" %}
 
 
 <a id="example"></a>
@@ -201,7 +201,7 @@ So, as is often the case, we set a __threshold__ and declare that as the cut-off
 
 Although these models were structured to behave like neurons, their behavior can also be illustrated by an analogy to human decision making: 
 >Imagine a scenario where you are forced to decide to either take ski trip or not (to stay home, instead).
-
+>
 >You could imagine the decision coming down to the influence of three different factors:
 >1. Is the weather forecast good (what kind of conditions can you expect on the slopes)?
 >2. Is it a weekend (traffic, crowds, etc)?
@@ -274,7 +274,7 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
 
-{% include figure.html url="/assets/images/neural_nets/bias_input.png" caption="" width="50%" %}
+{% include figure.html url="/assets/images/neural_nets/bias_input.png" caption="" width="35%" %}
 
 
 <a id="logic"></a>
@@ -302,7 +302,7 @@ $$
 
 The same process would reveal the following results:
 
-<table style="float: center; border: none">
+<center><table style="border: none">
 <tr>
 	<td style=""><b>$x_1$</b></td>
 	<td style=""><b>$x_2$</b></td>
@@ -328,7 +328,7 @@ The same process would reveal the following results:
 	<td style="text-align: center">1</td>
 	<td style="text-align: center">0</td>
 </tr>
-</table>
+</table></center>
 
 It's a **NAND gate**!
 
