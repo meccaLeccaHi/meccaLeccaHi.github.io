@@ -419,7 +419,7 @@ ax.legend(['Step Function', 'Sigmoid Function'], fontsize=20);
 ```
 
 
-![png](output_38_0.png)
+![png](/assets/images/neural_nets/output_38_0.png)
 
 
 It's worth considering, before moving on, the unique interpretations of step vs. sigmoid function output (with regard to making a prediction). While the former case makes interpretation straight-forward by providing a binary output, the latter can be more problematic, as it can be any real number between 0 and 1. But again, the most common solution is simply assigning a 'reasonable' threshold to use. In cases like this, .5 is usually a safe place to start.
@@ -555,7 +555,7 @@ display_digit(ran.randint(0, x_train.shape[0]))
 
 
 
-![png](output_58_1.png)
+![png](/assets/images/neural_nets/output_58_1.png)
 
 
 Just for kicks, let's take a look at what the classifier sees and look at some of the training samples in their flattened form. 
@@ -566,7 +566,7 @@ display_mult_flat(0,400)
 ```
 
 
-![png](output_60_0.png)
+![png](/assets/images/neural_nets/output_60_0.png)
 
 
 <a id='tensorflow'></a>
@@ -832,7 +832,7 @@ plt.pyplot.show()
 ```
 
 
-![png](output_97_0.png)
+![png](/assets/images/neural_nets/output_97_0.png)
 
 
 Our final figure shows the weights for each digit 0 through 9. These are by far the most important factor in determining whether your model will succeed or fail. The majority of effort in machine learning is spent in the optimization of these weights, which are what provide us with the model we can use to make predictions on future data. 
@@ -854,7 +854,7 @@ display_digit(0)
 
 
 
-![png](output_99_1.png)
+![png](/assets/images/neural_nets/output_99_1.png)
 
 
 
@@ -901,7 +901,7 @@ display_compare(ran.randint(0, 55000))
 ```
 
 
-![png](output_103_0.png)
+![png](/assets/images/neural_nets/output_103_0.png)
 
 
 <a id="topic-review"></a>
@@ -913,5 +913,3 @@ display_compare(ran.randint(0, 55000))
 - We were shown how to use Tensor flow to create convolutional neural network models that can be structured (i.e. shaped) to handle a wide-variety of prediction tasks.
 - We covered how to load the MNIST dataset in TensorFlow and generate plots of the dataset.
 - We saw how to reshape the MNIST dataset and develop a pretty simple (but well-performing) multi-layer perceptron model to tackle the problem.
-
-**Any further questions?**
