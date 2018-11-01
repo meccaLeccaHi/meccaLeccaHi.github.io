@@ -303,18 +303,20 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 ----
 **Example:**
  Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
-<div style="text-align: center">
-	<img src="/assets/images/neural_nets/perc_example.png" style="height: 125px">
-</div>
+
+
+{% include figure.html url="/assets/images/neural_nets/perc_example.png" caption="" width="60%" %}
+
 
 We can further imagine that we provide the model with `[0,0]`, and we see:
 
 \begin{equation}
+    \ \vec{w} \cdotp \vec{x} +b \
+\end{equation}
+
+\begin{equation}
 	(-2)*0+(-2)*0+3=3\\
 	\text{so} \ output=1
-\end{equation}
-\begin{equation}
-	\ (-2)*0+(-2)*0+3=3 \
 \end{equation}
 
 The same process would reveal the following results:
@@ -348,6 +350,8 @@ The same process would reveal the following results:
 </table>
 
 It's a **NAND gate**!
+
+
 ----
 
 The above is a *very* simple example of how single perceptrons are capable of implementing logical computations. But, in practice, neural networks can collectively compute *any* logical function possible! 
@@ -360,8 +364,9 @@ As impressive as this may sound, it actually overlooks the real value neural net
 
 To make the daunting task of training our (potentially-complicated) network of perceptrons more tractable, we'd really like to be able to make small changes to our weights (and biases) and expect small changes in behavior as a result. That way we could carefully experiment with different values and eventually improve the quality of our predictions. Something like this would be ideal:
 
-<img src="http://neuralnetworksanddeeplearning.com/images/tikz8.png" style="float: center; height: 250px">
+
 {% include figure_link.html url="http://neuralnetworksanddeeplearning.com/images/tikz8.png" href="http://neuralnetworksanddeeplearning.com" caption="The ideal context in which to experimentally-manipulate our model weights. Image source: http://neuralnetworksanddeeplearning.com" width="70%" %}
+
 
 But, the current model we have introduced does _not_ exhibit this behavior. If we implemented the current model, and manipulated our weights in order to improve our predictions, we could expect to see changes so severe that it was impossible to make any progress toward our goal of better prediction accuracy.
 So, what do we do?
