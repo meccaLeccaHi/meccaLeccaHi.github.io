@@ -213,15 +213,15 @@ Although these models were structured to behave like neurons, their behavior can
 >
 >On any given day we could represent the answer to each of these questions by a vector of 3 binary values (each a 0 or a 1). For example, if it was forecast to be good weather on a Tuesday, and I had just gotten a bonus at work (extra money to spare), I could represent that as:
 >
->\begin{equation*}
+>$${\begin{equation*}
 \vec{x}   = [1,0,1]
-\end{equation*}
+\end{equation*}}$$
 >
 >But each of these factors could (and most certainly, would) have different influences on the final decision, relative to each other. So we could represent this with a set of numbers or _'weights'_, (_w<sub>1</sub>_ to _w<sub>n</sub>_). If, for example, the weather was really important to me, and the day-of-the-week less so, but the money was relatively un-important, I might assign:
 >
->\begin{equation*}
+>$$\begin{equation*}
 \vec{w}   = [9,5,1]
-\end{equation*}
+\end{equation*}$$
 
 >I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use 10 as our cut-off for this example.
 >
