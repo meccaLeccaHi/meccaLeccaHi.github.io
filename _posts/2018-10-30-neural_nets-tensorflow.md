@@ -281,13 +281,13 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
-$$ b=-threshold\\
-output= \left[
+$$ b=-threshold \\
+output= \left(
 \begin{array}{@{}ll@{}}
 0 & \text{if}\ w \cdotp x +b \leq 0 \\
 1 & \text{if}\ w \cdotp x +b > 0
 \end{array}
-\right] $$
+\right) $$
 
 <a id="logic"></a>
 #### Background: Logic Gates
