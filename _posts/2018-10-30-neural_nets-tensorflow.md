@@ -300,60 +300,60 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 {% include figure_link.html url="/assets/images/neural_nets/logic_gates.png" href="http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html" caption="Image source: schoolphysics.co.uk" width="80%" %}
 
+----
+**Example:**
+ Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
+<div style="text-align: center">
+	<img src="/assets/images/neural_nets/perc_example.png" style="height: 125px">
+</div>
 
-	**Example:**
-	 Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
-	<div style="text-align: center">
-		<img src="/assets/images/neural_nets/perc_example.png" style="height: 125px">
-	</div>
+We can further imagine that we provide the model with `[0,0]`, and we see:
 
-	We can further imagine that we provide the model with `[0,0]`, and we see:
+\begin{equation}
+	(-2)*0+(-2)*0+3=3\\
+	\text{so} \ output=1
+\end{equation}
+\begin{equation}
+	\ (-2)*0+(-2)*0+3=3 \
+\end{equation}
 
-	\begin{equation}
-		(-2)*0+(-2)*0+3=3\\
-		\text{so} \ output=1
-	\end{equation}
-	\begin{equation}
-		\ (-2)*0+(-2)*0+3=3 \
-	\end{equation}
+The same process would reveal the following results:
 
-	The same process would reveal the following results:
+<table style="border: none">
+<tr style="border: none">
+	<td style=""><b>$x_1$</b></td>
+	<td style=""><b>$x_2$</b></td>
+	<td style=""><b>$output$</b></td>
+</tr>
+<tr>
+	<td style="text-align: center">0</td>
+	<td style="text-align: center">0</td>
+	<td style="text-align: center">1</td>
+</tr>
+<tr>
+	<td style="text-align: center">1</td>
+	<td style="text-align: center">0</td>
+	<td style="text-align: center">1</td>
+</tr>
+<tr>
+	<td style="text-align: center">0</td>
+	<td style="text-align: center">1</td>
+	<td style="text-align: center">1</td>
+</tr>
+<tr>
+	<td style="text-align: center">1</td>
+	<td style="text-align: center">1</td>
+	<td style="text-align: center">0</td>
+</tr>
+</table>
 
-	<table style="border: none">
-	<tr style="border: none">
-		<td style=""><b>$x_1$</b></td>
-		<td style=""><b>$x_2$</b></td>
-		<td style=""><b>$output$</b></td>
-	</tr>
-	<tr>
-		<td style="text-align: center">0</td>
-		<td style="text-align: center">0</td>
-		<td style="text-align: center">1</td>
-	</tr>
-	<tr>
-		<td style="text-align: center">1</td>
-		<td style="text-align: center">0</td>
-		<td style="text-align: center">1</td>
-	</tr>
-	<tr>
-		<td style="text-align: center">0</td>
-		<td style="text-align: center">1</td>
-		<td style="text-align: center">1</td>
-	</tr>
-	<tr>
-		<td style="text-align: center">1</td>
-		<td style="text-align: center">1</td>
-		<td style="text-align: center">0</td>
-	</tr>
-	</table>
-
-	It's a **NAND gate**!
+It's a **NAND gate**!
+----
 
 The above is a *very* simple example of how single perceptrons are capable of implementing logical computations. But, in practice, neural networks can collectively compute *any* logical function possible! 
 
 As impressive as this may sound, it actually overlooks the real value neural networks have in helping to solve complex problems. Like your brain, the perceptron is capable of adjusting its weights and biases following experience with external stimuli, in order to improve performance (and thus maximize reward) on a defined task. We shift our focus to this process in the next section.
 
-----
 
 <a id='nn-training'></a>
 ## Neural Network Training
