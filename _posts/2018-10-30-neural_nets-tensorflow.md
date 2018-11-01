@@ -186,39 +186,15 @@ In the example shown above, the perceptron has three binary inputs, _x<sub>1</su
 
 Thus, the neuron's output is determined by the weighted sum:
 
-\begin{equation*}
+$$\begin{equation*}
     \sum_{j=1}^n w_j x_j \leq threshold
-\end{equation*}
+\end{equation*}$$
 
 So, as is often the case, we set a __threshold__ and declare that as the cut-off point for whether to _'fire'_ (output a one), or not (output a zero).
 
-$$
-\begin{equation}
-  output= \left( \begin{array}{@{}ll@{}}
-    0 & \text{if}\ \sum_{j=1}^n w_j x_j \leq threshold \\
-    1 & \text{if} \sum_{j=1}^n w_j x_j > threshold \\
-  \end{array} \right)
-\end{equation}
-$$
 
-REMOVE THIS LATER (just for testing)
+{% include figure.html url="/assets/images/neural_nets/perc_function.png" caption="" width="50%" %}
 
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
 
 <a id="example"></a>
 ### An example
@@ -297,21 +273,9 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
-$$ b=-threshold \\ $$
 
-$$ \begin{array}{@{}ll@{}}
-0 & \text{if}\ w \cdotp x +b \leq 0 \\
-1 & \text{if}\ w \cdotp x +b > 0
-\end{array} $$
+{% include figure.html url="/assets/images/neural_nets/bias_input.png" caption="" width="50%" %}
 
-
-
-output= \left(
-\begin{array}{@{}ll@{}}
-0 & \text{if}\ w \cdotp x +b \leq 0 \\
-1 & \text{if}\ w \cdotp x +b > 0
-\end{array}
-\right)
 
 <a id="logic"></a>
 #### Background: Logic Gates
