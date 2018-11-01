@@ -281,16 +281,14 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
-$${\small
-\begin{equation}
-  b=-threshold\\
-  output=\left\{
-  \begin{array}{@{}ll@{}}
-    0 & \text{if}\ w \cdotp x +b \leq 0 \\
-    1 & \text{if}\ w \cdotp x +b > 0 \\
-  \end{array}\right.\\
-\end{equation}
-}$$
+$$\
+	b=-threshold\\
+	output=\left\{
+	\begin{array}{@{}ll@{}}
+	0 & \text{if}\ w \cdotp x +b \leq 0 \\
+	1 & \text{if}\ w \cdotp x +b > 0 \\
+	\end{array}\right.\\
+\ $$
 
 <a id="logic"></a>
 #### Background: Logic Gates
@@ -314,12 +312,6 @@ $$\
     (-2)*0+(-2)*0+3=3\\
     \text{so} \ output=1
 \ $$
-
-\begin{equation}
-	\(-2)*0+(-2)*0+3=3\\
-	\text{so} \ output=1
-\end{equation}
-
 
 The same process would reveal the following results:
 
@@ -616,7 +608,7 @@ y = tf.nn.softmax(tf.matmul(x,W) + b)
 
 Focusing on the input to `softmax` above: `matmul` is multiplying the matrices `x`(mx784) and `W`(784xn) to get a `m`(number of training examples fed) x `n`(number of classes) matrix.
 
-<img src='/assets/images/neural_nets/matrix_multiply.gif' style="float: center; height: 150px">
+{% include figure_link.html url="/assets/images/neural_nets/matrix_multiply.gif" href="https://www.mathsisfun.com/" caption="Each entry is the dot product of corresponding row and column vectors. Image source: mathisfun.com" width="60%" %}
 
 
 ```python
