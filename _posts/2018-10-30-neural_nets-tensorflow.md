@@ -283,12 +283,13 @@ But, it also leads to some convenient notational simplifications regarding the c
 
 $$
 	b=-threshold\\
+$$
+
 	output=\left\{
 	\begin{array}{@{}ll@{}}
 	0 & \text{if}\ w \cdotp x +b \leq 0 \\
 	1 & \text{if}\ w \cdotp x +b > 0 \\
 	\end{array}\right.
-$$
 
 <a id="logic"></a>
 #### Background: Logic Gates
@@ -806,7 +807,7 @@ for i in range(train_steps+1):
     Training Step:2500  Accuracy =  0.9067  Loss = 0.23929422
 
 
-Exactly what gradient descent is doing to improve accuracy is outside the scope of this class. But having used it to optimize our weights, we can now visualize each set to see how the network is 'focusing its attention'.
+Exactly what gradient descent is doing to improve accuracy is outside the scope of this article. But having used it to optimize our weights, we can now visualize each set to see how the network is 'focusing its attention'.
 >When reading the figure below, just remember that more red means more positive, white is near zero, and more blue means more negative.
 
 
