@@ -63,12 +63,6 @@ import tensorflow as tf
 %matplotlib inline
 ```
 
-    /Users/ga-loaner/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
-      return f(*args, **kwds)
-    /Users/ga-loaner/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
-      from ._conv import register_converters as _register_converters
-
-
 <a id="linear-algebra-review"></a>
 ## Quick Linear Algebra Review
 ---
@@ -167,9 +161,9 @@ In other words, our brains must first process an object's 'simple' features (col
 
 
 >This becomes even more apparent when we consider the complexity of the potential problem space, which, in this case, happens to include any potential combination of _mxn_ pixel-values. Put simply, the rules for reading hand-writing are hard to distill.
-
-><center><img src="https://i.imgur.com/dDYphPB.png" style="float: center; height: 250px"></center>
-
+>
+><img src="https://i.imgur.com/dDYphPB.png" style="height: 250px">
+>
 >But, complex, non-linear problems such as character recognition are exactly where the flexibility of **neural networks** start to become the most useful.
 
 <a id="neuron"></a>
