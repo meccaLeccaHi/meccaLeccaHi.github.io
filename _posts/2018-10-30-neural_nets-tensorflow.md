@@ -310,9 +310,9 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 We can further imagine that we provide the model with `[0,0]`, and we see:
 
-\begin{equation}
-    \ (-2)*0+(-2)*0+3 \vec{w} \cdotp \vec{x} +b \
-\end{equation}
+$$\ \vec{w} \cdotp \vec{x} +b \ $$
+
+$$\ (-2)* \vec{w} \cdotp \vec{x} +b \ $$
 
 \begin{equation}
 	\(-2)*0+(-2)*0+3=3\\
@@ -365,7 +365,7 @@ As impressive as this may sound, it actually overlooks the real value neural net
 To make the daunting task of training our (potentially-complicated) network of perceptrons more tractable, we'd really like to be able to make small changes to our weights (and biases) and expect small changes in behavior as a result. That way we could carefully experiment with different values and eventually improve the quality of our predictions. Something like this would be ideal:
 
 
-{% include figure_link.html url="http://neuralnetworksanddeeplearning.com/images/tikz8.png" href="http://neuralnetworksanddeeplearning.com" caption="The ideal context in which to experimentally-manipulate our model weights. Image source: http://neuralnetworksanddeeplearning.com" width="70%" %}
+{% include figure_link.html url="http://neuralnetworksanddeeplearning.com/images/tikz8.png" href="http://neuralnetworksanddeeplearning.com" caption="The ideal context in which to experimentally-manipulate our model weights. Image source: http://neuralnetworksanddeeplearning.com" width="65%" %}
 
 
 But, the current model we have introduced does _not_ exhibit this behavior. If we implemented the current model, and manipulated our weights in order to improve our predictions, we could expect to see changes so severe that it was impossible to make any progress toward our goal of better prediction accuracy.
@@ -374,9 +374,7 @@ So, what do we do?
 It is at this point that we say goodbye to the perceptron, and meet a new type of artificial neuron: the _sigmoid neuron_. Their behavior is largely similar, however, the sigmoid neurons respond less to changes in their weights and biases. 
 This is a result of differences in their output; whereas, the perceptron could only produce binary values (0 or 1), the sigmoid neuron produces continuous values between 0 and 1. This is because the perceptron's rule was:
 
-\begin{equation}
-    \ \vec{w} \cdotp \vec{x} +b \
-\end{equation}
+$$\ \vec{w} \cdotp \vec{x} +b \ $$
 
 Whereas, the sigmoid neuron's rule is:
 
