@@ -2,7 +2,7 @@
 title: "Neural Networks"
 date: 2018-10-30
 layout: post
-mathjax: true
+math: true
 category: blog
 tag:
 - matrix multiplication
