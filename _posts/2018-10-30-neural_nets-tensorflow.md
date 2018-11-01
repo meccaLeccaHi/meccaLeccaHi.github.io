@@ -280,15 +280,16 @@ We should also clarify how we decide what threshold is a good one to use. But be
 The purpose of the bias input is to influence the likelihood of triggering a given perceptron to 'fire', or more specifically, output a one instead of a zero. The greater the bias, the less input is required to trigger a perceptron (and vice-versa).
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
+
 $${\large
-\begin{equation}
+\begin{equation*}
   b=-threshold\\
   output=\left\{
   \begin{array}{@{}ll@{}}
     0 & \text{if}\ w \cdotp x +b \leq 0 \\
     1 & \text{if}\ w \cdotp x +b > 0 \\
   \end{array}\right.\\
-\end{equation}
+\end{equation*}
 }$$
 
 <a id="logic"></a>
