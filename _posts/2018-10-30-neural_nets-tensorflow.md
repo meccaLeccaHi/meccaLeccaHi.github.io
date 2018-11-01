@@ -305,17 +305,17 @@ We've seen how a perceptron can be employed to integrate the influence of many i
  Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
 
 
-{% include figure.html url="/assets/images/neural_nets/perc_example.png" caption="" width="60%" %}
+{% include figure.html url="/assets/images/neural_nets/perc_example.png" caption="" width="40%" %}
 
 
 We can further imagine that we provide the model with `[0,0]`, and we see:
 
 \begin{equation}
-    \ \vec{w} \cdotp \vec{x} +b \
+    \ (-2) \vec{w} \cdotp \vec{x} +b \
 \end{equation}
 
 \begin{equation}
-	(-2)*0+(-2)*0+3=3\\
+	\(-2)*0+(-2)*0+3=3\\
 	\text{so} \ output=1
 \end{equation}
 
