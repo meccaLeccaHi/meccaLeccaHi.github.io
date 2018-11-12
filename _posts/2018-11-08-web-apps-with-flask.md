@@ -6,6 +6,7 @@ math: false
 category: blog
 tag:
 - Virtual environments
+- Environmental variables
 - Flask
 - Googlemaps
 - SQL databases
@@ -42,7 +43,7 @@ $ source venv/bin/activate
 (venv)$ flask run
 ```
 
-This project served as a nice opportunity to get more familiar with Flask, with the intent of eventually building an app of greater utility down the road (perhaps integrating [Plotly](https://plot.ly/products/dash/)). For now let's learning about the essential components involved with Flask. But first, a brief primer on virtual enviroments and environmental variables.
+This project served as a nice opportunity to get more familiar with Flask, with the intent of eventually building an app of greater utility down the road (perhaps integrating [Plotly](https://plot.ly/products/dash/)). For now let's learning about the essential components involved with Flask. But first, a brief primer on virtual environments and environmental variables.
 
 ## Setting up the environment
 
@@ -86,12 +87,36 @@ The beauty of it is that it allows someone else to immediately adopt the same en
 >`$ pip install -r requirements.txt`
 
 
-## Setting environment vars
-		- FLASK_APP
-		- GOOGLE_KEY
+## Setting environmental variables
+'Environmental variables' are one way for a particular environment to keep track of certain settings, and to pass thos settings between different processes within the same environment. They are usually employed to keep track of ephemeral data, such as location of the current working directory.
+
+By convention, environmental variables are typically defined using all capital letters, which helps users distinguish environmental variables from other variable types.
+
+As with most variables, variable assignment consists of relating a key to a value, in most instances a string, using the following format:
+
+`KEY="value with spaces"`
+
+For example:export TEST_VAR
+```
+$ BASH=bin/bash
+$ echo $BASH
+bin/bash
+```
+
+#### Creating environmental variables
+The variable `BASH` now exists within this current environment, but will be destroyed as soon as this instance of the shell interpreter is closed. To make these variables persist, we use `export`, like so:
+`export BASH`
+Our program will use two environmental variables. `FLASK_APP` and `GOOGLE_KEY`.
+- `FLASK_APP` tells Flask how to import our application:
+`(venv) $ export FLASK_APP=microblog.py`
+- `GOOGLE_KEY` provides the necessary API key for [googlemaps](https://github.com/googlemaps/google-maps-services-python)
+`(venv)$ export GOOGLE_KEY='API_KEY_HERE'`
+
+Finally, we can include the creation of these variables during login, if desired, by including the `export` commands in at the bottom of our `~/.bashrc` file.
 
 
 ## Templates
+
 
 ## Forms
 
