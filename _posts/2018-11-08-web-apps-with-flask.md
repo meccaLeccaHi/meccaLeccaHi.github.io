@@ -92,8 +92,7 @@ The beauty of it is that it allows someone else to immediately adopt the same en
 
 By convention, environmental variables are typically defined using all capital letters, which helps users distinguish environmental variables from other variable types.
 
-As with most variables, variable assignment consists of relating a key to a value, in most instances a string, using the following format:
-
+As with most variables, variable assignment consists of relating a key to a value, in most instances a string, using the following format:  
 `KEY="value with spaces"`
 
 For example:export TEST_VAR
@@ -104,12 +103,12 @@ bin/bash
 ```
 
 #### Creating environmental variables
-The variable `BASH` now exists within this current environment, but will be destroyed as soon as this instance of the shell interpreter is closed. To make these variables persist, we use `export`, like so:
+The variable `BASH` now exists within this current environment, but will be destroyed as soon as this instance of the shell interpreter is closed. To make these variables persist, we use `export`, like so:  
 `export BASH`
 Our program will use two environmental variables. `FLASK_APP` and `GOOGLE_KEY`.
-- `FLASK_APP` tells Flask how to import our application:
+- `FLASK_APP` tells Flask how to import our application:  
 `(venv) $ export FLASK_APP=microblog.py`
-- `GOOGLE_KEY` provides the necessary API key for [googlemaps](https://github.com/googlemaps/google-maps-services-python)
+- `GOOGLE_KEY` provides the necessary API key for [googlemaps](https://github.com/googlemaps/google-maps-services-python)  
 `(venv)$ export GOOGLE_KEY='API_KEY_HERE'`
 
 Finally, we can include the creation of these variables during login, if desired, by including the `export` commands in at the bottom of our `~/.bashrc` file.
