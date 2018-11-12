@@ -13,7 +13,7 @@ author: adam
 description: Post on using Flask (Postgres, Heroku, etc.) to make a super simple web app
 ---
 
-# <img src="./app/static/images/yeti.gif" alt="Yeti from SkiFree on Windows 95" width="10%" height="auto">Snowblog!
+# <img src="https://github.com/meccaLeccaHi/snowblog/blob/master/app/static/images/yeti.gif" alt="Yeti from SkiFree on Windows 95" width="10%" height="auto">Snowblog!
 > If you've ever found yourself wondering what a snowblog is, why on earth someone would want one, or how to get started with Flask, this post may be for *you*!
 
 This is a simple app that allows Jerry to keep track of his experiences at different ski resorts, and find new ones based on his location input! This is a beginner-friendly example of a simple [Flask](http://flask.pocoo.org/) application, that uses [Bootstrap](http://getbootstrap.com) as the CSS framework and [SQLite](https://www.sqlite.org/) as the database. It's designed to help demonstrate the use of Flask, within the context of an introductory Python course. As such, the code in this repo is deliberately simplified and heavily-commented for clarity.
