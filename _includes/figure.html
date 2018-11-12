@@ -1,4 +1,6 @@
 <figure>
   <img src="{{ include.url }}" alt="{{ include.caption }}" class="center-image" style="width:{{ include.width }};"/>
+  {% if include.caption %}
   <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
 </figure>
