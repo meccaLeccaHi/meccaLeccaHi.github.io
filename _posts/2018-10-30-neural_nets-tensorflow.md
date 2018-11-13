@@ -269,7 +269,7 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
 
-{% include figure.html url="/assets/images/neural_nets/bias_input.png" caption="" width="35%" %}
+{% include figure.html url="/assets/images/neural_nets/bias_input.png" width="35%" %}
 
 
 <a id="logic"></a>
