@@ -4,6 +4,7 @@ date: 2018-11-08
 layout: post
 math: false
 category: blog
+comments: true
 tag:
 - Virtual environments
 - Environmental variables

@@ -4,6 +4,7 @@ date: 2018-10-30
 layout: post
 math: true
 category: blog
+comments: true
 tag:
 - matrix multiplication
 - perceptron
