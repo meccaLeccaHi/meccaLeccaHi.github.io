@@ -119,7 +119,7 @@ Templates, as employed by Flask, are loosely analagous to a Python function, in 
 This allows us to separate the 'back-end' data generation elements that determine the page's functionality, from the 'front-end' layout and presentation elements that determine the page's appearance.
 In Flask, templates are stored as separate files inside a */templates* folder inside the application package. An example is shown in `index.html` below.  
 
-<figcaption>index.html</figcaption>
+<figcaption>index.html</figcaption>  
 ```
 <html>
 	<head>
@@ -133,7 +133,7 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 
 This is a super simple HTML page that defines the title and a heading. But, notice the place holder for user's name in the heading? That's the adaptive component defined by whatever input is provided to the template. So when I the following:
 `render_template('index.html', user='Jerry')`
-... an HTML page is *rendered* like so:  
+ an HTML page is *rendered* like so:  
 {% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="40%" %}
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
 
