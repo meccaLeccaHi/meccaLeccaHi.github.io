@@ -177,7 +177,7 @@ Neural networks were initially proposed as a way of understanding how the brain 
 
 In the example shown above, the perceptron has three binary inputs, _x<sub>1</sub>_, _x<sub>2</sub>_, and _x<sub>3</sub>_, and produces a single binary output. When the perceptron was proposed in the 1950's by Frank Rosenblatt, he included a relatively simple rule for computing the output. Weights (_w<sub>1</sub>_ to _w<sub>n</sub>_) are assigned to each input to represent their relative importance. 
 
-{% include figure.html url="/assets/images/neural_nets/perceptron.png" caption="Basic representation of an artificial neuron (perceptron)." width="75%" %}
+{% include figure.html url="/assets/images/neural_nets/perceptron.png" caption="Basic representation of an artificial neuron (perceptron)." width="80%" %}
 
 Thus, the neuron's output is determined by the weighted sum:
 
@@ -285,7 +285,7 @@ We've seen how a perceptron can be employed to integrate the influence of many i
  Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
 
 
-{% include figure.html url="/assets/images/neural_nets/perc_example.png" caption="" width="40%" %}
+{% include figure.html url="/assets/images/neural_nets/perc_example.png" width="40%" %}
 
 
 We can further imagine that we provide the model with `[0,0]`, and we see:
