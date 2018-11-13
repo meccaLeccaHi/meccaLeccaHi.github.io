@@ -134,8 +134,34 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 This is a super simple HTML page that defines the title and a heading. But, notice the place holder for user's name in the heading? That's the adaptive component defined by whatever input is provided to the template. So when I the following:
 `render_template('index.html', user='Jerry')`
  an HTML page is *rendered* like so:  
-{% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="40%" %}
+{% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="45%" %}
+
+#### Template inheritance
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
+For example, if we define a base template and name it `base.html`, we could include a very simple navigation bar on every page that allows us to quickly navigate our entire site. So we can modify `index.html` to create `base.html` like so:
+<figcaption>base.html</figcaption>  
+```
+<html>
+	<head>
+		<title>Welcome to Snowblog</title>
+	</head>
+	<body>
+		<div>Microblog: <a href="/index">Home</a></div>
+		<hr>
+		{% block content %}{% endblock %}
+	</body>
+</html>
+```
+Now, `base.html` can save me from repeatedly adding (and maintaining) a navigation bar for each page of my website. Each page will inherit the same nav bar, while the `block` control statement above still allows me to insert the unique components of each page. For example, we can now simply set `index.html` to inherit the nav bar from `base.html` like so:  
+<figcaption>`index.html` with inheritance from base template.</figcaption>  
+```
+{% extends "base.html" %}
+{% block content %}
+	<h1>{{ user }}'s snowblog</h1>
+{% endblock %}
+```
+{% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="45%" %}
+From here on, whenever I need to create a new page for my website, I can simply derive them using `base.html` as a template, with the added bonus of having a more consistent, well-behaved application.
 
 ## Forms
 
