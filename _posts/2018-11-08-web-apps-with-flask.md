@@ -118,6 +118,8 @@ One last thing to mention is that we can, if we desire, include the creation of 
 Templates, as employed by Flask, are loosely analagous to a Python function, in that they are reusable sets of operations that accept pre-defined inputs and transform those inputs to produce a pre-defined output. In this case the inputs are the data required by different components of a webpage, and the output is the HTML webpage.  
 This allows us to separate the 'back-end' data generation elements that determine the page's functionality, from the 'front-end' layout and presentation elements that determine the page's appearance.
 In Flask, templates are stored as separate files inside a */templates* folder inside the application package. An example is shown in `index.html` below.  
+
+<figcaption>index.html</figcaption>
 ```
 <html>
 	<head>
@@ -128,7 +130,6 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 	</body>
 </html>
 ```
-<figcaption>index.html</figcaption>
 
 This is a super simple HTML page that defines the title and a heading. But, notice the place holder for user's name in the heading? That's the adaptive component defined by whatever input is provided to the template. So when I the following:
 `render_template('index.html', user='Jerry')`
