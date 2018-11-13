@@ -103,7 +103,7 @@ bin/bash
 ```
 
 #### Creating environmental variables
-The variable `BASH` now exists within this current environment, but will be destroyed as soon as this instance of the shell interpreter is closed. To make these variables persist, we use `export`, like so:  
+The variable `BASH` now exists within this current  environment, but will be destroyed as soon as this instance of the shell interpreter is closed. To make these variables persist, we use `export`, like so:  
 `export BASH`
 Our program will use two environmental variables. `FLASK_APP` and `GOOGLE_KEY`.
 - `FLASK_APP` tells Flask how to import our application:  
@@ -111,11 +111,27 @@ Our program will use two environmental variables. `FLASK_APP` and `GOOGLE_KEY`.
 - `GOOGLE_KEY` provides the necessary API key for [googlemaps](https://github.com/googlemaps/google-maps-services-python)  
 `(venv)$ export GOOGLE_KEY='API_KEY_HERE'`
 
-Finally, we can include the creation of these variables during login, if desired, by including the `export` commands in at the bottom of our `~/.bashrc` file.
+One last thing to mention is that we can, if we desire, include the creation of these variables during login by adding the `export` commands to our `~/.bashrc` file (at the bottom is fine).
 
 
 ## Templates
-
+Templates, as employed by Flask, are loosely analagous to a Python function, in that they are reusable sets of operations that accept pre-defined inputs and transform those inputs to produce a pre-defined output. In this case the inputs are the data required by different components of a webpage, and the output is the HTML webpage.  
+This allows us to separate the 'back-end' data generation elements that determine the page's functionality, from the 'front-end' layout and presentation elements that determine the page's appearance.
+In Flask, templates are stored as separate files inside a */templates* folder inside the application package. An example is shown in `index.html` below.  
+```
+<html>
+	<head>
+		<title>Welcome to Snowblog</title>
+	</head>
+	<body>
+		<h1>{{ user }}'s snowblog</h1>
+	</body>
+</html>
+```
+This is a super simple HTML page that defines the title and a heading. But, notice the place holder for user's name in the heading? That's the adaptive component defined by whatever input is provided to the template. So when I the following:
+`render_template('index.html', user='Jerry')`
+... an HTML page is *rendered* like so:  
+{% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="40%" %}
 
 ## Forms
 
