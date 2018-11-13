@@ -127,7 +127,7 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 		<title>Welcome to Snowblog</title>
 	</head>
 	<body>
-		<h1>{{ user }}'s snowblog</h1>
+		<h1>\{{ user }}'s snowblog</h1>
 	</body>
 </html>
 ```
