@@ -15,9 +15,11 @@ description: A quick primer on Bayes' Theorem.
 
 # Applying Bayes' Theorem to Iris Classification
 
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
+
 [**Background Materials**](https://www.youtube.com/watch?v=eDMGDhyDxuY)- an excellent discussion of Bayesian/frequentist approaches
 
-Can Bayes' theorem help us to solve a classification problem, namely predicting the species of an iris?
+Can [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem) help us to solve a classification problem, namely predicting the species of an iris?
 
 ## Preparing the Data
 
