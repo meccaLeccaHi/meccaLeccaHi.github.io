@@ -414,8 +414,8 @@ $$P(species \ | \ 7,3,5,2)$$
 We could calculate the conditional probability for each of the three species, and then predict the species with the highest probability:
 
 $$
-	P(setosa \ | \ 7,3,5,2)
-	P(versicolor \ | \ 7,3,5,2)
+	P(setosa \ | \ 7,3,5,2)1 \\
+	P(versicolor \ | \ 7,3,5,2)1 \\
 	P(virginica \ | \ 7,3,5,2)
 $$
 
