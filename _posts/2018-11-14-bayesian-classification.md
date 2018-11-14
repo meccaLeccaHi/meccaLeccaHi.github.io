@@ -454,17 +454,16 @@ We predict that the iris is a versicolor, since that species had the highest con
 
 Let's make some hypothetical adjustments to the data to demonstrate how Bayes' theorem makes intuitive sense:
 
-Pretend that more of the existing versicolors had measurements of 7,3,5,2:
-$P(7,3,5,2 \ | \ versicolor)$
-- As a result, $$P(7,3,5,2 \ | \ versicolor)$$ would increase, thus increasing the numerator.
-- It would make sense that, given an iris with measurements of 7,3,5,2, the probability of it being a versicolor would also increase.
+Pretend that more of the existing versicolors had measurements of 7,3,5,2, thus causing $P(7,3,5,2 \ | \ versicolor)$ to increase:
+- This would result in increasing the numerator in Bayes' Theorem.
+- So, given an iris with measurements of 7,3,5,2, the probability of it being a versicolor would be higher.
 
 Pretend that most of the existing irises were versicolor:
 
-- $P(versicolor)$ would increase, thus increasing the numerator.
-- It would make sense that the probability of any iris being a versicolor (regardless of measurements) would also increase.
+- $P(versicolor)$ would increase, thus increasing the numerator in Bayes' Theorem again.
+- So, the probability of any iris being a versicolor (regardless of measurements) would also increase.
 
 Pretend that 17 of the setosas had measurements of 7,3,5,2:
 
 - $P(7,3,5,2)$ would double, thus doubling the denominator.
-- It would make sense that given an iris with measurements of 7,3,5,2, the probability of it being a versicolor would be cut in half.
+- As a result, the probability of the same iris (with measurements of 7,3,5,2) being a versicolor would be cut in half.
