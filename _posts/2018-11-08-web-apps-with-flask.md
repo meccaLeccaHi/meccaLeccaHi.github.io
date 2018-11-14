@@ -127,7 +127,7 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 		<title>Welcome to Snowblog</title>
 	</head>
 	<body>
-		<h1>\{{ "{{ user " }}}}'s snowblog</h1>
+		<h1>{{ "{{ user " }}}}'s snowblog</h1>
 	</body>
 </html>
 ```
@@ -160,7 +160,7 @@ Now, `base.html` can save me from repeatedly adding (and maintaining) a navigati
 {{ "{% extends 'base.html' " }}%}
 {{ "{% block content " }}%}
 	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
-{% endblock %}
+{{ "{% endblock " }}%}
 ```
 {% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="45%" %}
 From here on, whenever I need to create a new page for my website, I can simply derive them using `base.html` as a template, with the added bonus of having a more consistent, well-behaved application.
