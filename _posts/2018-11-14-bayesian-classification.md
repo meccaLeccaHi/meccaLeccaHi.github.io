@@ -110,7 +110,7 @@ iris.head()
   </tbody>
 </table>
 </div>
-
+<br>
 
 
 
@@ -192,7 +192,7 @@ iris.head()
   </tbody>
 </table>
 </div>
-
+<br>
 
 
 ## Deciding How to Make a Prediction
@@ -373,7 +373,7 @@ iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (
   </tbody>
 </table>
 </div>
-
+<br>
 
 
 
