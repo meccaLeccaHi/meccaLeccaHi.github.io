@@ -149,7 +149,7 @@ For example, if we define a base template and name it `base.html`, we could incl
 	<body>
 		<div>Microblog: <a href="/index">Home</a></div>
 		<hr>
-		{{ '{%' }} block content {{ '%}' }}{{ '{%' }} endblock {{ '%}' }}
+		{{ "{% block content " }}%}{{ "{% endblock " }}%}
 	</body>
 </html>
 ```
@@ -157,8 +157,8 @@ The `block` content above is how we reference other templates in jinja templates
 Now, `base.html` can save me from repeatedly adding (and maintaining) a navigation bar for each page of my website. Each page will inherit the same nav bar, while the `block` control statement above still allows me to insert the unique components of each page. For example, we can now simply set `index.html` to inherit the nav bar from `base.html` like so:  
 <figcaption>`index.html` with inheritance from base template.</figcaption>  
 ```
-{% extends "base.html" %}
-{% block content %}
+{{ "{% extends 'base.html' " }}%}
+{{ "{% block content " }}%}
 	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
 {% endblock %}
 ```
