@@ -455,7 +455,7 @@ We predict that the iris is a versicolor, since that species had the highest con
 Let's make some hypothetical adjustments to the data to demonstrate how Bayes' theorem makes intuitive sense:
 
 Pretend that more of the existing versicolors had measurements of 7,3,5,2:
-
+$P(7,3,5,2 \ | \ versicolor)$
 - As a result, $$P(7,3,5,2 \ | \ versicolor)$$ would increase, thus increasing the numerator.
 - It would make sense that, given an iris with measurements of 7,3,5,2, the probability of it being a versicolor would also increase.
 
