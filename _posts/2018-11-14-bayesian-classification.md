@@ -110,7 +110,6 @@ iris.head()
   </tbody>
 </table>
 </div>
-<br>
 
 
 
@@ -192,7 +191,6 @@ iris.head()
   </tbody>
 </table>
 </div>
-<br>
 
 
 ## Deciding How to Make a Prediction
@@ -373,7 +371,6 @@ iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (
   </tbody>
 </table>
 </div>
-<br>
 
 
 
@@ -459,7 +456,7 @@ Let's make some hypothetical adjustments to the data to demonstrate how Bayes' t
 
 Pretend that more of the existing versicolors had measurements of 7,3,5,2:
 
-- $$\begin{equation*}P(7,3,5,2 \ | \ versicolor)\end{equation*}$$ would increase, thus increasing the numerator.
+- $P(7,3,5,2 | versicolor)$ would increase, thus increasing the numerator.
 - It would make sense that, given an iris with measurements of 7,3,5,2, the probability of it being a versicolor would also increase.
 
 Pretend that most of the existing irises were versicolor:
