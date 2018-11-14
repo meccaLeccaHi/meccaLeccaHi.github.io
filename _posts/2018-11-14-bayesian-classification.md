@@ -35,16 +35,13 @@ import pandas as pd
 import numpy as np
 ```
 
-
+Read the iris data into a DataFrame.
 ```python
-# Read the iris data into a DataFrame.
 url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 col_names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
 iris = pd.read_csv(url, header=None, names=col_names)
 iris.head()
 ```
-
-
 
 
 <div>
@@ -118,9 +115,8 @@ iris.head()
 </div>
 
 
-
+Apply the ceiling function to the numeric columns.
 ```python
-# Apply the ceiling function to the numeric columns.
 iris.loc[:, 'sepal_length':'petal_width'] = iris.loc[:, 'sepal_length':'petal_width'].apply(np.ceil)
 iris.head()
 ```
