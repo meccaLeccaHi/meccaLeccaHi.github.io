@@ -140,7 +140,7 @@ This is a super simple HTML page that defines the title and a heading. But, noti
 #### Template inheritance
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
 For example, if we define a base template and name it `base.html`, we could include a very simple navigation bar on every page that allows us to quickly navigate our entire site. So we can modify `index.html` to create `base.html` like so:
-<figcaption>base.html</figcaption>  
+<figcaption>base.html</figcaption><br>  
 ```
 <html>
 	<head>
