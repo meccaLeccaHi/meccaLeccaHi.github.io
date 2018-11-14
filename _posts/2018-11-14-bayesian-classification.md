@@ -199,12 +199,10 @@ iris.head()
 
 Let's say  I have an out-of-sample iris with the following measurements: 7, 3, 5, 2. How might I predict the species?
 
-
+Show all observations with features 7, 3, 5, 2.
 ```python
-# Show all observations with features 7, 3, 5, 2.
 iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (iris.petal_width==2)]
 ```
-
 
 
 
@@ -375,9 +373,8 @@ iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (
 </div>
 
 
-
+Count the species for these observations.
 ```python
-# Count the species for these observations.
 iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (iris.petal_width==2)].species.value_counts()
 ```
 
@@ -389,13 +386,10 @@ iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (
     Name: species, dtype: int64
 
 
-
-
+Count the species for all observations.
 ```python
-# Count the species for all observations.
 iris.species.value_counts()
 ```
-
 
 
 
