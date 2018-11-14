@@ -96,7 +96,7 @@ By convention, environmental variables are typically defined using all capital l
 As with most variables, variable assignment consists of relating a key to a value, in most instances a string, using the following format:  
 `KEY="value with spaces"`
 
-For example:export TEST_VAR
+For example:
 ```
 $ BASH=bin/bash
 $ echo $BASH

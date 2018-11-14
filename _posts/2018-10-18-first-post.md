@@ -3,6 +3,7 @@ title: "Post Numero Uno"
 date: 2018-10-18
 layout: post
 category: blog
+comments: true
 tag:
 - jekyll
 - github

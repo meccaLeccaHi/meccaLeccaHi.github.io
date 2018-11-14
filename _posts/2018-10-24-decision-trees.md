@@ -4,6 +4,7 @@ date: 2018-10-24
 layout: post
 mathjax: true
 category: blog
+comments: true
 tag:
 - recursive function
 - decision trees
