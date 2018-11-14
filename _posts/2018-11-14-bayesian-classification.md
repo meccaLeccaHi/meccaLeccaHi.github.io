@@ -2,6 +2,7 @@
 title: "Iris Classification with Bayes Theorem"
 date: 2018-11-14
 layout: post
+math: true
 category: blog
 comments: true
 tag:
