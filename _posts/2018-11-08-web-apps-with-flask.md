@@ -10,7 +10,7 @@ tag:
 - Environmental variables
 - Flask
 - Googlemaps
-- SQL databases
+- SQL
 - HTML/CSS
 author: adam
 description: Post on using Flask (Postgres, Heroku, etc.) to make a super simple web app
@@ -160,8 +160,7 @@ Now, `base.html` can save me from repeatedly adding (and maintaining) a navigati
 <figcaption>`index.html` with inheritance from base template.</figcaption>  
 ```
 {{ "{% extends 'base.html' " }}%}
-{{ "{% block content " }}%}
-	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
+{{ "{% block content " }}%}	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
 {{ "{% endblock " }}%}
 ```
 {% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="45%" %}

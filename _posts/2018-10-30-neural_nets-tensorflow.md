@@ -7,6 +7,7 @@ category: blog
 comments: true
 tag:
 - matrix multiplication
+- supervised classification
 - perceptron
 - neural network
 - MNIST database

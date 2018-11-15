@@ -7,6 +7,7 @@ category: blog
 comments: true
 tag:
 - bayesian statistics
+- iris database
 - supervised classification
 author: adam
 description: A quick primer on Bayes' Theorem. 

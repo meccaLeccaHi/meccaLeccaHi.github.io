@@ -8,7 +8,8 @@ comments: true
 tag:
 - recursive function
 - decision trees
-- Iris database
+- supervised classification
+- iris database
 - GraphViz
 author: adam
 description: A Juptyter notebook on Decision Trees
