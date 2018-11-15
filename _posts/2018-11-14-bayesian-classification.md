@@ -17,14 +17,14 @@ description: A quick primer on Bayes' Theorem.
 
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
 
-> [Background Materials](https://www.youtube.com/watch?v=eDMGDhyDxuY)- an excellent discussion of Bayesian/frequentist approaches
->
->From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
->
->Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
->
->$$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
->
+> See this excellent [discussion](https://www.youtube.com/watch?v=eDMGDhyDxuY) of Bayesian/frequentist approaches for greater background, if desired/required.
+
+From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
+
+Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
+
+$$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
+
 > ### Example: Medical Data
 Imagine a routine medical test that tests for a certain medical condition; influenza, for example. Pretend this test is 99% sensitive and 99% specific. In other words, the test will be positive produce 99% of the time for people with the disease and 99% true negative results for people without.
 Now suppose that 0.5% of people have the disease. What is the probability that a randomly selected individual with a positive test has the disease?
