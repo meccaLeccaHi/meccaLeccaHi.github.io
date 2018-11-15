@@ -23,6 +23,8 @@ description: A quick primer on Bayes' Theorem.
 >
 >Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
 
+$$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
+
 Can Bayes' theorem help us to solve a classification problem, namely predicting the species of an iris?
 
 ## Preparing the Data
