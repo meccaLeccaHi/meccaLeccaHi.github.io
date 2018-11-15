@@ -5,7 +5,7 @@ headerImage: false
 ---
 ![Profile Image](/assets/images/adam4.jpg)
 
-Hi there! I'm a former neuroscientist who has recently transplanted to San Francisco to be part of the growing data science industry. Most recently, I've taken a position as Lead Instructor for a Data Science course at General Assembly. One of my main goals with this page is to capture the questions that have come up during multiple iterations of the course, while also refining the answers that I've generated in response to them. Hopefully this can serve as a resource for future students, or anyone who happens to stumble across my page.
+Hi there! I'm a neuroscientist by training who has recently transplanted to San Francisco to be part of the growing data science industry. Most recently, I've taken a position as Lead Instructor for a Data Science course at General Assembly. One of my main goals with this page is to capture the questions that have come up during multiple iterations of the course, while also refining the answers that I've generated in response to them. Hopefully this can serve as a resource for future students, or anyone who happens to stumble across my page.
 
 I get excited about data visualizations and have been known to reference [Edward Tufte](https://www.edwardtufte.com/tufte/) more often than is strictly necessary. I'd like to think this is reflected in my [GitHub](http://github.com/meccaLeccaHi) profile, so please feel free to take a look around.
 
