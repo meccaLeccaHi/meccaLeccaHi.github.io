@@ -19,7 +19,7 @@ description: Post on using Flask (Postgres, Heroku, etc.) to make a super simple
 # <img src="https://raw.githubusercontent.com/meccaLeccaHi/snowblog/master/app/static/images/yeti.gif" alt="Yeti from SkiFree on Windows 95" width="7%" height="auto">Snowblog!
 > If you've ever found yourself wondering what a snowblog is, why on earth some one would want one, or maybe just how to get started with Flask, this post may be for *you*!
 
-When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up the slopes! This is a simple app that allows Jerry to keep track of his experiences at different ski resorts, and find new ones based on his location input! This is a beginner-friendly example of a simple [Flask](http://flask.pocoo.org/) application, that uses [Bootstrap](http://getbootstrap.com) as the CSS framework and [SQLite](https://www.sqlite.org/) as the database. It's designed to help demonstrate the use of Flask, within the context of an introductory Python course. As such, the code in this repo is deliberately simplified and heavily-commented for clarity.
+When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up the slopes! This is a simple app that allows Jerry to keep track of his experiences at different ski resorts, and find new ones based on his location! This is a beginner-friendly example of a simple [Flask](http://flask.pocoo.org/) application, that uses [Bootstrap](http://getbootstrap.com) as the CSS framework and [SQLite](https://www.sqlite.org/) as the database. It's designed to help demonstrate the use of Flask, within the context of an introductory Python course. As such, the code in this repo is deliberately simplified and heavily-commented for clarity.
 
 ### View online at:
 [https://snowblogg.herokuapp.com/index](https://snowblogg.herokuapp.com/index)
@@ -160,14 +160,36 @@ Now, `base.html` can save me from repeatedly adding (and maintaining) a navigati
 <figcaption>`index.html` with inheritance from base template.</figcaption>  
 ```
 {{ "{% extends 'base.html' " }}%}
-{{ "{% block content " }}%}	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
+{{ "{% block content " }}%}
+	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
 {{ "{% endblock " }}%}
 ```
 {% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="45%" %}
 From here on, whenever I need to create a new page for my website, I can simply derive them using `base.html` as a template, with the added bonus of having a more consistent, well-behaved application.
 
 ## Forms
+So far, we've created a super simple template to provide the home page of our awesome new application. To start making this web site functional, we need to include mechanisms for users to input information using a variety of 'web forms'. *Web forms* are pages that users request using their browser. Upon these requests, the server uses HTML and other markup code to render the form in the client's browser. These forms then serve as the re-usable components that can be adapted to the particular needs of each application, without having to worry about the presentation.
+Fortunately, Flask has an extension to handle web forms: [Flask-WTF](http://packages.python.org/Flask-WTF). We'll see more Flask extensions later on, since extensions are a central element in the Flask ecosystem.
+> Like other Python packages, we can install Flask-WTF with `pip`.
+```
+(venv) $ pip install flask-wtf
+```
+### Locate Ski Resorts Form
 
+For our first form, let's create the form we will use to locate ski resorts closest to the user based their location, which will have to be provided as text input.  Flask-WTF uses Python classes to represent each type of web form. So, in order to create a new form we define it as a new class whose variables represent the fields of the form. We can group our forms together in a new module *app/form.py* (see below).  
+<figcaption>`app/form.py` now with 'Locate' form.</figcaption>  
+```
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+
+# Define class for location form
+class LocateForm(FlaskForm):
+	# Create address field
+	address = StringField('Enter Address Below', validators=[DataRequired()])
+	# Create submission button
+	submit = SubmitField('Submit')
+```
 ## Databases
 
 
