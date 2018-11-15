@@ -17,7 +17,7 @@ description: A quick primer on Bayes' Theorem.
 
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
 
-> [<span style="color:blue,font-weight: bold">Background Materials</span>](https://www.youtube.com/watch?v=eDMGDhyDxuY)- an excellent discussion of Bayesian/frequentist approaches
+> [Background Materials](https://www.youtube.com/watch?v=eDMGDhyDxuY)- an excellent discussion of Bayesian/frequentist approaches
 >
 >From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
 >
