@@ -22,9 +22,21 @@ description: A quick primer on Bayes' Theorem.
 >From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
 >
 >Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
+>
+>$$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
+>
+> ### Example: Medical Data
+Imagine a routine medical test that tests for a certain medical condition; influenza, for example. Pretend this test is 99% sensitive and 99% specific. In other words, the test will be positive produce 99% of the time for people with the disease and 99% true negative results for people without.
+Now suppose that 0.5% of people have the disease. What is the probability that a randomly selected individual with a positive test has the disease?
 
-$$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
+$$P(+_{Flu} \ | \ +_{Test}) = \frac {P(+_{Test} \ | \ +_{Flu}) P(+_{Flu})} {P(+_{Test})}$$
 
+$$ = \frac {P(+_{Test} \ | \ +_{Flu}) P(+_{Flu})} {P(+_{Test} \ | \ +_{Flu})P(+_{Flu})+P(+_{Test} \ | \ -_{Flu})P(-_{Flu})}$$
+
+
+$$ = \frac {0.99 \times 0.005} {0.99 \times 0.005 + 0.01 \times 0.995}$$
+
+$$ \approx 33.2\%$$
 Can Bayes' theorem help us to solve a classification problem, namely predicting the species of an iris?
 
 ## Preparing the Data
