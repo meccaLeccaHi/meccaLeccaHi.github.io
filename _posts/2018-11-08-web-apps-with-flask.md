@@ -177,7 +177,7 @@ Fortunately, Flask has an extension to handle web forms: [Flask-WTF](http://pack
 ### Locate Ski Resorts Form
 
 For our first form, let's create the form we will use to locate ski resorts closest to the user based their location, which will have to be provided as text input.  Flask-WTF uses Python classes to represent each type of web form. So, in order to create a new form we define it as a new class whose variables represent the fields of the form. We can group our forms together in a new module *app/form.py* (see below).  
-<figcaption>`app/form.py` now with 'Locate' form.</figcaption>  
+<figcaption>`app/form.py` with LocateForm class.</figcaption>  
 ```
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -190,6 +190,30 @@ class LocateForm(FlaskForm):
 	# Create submission button
 	submit = SubmitField('Submit')
 ```
+As you can see, we are importing a class from the WTForms package for each field type in the form. In this example, we create class variables for the string field and submit button within the `LocateForm` class. We also provide each field with a brief description, which can serve as a label later on.
+The `validators` you noticed in the string field just assigns certain validation routines to the submission of data through these fields. In this case, `DataRequired` will just check and make sure the text field is not empty upon submission. But more complicated validators are also available.
+
+### Form Templates
+<figcaption>`app/templates/locate.html` Location form template.</figcaption>  
+```
+{{ "{% extends 'base.html' " }}%}
+
+{{ "{% block content " }}%}
+	<h1>Locate ski resorts</h1>
+	<form action="" method="post" novalidate>
+		{{ "{{ form.hidden_tag() " }}}}
+		<p>
+			<b>{{ "{{ form.address.label " }}}}</b><br>
+			{{ "{{ form.address(size=32) " }}}}<br>
+			{{ "{% for error in form.address.errors " }}%}
+			<span style="color: red;">{{ error }}</span>
+			{{ "{% endfor " }}%}
+		</p>
+		<p>{{ "{{ form.submit() " }}}}</p>
+	</form>
+{{ "{% endblock " }}%}
+```
+
 ## Databases
 
 
