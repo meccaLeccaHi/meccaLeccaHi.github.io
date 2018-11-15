@@ -28,15 +28,15 @@ description: A quick primer on Bayes' Theorem.
 > ### Example: Medical Data
 Imagine a routine medical test that tests for a certain medical condition; influenza, for example. Pretend this test is 99% sensitive and 99% specific. In other words, the test will be positive produce 99% of the time for people with the disease and 99% true negative results for people without.
 Now suppose that 0.5% of people have the disease. What is the probability that a randomly selected individual with a positive test has the disease?
+>
+> $$P(+_{Flu} \ | \ +_{Test}) = \frac {P(+_{Test} \ | \ +_{Flu}) P(+_{Flu})} {P(+_{Test})}$$
+>
+> $$ = \frac {P(+_{Test} \ | \ +_{Flu}) P(+_{Flu})} {P(+_{Test} \ | \ +_{Flu})P(+_{Flu})+P(+_{Test} \ | \ -_{Flu})P(-_{Flu})}$$
+>
+> $$ = \frac {0.99 \times 0.005} {0.99 \times 0.005 + 0.01 \times 0.995}$$
+>
+> $$ \approx 33.2\%$$
 
-$$P(+_{Flu} \ | \ +_{Test}) = \frac {P(+_{Test} \ | \ +_{Flu}) P(+_{Flu})} {P(+_{Test})}$$
-
-$$ = \frac {P(+_{Test} \ | \ +_{Flu}) P(+_{Flu})} {P(+_{Test} \ | \ +_{Flu})P(+_{Flu})+P(+_{Test} \ | \ -_{Flu})P(-_{Flu})}$$
-
-
-$$ = \frac {0.99 \times 0.005} {0.99 \times 0.005 + 0.01 \times 0.995}$$
-
-$$ \approx 33.2\%$$
 Can Bayes' theorem help us to solve a classification problem, namely predicting the species of an iris?
 
 ## Preparing the Data
