@@ -198,7 +198,7 @@ Now, `base.html` can save me from repeatedly adding (and maintaining) a navigati
 ```
 {{ "{% extends 'base.html' " }}%}
 {{ "{% block content " }}%}
-	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
+	<h1>{{ "{{ user " }}}}'s snowblog</h1>
 {{ "{% endblock " }}%}
 ```
 {% include figure.html url="/assets/images/flask/block_example.png" caption="Rendering using template inheritance." width="55%" %}
@@ -339,16 +339,16 @@ from flask import render_template, flash, redirect, url_for
             <a href="/locate">Locate</a>
         </div>
         <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
+        {{ "{% with messages = get_flashed_messages() " }}%}
+        {{ "{% if messages " }}%}
         <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
+            {{ "{% for message in messages " }}%}
+            <li>{{ "{{ message " }}}}</li>
+            {{ "{% endfor " }}%}
         </ul>
-        {% endif %}
-        {% endwith %}
-        {% block content %}{% endblock %}
+        {{ "{% endif " }}%}
+        {{ "{% endwith " }}%}
+        {{ "{% block content " }}%}{{ "{% endblock " }}%}
     </body>
 </html>
 ```
