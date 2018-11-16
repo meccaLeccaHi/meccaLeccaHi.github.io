@@ -223,7 +223,7 @@ We can infer that this template expects a `form` argument upon instantiation. We
 ### Adding Location View
 Now, let's add a new function to our `routes` module that defines the new `/locate` view that we've added to our website.  We do that by adding another function to *app/form.py* (see below). This is where we import and instantiate LocateForm from `forms.py`, while passing it to the template to be rendered.  
 
-<figcaption>`app/routes.py` Adding `/locate` view.</figcaption>  
+<figcaption>*app/routes.py* Adding location view.</figcaption>  
 ```
 from flask import render_template, flash, redirect, url_for
 from app import app
@@ -245,10 +245,9 @@ def locate():
 	return render_template('locate.html', title="Find resorts", form=form)
 ```
 
-**Optionally**, we might want to add the new 'locate' view to our navigation bar:
+**Optionally**, we might want to add the new location view to our navigation bar:
 
-
-<figcaption>*app/templates/base.html* Updating navigation bar<br></figcaption>
+<figcaption>app/templates/base.html - Updating navigation bar<br> </figcaption>
 ```
 <div>
 	Snowblog:
