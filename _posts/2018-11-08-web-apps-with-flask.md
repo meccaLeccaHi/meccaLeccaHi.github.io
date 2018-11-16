@@ -135,7 +135,7 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 This is a super simple HTML page that defines the title and a heading. But, notice the place holder for user's name in the heading? That's the adaptive component defined by whatever input is provided to the template. So when I the following:
 `render_template('index.html', user='Jerry')`
  an HTML page is *rendered* like so:  
-{% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="45%" %}
+{% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="55%" %}
 
 #### Template inheritance
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
@@ -164,7 +164,7 @@ Now, `base.html` can save me from repeatedly adding (and maintaining) a navigati
 	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
 {{ "{% endblock " }}%}
 ```
-{% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="45%" %}
+{% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="55%" %}
 From here on, whenever I need to create a new page for my website, I can simply derive them using `base.html` as a template, with the added bonus of having a more consistent, well-behaved application.
 
 ## Forms
@@ -223,7 +223,7 @@ We can infer that this template expects a `form` argument upon instantiation. We
 ### Adding Location View
 Now, let's add a new function to our `routes` module that defines the new `/locate` view that we've added to our website.  We do that by adding another function to *app/form.py* (see below). This is where we import and instantiate LocateForm from `forms.py`, while passing it to the template to be rendered.  
 
-<figcaption>*app/routes.py* Adding location view.</figcaption>  
+<figcaption><i>app/routes.py</i> - Adding location view.<br>&nbsp;</figcaption>  
 ```
 from flask import render_template, flash, redirect, url_for
 from app import app
@@ -247,7 +247,7 @@ def locate():
 
 **Optionally**, we might want to add the new location view to our navigation bar:
 
-<figcaption><i>app/templates/base.html</i> - Updating navigation bar<br>&nbsp;</figcaption>
+<figcaption><i>app/templates/base.html</i> - Updating navigation bar.<br>&nbsp;</figcaption>
 ```
 <div>
 	Snowblog:
@@ -258,7 +258,7 @@ def locate():
 
 And *viola*! Pretty neat, eh?
 
-{% include figure.html url="/assets/images/flask_app/added_locate_view.png" caption="Added 'location' view to website." width="45%" %}
+{% include figure.html url="/assets/images/flask_app/added_locate_view.png" caption="Added 'location' view to website." width="55%" %}
 
 ## Databases
 
