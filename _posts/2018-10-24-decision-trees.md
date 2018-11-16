@@ -24,16 +24,8 @@ description: A Juptyter notebook on Decision Trees
 >* For 'simple' installation: `$ pip install graphviz` 
 >  For more info, see: https://pypi.org/project/graphviz/
 
-
-<a id="learning-objectives"></a>
-## Learning Objectives
-
-- Understand how to use recursion in Python.
-- Observe the utility of decision trees as visualizations, capable of conveying complex, decision-like processes.
-- Identify the limitations of decision tree models, as well as some common methods for improving on them.
-- Preview some of the 'ensembling methods' available for decision tree models.
-
-### Lesson Guide
+## Lesson Guide
+- [Learning Objectives](#learning-objectives)
 - [Recursion Example](#recursion)
 - [Intuition Behind Decision Trees](#intuition)
     - [Why Should I Use A Decision Tree?](#why)
@@ -44,8 +36,14 @@ description: A Juptyter notebook on Decision Trees
 	- [Bagging](#bagging)
 	- [Random Forests](#forests)
 	- [Boosting](#boosting)
-- [Lesson Review](#topic-review)
+- [Topic Review](#topic-review)
 
+<a id="learning-objectives"></a>
+## Learning Objectives
+- Understand how to use recursion in Python.
+- Observe the utility of decision trees as visualizations, capable of conveying complex, decision-like processes.
+- Identify the limitations of decision tree models, as well as some common methods for improving on them.
+- Preview some of the 'ensembling methods' available for decision tree models.
 
 ```python
 # Import toolkits
@@ -413,7 +411,7 @@ Random forest models are one of the most widespread classifiers used.
 
 
 <a id="topic-review"></a>
-## Lesson Review
+## Topic Review
 ---
 
 - We learned about the use of recursion in Python.

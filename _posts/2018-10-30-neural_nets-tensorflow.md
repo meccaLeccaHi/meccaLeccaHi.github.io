@@ -19,21 +19,10 @@ description: A Juptyter notebook on Neural Networks using Tensorflow
 >- [*Neural Networks and Deep Learning*](http://neuralnetworksanddeeplearning.com/chap1.html) by *Michael Nielsen*
 >- [*Not another MNIST tutorial with TensorFlow*](https://www.oreilly.com/learning/not-another-mnist-tutorial-with-tensorflow) by *Justin Francis*
 
->Dependencies: Numpy, Matplotlib, and TensorFlow.*
->
->* For 'simple' installation: `$ pip install --upgrade tensorflow`
->  For more info, see: https://www.tensorflow.org/install/
 
-
-<a id="learning-objectives"></a>
-## Learning Objectives
-
-- Identify the types of problems a neural network is likely to succeed at.
-- Explain the similarities/differences between real and artificial neurons.
-- Define the working components of a basic, feed-forward neural network.
-- Determine how to apply neural networks to the prediction problem of your choosing.
-
-### Lesson Guide
+### Topic Guide
+- [Learning Objectives](#learning-objectives)
+- [Installing Dependencies](#dependencies)
 - [Linear Algebra Review](#linear-algebra-review)
 	- [Dot Product](#dot-product)
 	- [Matrix Multiplication](#matrix-multiplication)
@@ -52,8 +41,25 @@ description: A Juptyter notebook on Neural Networks using Tensorflow
     - [Using TensorFlow](#tensorflow)
         - [Loss Function: Cross-Entropy Loss](#loss-function)
     - [Model Training With TensorFlow](#training-tf)
-- [Lesson Review](#topic-review)
+- [Topic Review](#topic-review)
 
+
+<a id="learning-objectives"></a>
+## Learning Objectives
+
+- Identify the types of problems a neural network is likely to succeed at.
+- Explain the similarities/differences between real and artificial neurons.
+- Define the working components of a basic, feed-forward neural network.
+- Determine how to apply neural networks to the prediction problem of your choosing.
+
+
+<a id="dependencies"></a>
+## Installing Dependencies
+- Numpy
+- Matplotlib
+- TensorFlow.*
+>* For 'simple' installation: `$ pip install --upgrade tensorflow`
+>  For more info, see: https://www.tensorflow.org/install/
 
 ```python
 # Import toolkits
@@ -65,10 +71,12 @@ import tensorflow as tf
 %matplotlib inline
 ```
 
+
 <a id="linear-algebra-review"></a>
 ## Quick Linear Algebra Review
 ---
 **Objective:** Compute dot products and matrix multiplications using NumPy
+
 
 <a id="dot-product"></a>
 ### Dot Product
@@ -881,7 +889,7 @@ display_compare(ran.randint(0, 55000))
 
 
 <a id="topic-review"></a>
-## Lesson Review
+## Topic Review
 ---
 
 - We explored the decision-making capacity of single artificial neurons, and the role of weights in adjusting the outcome of our decision.

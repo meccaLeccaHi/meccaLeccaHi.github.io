@@ -15,11 +15,41 @@ description: A quick primer on Bayes' Theorem.
 
 
 # Applying Bayes' Theorem to Iris Classification
-
-{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
+Can Bayes' theorem help us to solve a classification problem, namely predicting the species of an iris?
 
 > See this excellent [discussion](https://www.youtube.com/watch?v=eDMGDhyDxuY) of Bayesian/frequentist approaches for greater background, if desired/required.
 
+<a id="learning-objectives"></a>
+## Learning Objectives
+
+- Identify the types of problems a neural network is likely to succeed at.
+- Explain the similarities/differences between real and artificial neurons.
+- Define the working components of a basic, feed-forward neural network.
+- Determine how to apply neural networks to the prediction problem of your choosing.
+
+### Topic Guide
+- [Linear Algebra Review](#linear-algebra-review)
+	- [Dot Product](#dot-product)
+	- [Matrix Multiplication](#matrix-multiplication)
+- [Introduction to Neural Networks](#intro)
+	- [What Makes Neural Networks Special?](#nn-special)
+	- [The Neuron](#neuron)
+	- [An Example](#example)
+- [Practical Considerations](#nn-practical)
+	- [Network Structure](#structure)
+    - [Network Function](#function)
+        - [Bias Input](#bias)
+        - [Logic Gates](#logic)
+- [Neural Network Training](#nn-training)
+- [Neural Network Architecture](#nn-architecture)
+- [Using Neural Nets To Recognize Handwritten Digits](#nn-digits)
+    - [Using TensorFlow](#tensorflow)
+        - [Loss Function: Cross-Entropy Loss](#loss-function)
+    - [Model Training With TensorFlow](#training-tf)
+- [Topic Review](#topic-review)
+
+## Background
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
 From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
 
 Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
@@ -38,7 +68,7 @@ Now suppose that 0.5% of people have the disease. What is the probability that a
 >
 > $$ \approx 33.2\%$$
 
-Can Bayes' theorem help us to solve a classification problem, namely predicting the species of an iris?
+Now that we know how it works, can we use Bayes' theorem to help us to solve a classification problem, namely predicting the species of an iris?
 
 ## Preparing the Data
 
