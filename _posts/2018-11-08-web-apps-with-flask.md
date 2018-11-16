@@ -40,7 +40,7 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
 - [Databases](#databases)
     - [Database Models](#database_models)
 
-
+- [HTML/CSS](#html_css)
 - [Topic Review](#topic-review)
 
 
@@ -388,13 +388,30 @@ Setting `SQLALCHEMY_TRACK_MODIFICATIONS` to false just avoids an unecessary, ext
 
 We also need to make sure our database is instantiated. This will take place as part of the creation of our app in `app/__init__.py`:
 
+<figcaption><i>app/__init__.py</i> - Adding databases.<br>&nbsp;</figcaption>  
+```
+from flask import Flask
+from config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
+# Create instances of app components to be included
+app = Flask(__name__)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
+from app import routes, models
+```
+We can use the same pattern for adding any Flask extension: we first initialize our Flask extension, then import `routes` and `models` modules. We've seen `routes` previously, and `models` is defined in the following section of this post.
 
 
 <a id="database_models"></a>
 ## Database Models
 
+
+<a id="html_css"></a>
+## HTML/CSS
 
 
 <a id="topic-review"></a>
