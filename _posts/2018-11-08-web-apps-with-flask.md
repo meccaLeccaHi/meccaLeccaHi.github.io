@@ -403,11 +403,52 @@ migrate = Migrate(app, db)
 
 from app import routes, models
 ```
-We can use the same pattern for adding any Flask extension: we first initialize our Flask extension, then import `routes` and `models` modules. We've seen `routes` previously, and `models` is defined in the following section of this post.
-
+We can use the same pattern for adding any Flask extension: we first initialize our Flask extension, then import `routes` and `models` modules. We've seen `routes` previously, and `models` is defined in the next section of this post.
 
 <a id="database_models"></a>
 ## Database Models
+
+In order for ORM to properly translate between objects and databases, we need to define our 'database models'. Our goal is to create the following two tables. 
+
+{% include figure_link.html url="/assets/images/flask/db_models.png" href="http://ondras.zarovi.cz/sql/demo" caption="Database tables (made with WWW SQL Designer)" width="45%" %}
+
+
+...
+
+
+<figcaption><i>app/models.py</i> - Creating database models.<br>&nbsp;</figcaption>  
+```
+from app import db
+
+# Define 'Resort' table
+class Resort(db.Model):
+	# Define table columns
+	id = db.Column(db.Integer, primary_key=True)
+	resortname = db.Column(db.String(64), index=True)
+	state = db.Column(db.String(2))
+	latitude = db.Column(db.Integer)
+	longitude = db.Column(db.Integer)
+	url = db.Column(db.String(128))
+
+	# Define the representation of instances of this class
+	def __repr__(self):
+		return '<Resort {}>'.format(self.resortname)
+
+# Define 'Post' table
+class Post(db.Model):
+	# Define table columns
+	id = db.Column(db.Integer, primary_key=True)
+	body = db.Column(db.String(256))
+	resortname = db.Column(db.String(64), index=True)
+
+	# Define the representation of instances of this class
+	def __repr__(self):
+		return '<Post {}>'.format(self.body)
+```
+
+
+
+
 
 
 <a id="html_css"></a>
