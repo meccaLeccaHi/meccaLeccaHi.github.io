@@ -8,7 +8,7 @@ markdown: kramdown
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/adam5.jpg
+picture: assets/images/adam1.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -42,7 +42,7 @@ authors:
         name: Adam
         bio: Don't run in ski boots.
         external-image: false
-        picture: assets/images/adam7.png
+        picture: assets/images/adam3.png
         linkedin: adam-p-jones
 
 # do you want a larger site? change the option below
