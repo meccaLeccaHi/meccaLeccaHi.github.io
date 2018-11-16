@@ -27,19 +27,19 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
 ## Topic Guide
 - [Learning Objectives](#learning-objectives)
 - [Installing Dependencies](#dependencies)
-- [Setting up the environment](#environment)
+- [Setting Up The environment](#environment)
     - [Virtual Environments](#virtual_environment)
-    - [Setting environmental variables](#environmental_variables)
+    - [Setting Environmental Variables](#environmental_variables)
 - [Templates](#templates)
-    - [Template inheritance](#template_inheritance)
+    - [Template Inheritance](#template_inheritance)
 - [Forms](#forms)
-    - [Locate resorts form](#locate_form)
-    - [Form templates](#form_templates)
-    - [Add location view](#add_view)
-    - [Using data from forms](#form_data)
-
-
+    - [Locate Resorts Form](#locate_form)
+    - [Form Templates](#form_templates)
+    - [Add Location View](#add_view)
+    - [Using Data From Forms](#form_data)
 - [Databases](#databases)
+    - [Database Models](#database_models)
+
 
 - [Topic Review](#topic-review)
 
@@ -80,18 +80,18 @@ $ source venv/bin/activate
 This project served as a nice opportunity to get more familiar with Flask, with the intent of eventually building an app of greater utility down the road (perhaps integrating [Plotly](https://plot.ly/products/dash/)). For now let's learning about the essential components involved with Flask. But first, a brief primer on virtual environments and environmental variables.
 
 <a id="environment"></a>
-## Setting up the environment
+## Setting Up The Environment
 
 Obviously, we are going to use Python 3 in this post as we have for all the others. So, if it's not installed, we can change that like so:  
 `$ sudo apt-get -y install python3 python3-venv python3-dev`
 
 <a id="virtual_environment"></a>
-### Virtual environments
+### Virtual Environments
 A _virtual environment_ is an enclosed copy of the Python interpreter. By that I mean that when you install Python packages in a virtual environment (as opposed to the system-wide Python interpreter), only the virtual environment is affected. This provides us greater freedom to experiment with numerous environments in parallel, while keeping the changes in each separate from the others.
 - This also allows others to re-create your environment more easily, as we'll see below.
 - Plus, they are 'owned' by the user who creates them, so they don't require a separate admin account.
 
-#### Create environment
+#### Create the environment
 We can start by creating a virtual environment inside the project we are working on. So, from within that directory, run:  
 >`$ python -m venv venv`\*  
 >\*If we want to use a different interpreter (e.g. `python3` or `python2`), use that instead.
@@ -103,13 +103,13 @@ Now that the environmet has been created, we install it like so:
 >`$ virtualenv venv`
 
 
-#### Activate environment
+#### Activating environments
 Having done so, we can `cd` into this package and 'activate' the appropriate virtual environment whenever we want like so:
 >`$ source venv/bin/activate`   
 
 Notice that the cursor will change from `$` to `(venv) $`
 
-#### Install environment
+#### Install the environment
 Now, we're ready to start customizing our environment!
 **Just remember**, the changes you make inside your virtual environment are unique to that environment, and will not exist if the environment is deactivated. The changes you make *are* persistent, however, and will stay the way they are left on the last time they are used.
 
@@ -123,7 +123,7 @@ The beauty of it is that it allows someone else to immediately adopt the same en
 >`$ pip install -r requirements.txt`
 
 <a id="environmental_environment"></a>
-### Setting environmental variables
+### Setting Environmental Variables
 'Environmental variables' are one way for a particular environment to keep track of certain settings, and to pass thos settings between different processes within the same environment. They are usually employed to keep track of ephemeral data, such as location of the current working directory.
 
 By convention, environmental variables are typically defined using all capital letters, which helps users distinguish environmental variables from other variable types.
@@ -173,7 +173,7 @@ This is a super simple HTML page that defines the title and a heading. But, noti
 {% include figure.html url="/assets/images/flask/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="55%" %}
 
 <a id="template_inheritance"></a>
-### Template inheritance
+### Template Inheritance
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
 For example, if we define a base template and name it `base.html`, we could include a very simple navigation bar on every page that allows us to quickly navigate our entire site. So we can modify `index.html` to create `base.html` like so:
 
@@ -213,7 +213,7 @@ Fortunately, Flask has an extension to handle web forms: [Flask-WTF](http://pack
 (venv) $ pip install flask-wtf
 ```
 <a id="locate_form"></a>
-### Locate resorts form
+### Locate Resorts Form
 
 For our first form, let's create the form we will use to locate ski resorts closest to the user based their location, which will have to be provided as text input.  Flask-WTF uses Python classes to represent each type of web form. So, in order to create a new form we define it as a new class whose variables represent the fields of the form. We can group our forms together in a new module *app/form.py* (see below).  
 <figcaption><i>app/form.py</i> - Now with LocateForm class.<br>&nbsp;</figcaption>  
@@ -233,7 +233,7 @@ As you can see, we are importing a class from the WTForms package for each field
 The `validators` you noticed in the string field just assigns certain validation routines to the submission of data through these fields. In this case, `DataRequired` will just check and make sure the text field is not empty upon submission. But more complicated validators are also available.
 
 <a id="form_templates"></a>
-### Form templates
+### Form Templates
 Now we just need to connect the form to an HTML template to render it in a browser. But Flask makes this simple by handling most of the HTML rendering for you. For example, the template for the location form is shown below.
 
 <figcaption><i>app/templates/locate.html</i> - Location form template.<br>&nbsp;</figcaption>  
@@ -260,7 +260,7 @@ As with `index.html`, this template is another extension of the `base.html` temp
 We can infer that this template expects a `form` argument upon instantiation. We'll see how that's handled below, in the last document that's required to implement our brilliant location form.
 
 <a id="add_view"></a>
-### Add location view
+### Add Location View
 Now, let's add a new function to our `routes` module that defines the new `/locate` view that we've added to our website.  We do that by adding another function to *app/form.py* (see below). This is where we import and instantiate LocateForm from `forms.py`, while passing it to the template to be rendered.  
 
 <figcaption><i>app/routes.py</i> - Adding location view.<br>&nbsp;</figcaption>  
@@ -296,7 +296,7 @@ And *viola*! Pretty neat, eh?
 {% include figure.html url="/assets/images/flask/added_locate_view.png" caption="Added 'location' view to website." width="55%" %}
 
 <a id="form_data"></a>
-### Using data from forms
+### Using Data From Forms
 
 While this may look nice, anyone who was brave enough to click on 'submit' would find that we get an error: "Method Not Allowed". That's simply because we still need to provide our web form with some logic telling it how to handle the data provided by the user. We accomplish that by modifying our definition of the `locate` class in `routes.py` (see below).
 
@@ -368,6 +368,32 @@ As we saw before, we can simply install the package in our virtual environment u
 (venv) $ pip install flask-sqlalchemy
 ```
 
+For small, 'light-weight' applications such as these, SQLite is a convenient database options since it takes the form of file on the hard drive, rather than a server that needs to be connected to (e.g. PostgreSQL or MySQL). To make our dream a reality, we need to make some changes to our config file:
+
+<figcaption><i>config.py</i> - Setting up Flask-SQLAlchemy.<br>&nbsp;</figcaption>  
+```
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
+
+# Assign app configuration variables (or retrieve them from the os, if they exist there)
+class Config(object):
+    GOOGLE_KEY = os.environ.get('GOOGLE_KEY')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+        'sqlite:///' + os.path.join(basedir, 'app.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+```
+Now, we've added a few variables to our `Config` class, including `SQLALCHEMY_DATABASE_URI`, which tells Flask where to find database for our application. Since `DATABASE_URL` is requested from the shell, it must be set as an environmental variable for Flask to use it, otherwise it will fall back and use the other value that was provided.
+
+Setting `SQLALCHEMY_TRACK_MODIFICATIONS` to false just avoids an unecessary, extra step every time a change is made to our database. 
+
+We also need to make sure our database is instantiated. This will take place as part of the creation of our app in `app/__init__.py`:
+
+
+
+
+
+<a id="database_models"></a>
+## Database Models
 
 
 
