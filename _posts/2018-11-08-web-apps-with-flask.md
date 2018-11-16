@@ -120,7 +120,7 @@ Templates, as employed by Flask, are loosely analagous to a Python function, in 
 This allows us to separate the 'back-end' data generation elements that determine the page's functionality, from the 'front-end' layout and presentation elements that determine the page's appearance.
 In Flask, templates are stored as separate files inside a */templates* folder inside the application package. An example is shown in `index.html` below.  
 
-<figcaption>index.html</figcaption>  
+<figcaption><i>app/templates/index.html</i><br>&nbsp;</figcaption>  
 ```
 <html>
 	<head>
@@ -141,6 +141,7 @@ This is a super simple HTML page that defines the title and a heading. But, noti
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
 For example, if we define a base template and name it `base.html`, we could include a very simple navigation bar on every page that allows us to quickly navigate our entire site. So we can modify `index.html` to create `base.html` like so:
 
+<figcaption><i>app/templates/base.html</i><br>&nbsp;</figcaption>  
 ```
 <html>
 	<head>
@@ -153,11 +154,11 @@ For example, if we define a base template and name it `base.html`, we could incl
 	</body>
 </html>
 ```
-<figcaption>base.html</figcaption>  
 
 The `block` content above is how we reference other templates in jinja templates, such as these.
 Now, `base.html` can save me from repeatedly adding (and maintaining) a navigation bar for each page of my website. Each page will inherit the same nav bar, while the `block` control statement above still allows me to insert the unique components of each page. For example, we can now simply set `index.html` to inherit the nav bar from `base.html` like so:  
-<figcaption>`index.html` with inheritance from base template.</figcaption>  
+
+<figcaption><i>app/templates/index.html</i> - Inheritance from base template.<br>&nbsp;</figcaption>  
 ```
 {{ "{% extends 'base.html' " }}%}
 {{ "{% block content " }}%}
@@ -178,7 +179,7 @@ Fortunately, Flask has an extension to handle web forms: [Flask-WTF](http://pack
 ### Locate Ski Resorts Form
 
 For our first form, let's create the form we will use to locate ski resorts closest to the user based their location, which will have to be provided as text input.  Flask-WTF uses Python classes to represent each type of web form. So, in order to create a new form we define it as a new class whose variables represent the fields of the form. We can group our forms together in a new module *app/form.py* (see below).  
-<figcaption>`app/form.py` with LocateForm class.</figcaption>  
+<figcaption><i>app/form.py</i> - Now with LocateForm class.<br>&nbsp;</figcaption>  
 ```
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -197,7 +198,7 @@ The `validators` you noticed in the string field just assigns certain validation
 ### Form Templates
 Now we just need to connect the form to an HTML template to render it in a browser. But Flask makes this simple by handling most of the HTML rendering for you. For example, the template for the location form is shown below.
 
-<figcaption>`app/templates/locate.html` Location form template.</figcaption>  
+<figcaption><i>app/templates/locate.html</i> - Location form template.<br>&nbsp;</figcaption>  
 ```
 {{ "{% extends 'base.html' " }}%}
 
