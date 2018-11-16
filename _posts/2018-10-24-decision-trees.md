@@ -329,7 +329,7 @@ graphviz.Source(dot_data)
 
 
 
-![svg](../assets/images/output_41_0.svg)
+![svg](../assets/images/decision_trees/output_41_0.svg)
 
 
 
