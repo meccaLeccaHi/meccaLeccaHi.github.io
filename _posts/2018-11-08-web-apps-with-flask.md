@@ -368,13 +368,13 @@ As we saw before, we can simply install the package in our virtual environment u
 (venv) $ pip install flask-sqlalchemy
 ```
 
+
+
+
 <a id="topic-review"></a>
 ## Topic Review
 ---
-
-- We learned about the use of recursion in Python.
-- We saw how decision trees are built by recursively splitting the data.
-- We saw that trees can be displayed graphically, and are easily interpreted even bya non-expert (as long as they are small).
-- We learned about the application of decision tree models to both classification and regression problems.
-- We saw the limitations of decision tree models, particularly their tendency to become overfit, and learned about 'pruning' methods available to resolve this.
-- We previewed some of the 'ensembling methods' available to overcome the high-variability inherent in decision tree models.
+- We learned about the use of virtual environments in Python.
+- We saw how environmental variables are set in the shell.
+- We learned how to use templates and forms to quickly construct a 'lightweight' application that allows us to focus on website functionality and not on the presentation/HTML.
+- We learned about the variety of database options available to use with Flask.
