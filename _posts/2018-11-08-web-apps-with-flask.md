@@ -256,6 +256,17 @@ def locate():
 </div>
 ```
 
+<figure>
+  <figcaption>File: folderName/fileName.rb</figcaption>
+  def print_hi(name)
+    puts "Hi, #{name}"
+  end
+</figure>
+
+And viola! Pretty neat, eh?
+
+{% include figure.html url="/assets/images/flask_app/added_locate_view.png" caption="Added 'location' view to website." width="45%" %}
+
 ## Databases
 
 
