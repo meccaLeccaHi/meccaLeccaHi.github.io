@@ -174,6 +174,7 @@ Fortunately, Flask has an extension to handle web forms: [Flask-WTF](http://pack
 ```
 (venv) $ pip install flask-wtf
 ```
+
 ### Locate Ski Resorts Form
 
 For our first form, let's create the form we will use to locate ski resorts closest to the user based their location, which will have to be provided as text input.  Flask-WTF uses Python classes to represent each type of web form. So, in order to create a new form we define it as a new class whose variables represent the fields of the form. We can group our forms together in a new module *app/form.py* (see below).  
@@ -194,6 +195,8 @@ As you can see, we are importing a class from the WTForms package for each field
 The `validators` you noticed in the string field just assigns certain validation routines to the submission of data through these fields. In this case, `DataRequired` will just check and make sure the text field is not empty upon submission. But more complicated validators are also available.
 
 ### Form Templates
+Now we just need to connect the form to an HTML template to render it in a browser. But Flask makes this simple by handling most of the HTML rendering for you. For example, the template for the location form is shown below.
+
 <figcaption>`app/templates/locate.html` Location form template.</figcaption>  
 ```
 {{ "{% extends 'base.html' " }}%}
@@ -212,6 +215,45 @@ The `validators` you noticed in the string field just assigns certain validation
 		<p>{{ "{{ form.submit() " }}}}</p>
 	</form>
 {{ "{% endblock " }}%}
+```
+As with `index.html`, this template is another extension of the `base.html` template that we've discussed already. This consistency is among the greatest advantages afforded by templates in Flask.
+
+We can infer that this template expects a `form` argument upon instantiation. We'll see how that's handled below, in the last document that's required to implement our brilliant location form.
+
+### Adding Location View
+Now, let's add a new function to our `routes` module that defines the new `/locate` view that we've added to our website.  We do that by adding another function to *app/form.py* (see below). This is where we import and instantiate LocateForm from `forms.py`, while passing it to the template to be rendered.  
+
+<figcaption>`app/routes.py` Adding `/locate` view.</figcaption>  
+```
+from flask import render_template, flash, redirect, url_for
+from app import app
+from app.forms import LocateForm
+
+# ...
+
+# 'Locate ski resorts' view
+@app.route('/locate', methods=['GET', 'POST'])
+def locate():
+	form = LocateForm()
+	if form.validate_on_submit():
+		
+		# Provide user feedback
+		flash('Finding ski resorts closest to: {}'.format(form.address.data))
+		return redirect('/index')
+
+	# Render webpage
+	return render_template('locate.html', title="Find resorts", form=form)
+```
+
+**Optionally**, we might want to add the new 'locate' view to our navigation bar:
+
+<figcaption>`app/templates/base.html` Updating navigation bar</figcaption>  
+```
+<div>
+    Snowblog:
+    <a href="/index">Home</a>
+    <a href="/locate">Locate</a>
+</div>
 ```
 
 ## Databases
