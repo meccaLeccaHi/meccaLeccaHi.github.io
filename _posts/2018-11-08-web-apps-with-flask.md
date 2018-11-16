@@ -247,7 +247,7 @@ def locate():
 
 **Optionally**, we might want to add the new 'locate' view to our navigation bar:
 
-<figcaption>`app/templates/base.html` Updating navigation bar</figcaption>  
+<span style="color: grey;">`app/templates/base.html` Updating navigation bar</span>
 ```
 <div>
     Snowblog:
