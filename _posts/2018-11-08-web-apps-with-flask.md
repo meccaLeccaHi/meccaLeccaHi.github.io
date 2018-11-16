@@ -246,9 +246,9 @@ def locate():
 	return render_template('locate.html', title="Find resorts", form=form)
 ```
 
-**Optionally**, we might want to add the new location view to our navigation bar:
+***Optionally***, we might want to add the new location view to our navigation bar:
 
-<figcaption align="left"><i>app/templates/base.html</i> - Updating navigation bar.<br>&nbsp;</figcaption>
+<figcaption><i>app/templates/base.html</i> - Updating navigation bar.<br>&nbsp;</figcaption>
 ```
 <div>
 	Snowblog:
