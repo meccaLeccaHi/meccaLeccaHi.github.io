@@ -250,18 +250,16 @@ def locate():
 <span style="color: grey;">`app/templates/base.html` Updating navigation bar</span>
 
 
-<figure>
-	<figcaption>File: folderName/fileName.rb</figcaption>
-	```
-	<div>
-		Snowblog:
-		<a href="/index">Home</a>
-		<a href="/locate">Locate</a>
-	</div>
-	```
-</figure>
+<figcaption>File: folderName/fileName.rb</figcaption>
+```
+<div>
+	Snowblog:
+	<a href="/index">Home</a>
+	<a href="/locate">Locate</a>
+</div>
+```
 
-And viola! Pretty neat, eh?
+And *viola*! Pretty neat, eh?
 
 {% include figure.html url="/assets/images/flask_app/added_locate_view.png" caption="Added 'location' view to website." width="45%" %}
 
