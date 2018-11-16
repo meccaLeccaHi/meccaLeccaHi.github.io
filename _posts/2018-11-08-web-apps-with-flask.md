@@ -22,7 +22,7 @@ description: Post on using Flask (Postgres, Heroku, etc.) to make a super simple
 >This project was inspired by numerous sources, most notably: 
 >- [*New and Improved Flask Mega-Tutorial*](http://neuralnetworksanddeeplearning.com/chap1.html) by *Miguel Grinberg* (Highly recommended)
 
-When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up the slopes! This is a simple app that allows Jerry to keep track of his experiences at different ski resorts, and find new ones based on his location! This is a beginner-friendly example of a simple [Flask](http://flask.pocoo.org/) application, that uses [Bootstrap](http://getbootstrap.com) as the CSS framework and [SQLite](https://www.sqlite.org/) as the database. It's designed to help demonstrate the use of Flask, within the context of an introductory Python course. As such, the code in this repo is deliberately simplified and heavily-commented for clarity.
+When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up the slopes! This is a simple app that allows Jerry to keep track of his experiences at different ski resorts, and find new ones based on his location! This is a beginner-friendly example of a simple [Flask](http://flask.pocoo.org/) application, that uses [Bootstrap](http://getbootstrap.com) as the CSS framework and [SQLite](https://www.sqlite.org/) as the database. It's designed to help demonstrate the use of Flask, within the context of an introductory Python course. As such, the code in this post is deliberately simplified and heavily-commented for clarity.
 
 ## Topic Guide
 - [Learning Objectives](#learning-objectives)
@@ -36,8 +36,10 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
     - [Locate resorts form](#locate_form)
     - [Form templates](#form_templates)
     - [Add location view](#add_view)
-- [Databases](#databases)
+    - [Using data from forms](#form_data)
 
+
+- [Databases](#databases)
 
 - [Topic Review](#topic-review)
 
@@ -263,7 +265,7 @@ Now, let's add a new function to our `routes` module that defines the new `/loca
 
 <figcaption><i>app/routes.py</i> - Adding location view.<br>&nbsp;</figcaption>  
 ```
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, redirect, url_for
 from app import app
 from app.forms import LocateForm
 
@@ -273,11 +275,6 @@ from app.forms import LocateForm
 @app.route('/locate', methods=['GET', 'POST'])
 def locate():
 	form = LocateForm()
-	if form.validate_on_submit():
-		
-		# Provide user feedback
-		flash('Finding ski resorts closest to: {}'.format(form.address.data))
-		return redirect('/index')
 
 	# Render webpage
 	return render_template('locate.html', title="Find resorts", form=form)
@@ -298,12 +295,66 @@ And *viola*! Pretty neat, eh?
 
 {% include figure.html url="/assets/images/flask/added_locate_view.png" caption="Added 'location' view to website." width="55%" %}
 
+<a id="form_data"></a>
+### Using data from forms
+
+While this may look nice, anyone who was brave enough to click on 'submit' would find that we get an error: "Method Not Allowed". That's simply because we still need to provide our web form with some logic telling it how to handle the data provided by the user. We accomplish that by modifying our definition of the `locate` class in `routes.py` (see below).
+
+<figcaption><i>app/routes.py</i> - Adding user feedback.<br>&nbsp;</figcaption>  
+```
+from flask import render_template, flash, redirect, url_for
+# ...
+
+# 'Locate ski resorts' view
+@app.route('/locate', methods=['GET', 'POST'])
+def locate():
+	form = LocateForm()
+	if form.validate_on_submit():
+		
+		# Provide user feedback
+		flash('Finding ski resorts closest to: {}'.format(form.address.data))
+		return redirect('/index')
+
+	# Render webpage
+	return render_template('locate.html', title="Find resorts", form=form)
+```
+Now, when `form.validate_on_submit()` returns as `True`, the `locate` function executes two more functions, imported from Flask. `flash()` essentially records a message at the end of one request, then accesses it on the next request and only next request. `redirect()` is pretty self-explanatory; it tells the client's browser to navigate to a certain page (supplied as an argument).
+
+To make this work, we just need to add some way of rendering those flashed messages in our existing templates. By adding that to base template (see below), all of our pages will inherit this functionality.
+
+<figcaption><i>app/templates/base.html</i> - Adding flashed messages.<br>&nbsp;</figcaption>  
+```
+from flask import render_template, flash, redirect, url_for
+# ...
+
+# 'Locate ski resorts' view
+<html>
+    <head>
+		<title>Welcome to Snowblog</title>
+	</head>
+    <body>
+        <div>
+            Snowblog:
+            <a href="/index">Home</a>
+            <a href="/locate">Locate</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
+```
+Here we are calling `get_flashed_messages` and assigning the output to `messages`, which we iteratively print to our page as items in a list (notice the `<ul>` and `<li>` elements). The convenient thing about flashed messsages is that they cease to exist after they have been displayed, so they will not appear again on subsequent page views. Their purpose is typically to convey errors or warnings to the user as they occur.
 <a id="databases"></a>
 ## Databases
-
-
-
-
 
 <a id="topic-review"></a>
 ## Topic Review
