@@ -352,9 +352,21 @@ from flask import render_template, flash, redirect, url_for
     </body>
 </html>
 ```
-Here we are calling `get_flashed_messages` and assigning the output to `messages`, which we iteratively print to our page as items in a list (notice the `<ul>` and `<li>` elements). The convenient thing about flashed messsages is that they cease to exist after they have been displayed, so they will not appear again on subsequent page views. Their purpose is typically to convey errors or warnings to the user as they occur.
+Here we are calling `get_flashed_messages` and assigning the output to `messages`, which we iteratively print to our page as items in a list (notice the `<ul>` and `<li>` elements). The convenient thing about flashed messsages is that they cease to exist after they have been displayed, so they will not appear again on subsequent page views. Their purpose is typically to convey errors or warnings to the user as they occur. Now, when we hit 'submit', we are redirected to the home page and given a feedback message about our input.
+
+{% include figure.html url="/assets/images/flask/flashed_message_example.png" caption="Flashed message example." width="55%" %}
+
 <a id="databases"></a>
 ## Databases
+
+So far, we've covered a lot of ground, but have left out a major component that will be necessary for even the simplest of applications. Flask works with a variety of databases, including those that use SQL ('relational') and others that don't (i.e. *NoSQL*).
+
+For this project, we'll use another Flask extension: [Flask-SQLAlchemy](http://packages.python.org/Flask-SQLAlchemy), which provides a wrapper to incorporate [SQLAlchemy](http://www.sqlalchemy.org) into the Flask ecosystem. [Object Relational Mappers](http://en.wikipedia.org/wiki/Object-relational_mapping) (ORM's) provide a way to handle databases of tables as if they were simply Python objects. This saves a lot of the effort of switching between the use of Python and SQL during administration of our site.
+
+As we saw before, we can simply install the package in our virtual environment using `pip`.
+```
+(venv) $ pip install flask-sqlalchemy
+```
 
 <a id="topic-review"></a>
 ## Topic Review
