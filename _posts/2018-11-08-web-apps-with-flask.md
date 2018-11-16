@@ -135,7 +135,7 @@ In Flask, templates are stored as separate files inside a */templates* folder in
 This is a super simple HTML page that defines the title and a heading. But, notice the place holder for user's name in the heading? That's the adaptive component defined by whatever input is provided to the template. So when I the following:
 `render_template('index.html', user='Jerry')`
  an HTML page is *rendered* like so:  
-{% include figure.html url="/assets/images/flask_app/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="55%" %}
+{% include figure.html url="/assets/images/flask/render_example.png" caption="Super simple HTML page produced from our `index.html` template." width="55%" %}
 
 #### Template inheritance
 An just like a Python function can contain other functions, templates can contain other templates. That way we can use them when we need to render commonly-occuring elements in our website, like the navigation bar or log-in page.
@@ -165,7 +165,7 @@ Now, `base.html` can save me from repeatedly adding (and maintaining) a navigati
 	<h1>{% raw %}{{ user }}{% endraw %}'s snowblog</h1>
 {{ "{% endblock " }}%}
 ```
-{% include figure.html url="/assets/images/flask_app/block_example.png" caption="Rendering using template inheritance." width="55%" %}
+{% include figure.html url="/assets/images/flask/block_example.png" caption="Rendering using template inheritance." width="55%" %}
 From here on, whenever I need to create a new page for my website, I can simply derive them using `base.html` as a template, with the added bonus of having a more consistent, well-behaved application.
 
 ## Forms
@@ -259,7 +259,7 @@ def locate():
 
 And *viola*! Pretty neat, eh?
 
-{% include figure.html url="/assets/images/flask_app/added_locate_view.png" caption="Added 'location' view to website." width="55%" %}
+{% include figure.html url="/assets/images/flask/added_locate_view.png" caption="Added 'location' view to website." width="55%" %}
 
 ## Databases
 
