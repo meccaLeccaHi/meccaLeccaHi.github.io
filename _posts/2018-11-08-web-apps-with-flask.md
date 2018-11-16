@@ -248,16 +248,14 @@ def locate():
 **Optionally**, we might want to add the new 'locate' view to our navigation bar:
 
 
-
-
-|<figcaption>`app/templates/base.html` Updating navigation bar</figcaption>|
-|```
+<figcaption>`app/templates/base.html` Updating navigation bar\n/tfoo</figcaption>
+```
 <div>
 	Snowblog:
 	<a href="/index">Home</a>
 	<a href="/locate">Locate</a>
 </div>
-```|
+```
 
 And *viola*! Pretty neat, eh?
 
