@@ -247,17 +247,17 @@ def locate():
 
 **Optionally**, we might want to add the new 'locate' view to our navigation bar:
 
-<span style="color: grey;">`app/templates/base.html` Updating navigation bar</span>
 
 
-<figcaption>File: folderName/fileName.rb</figcaption>
-```
+
+|<figcaption>`app/templates/base.html` Updating navigation bar</figcaption>|
+|```
 <div>
 	Snowblog:
 	<a href="/index">Home</a>
 	<a href="/locate">Locate</a>
 </div>
-```
+```|
 
 And *viola*! Pretty neat, eh?
 
