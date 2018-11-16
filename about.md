@@ -14,22 +14,3 @@ I earned my Phd in 2015 studying in the [Laboratory of Neuropsychology](https://
 I am currently applying to more senior data scientist positions, through which I intend to join a company with an established data science team, in an environment fostering growth and collaboration with colleagues.
 
 Most people say I'm pretty friendly, so don't hesitate to reach out via [email](mailto:ajones173@gmail.com). I'd love to chat with other bay area data scientists, about projects, suggestions, or whatever.
-
-
-<h2>Skills</h2>
-
-<ul class="skill-list">
-	<li>Python (NumPy, pandas, Keras)</li>
-	<li>R (dplyr, ggplot2, Rmarkdown)</li>
-	<li>SQL</li>
-	<li>Jupyter</li>
-	<li>UNIX</li>
-	<li>LaTeX</li>
-	<li>Git</li>
-	<li>deep learning (TensorFlow/Theano)</li>
-	<li>hypothesis testing</li>
-	<li>statistical learning</li>
-	<li>Bayesian statistics</li>
-	<li>neural networks</li>
-	<li>signal processing (spectral analysis)</li>
-</ul>
