@@ -41,7 +41,7 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
     - [Database Models](#database_models)
     - [Interacting With Our Database](#interacting)
 - [Adding Comment View](#comment_view)
-    - [Google Places API](#google_places)
+- [Google Places API](#google_places)
 - [HTML/CSS](#html_css)
 - [Topic Review](#topic-review)
 
@@ -534,6 +534,10 @@ To create the comment page, let's start by adding the `/comment` route to our ap
 
 <figcaption><i>app/routes.py</i> - Adding '/comment' view.<br>&nbsp;</figcaption>  
 ```
+from flask import render_template, flash, redirect
+from app import app
+from app.forms import LocateForm, CommentForm
+from app.models import Post
 # ...
 
 # 'Comment' view
@@ -555,6 +559,8 @@ def comment():
 
 	return render_template('comment.html', title="Share your experiences", form=form)
 ```
+Here, when `form.validate_on_submit()` returns as `True`, the `comment` function updates the database with the data submitted to the form. `flash()` records another message, this time informing the user that their feedback has been posted. `redirect()` then tells the client's browser to navigate back to the home page.
+
 Next, we create the `comment.html` template:
 <figcaption><i>app/templates/comment.html</i> - `comment.html` template.<br>&nbsp;</figcaption>  
 ```
@@ -577,8 +583,30 @@ Next, we create the `comment.html` template:
 	</form>
 {{ "{% endblock " }}%}
 ```
+The last thing we need to do is define the `CommentForm` class:
+<figcaption><i>app/forms.py</i> - Adding form for comment page.<br>&nbsp;</figcaption>  
+```
+from flask_wtf import FlaskForm
+from wtforms import SelectField, StringField, TextAreaField, SubmitField
+from wtforms.validators import DataRequired
+from app.models import Resort
+
+# ...
+
+# Define class for comment form
+class CommentForm(FlaskForm):
+	# Refine choices for drop-down menu from db
+	choices = [(r.resortname, r.resortname) for r in Resort.query.order_by('resortname').all()]
+	# Create drop-down menu
+	comment_resort = SelectField('Select Resort:', choices=choices)
+	# Create comment field
+	comment = TextAreaField('Enter Comments Here:', validators=[DataRequired()])
+	# Create submission button
+	submit = SubmitField('Submit')
+```
+
 That's it. Our new view is complete. That's all it takes to add another page to your website in Flask! Let's make it accessible through a link in the navigation bar:
-<figcaption><i>app/templates/base.html</i> - Adding link to `comment.html` template.<br>&nbsp;</figcaption>  
+<figcaption><i>app/forms.py</i> - Adding link to `comment.html` template.<br>&nbsp;</figcaption>  
 ```
 <html>
     <head>
@@ -593,12 +621,16 @@ That's it. Our new view is complete. That's all it takes to add another page to 
         </div>
 ...
 ```
+Check it out! It works!
+{% include figure.html url="/assets/images/flask/comment_view.png" caption="Sweet, new 'comments' page." width="55%" %}
+> See drafts/snowblog-0.3
+
 
 <a id="google_places"></a>
-### Google Places API
+## Adding Google Places API
 #### *UNDER CONSTRUCTION*
 
-> See drafts/snowblog-0.3
+
 
 <a id="html_css"></a>
 ## HTML/CSS
