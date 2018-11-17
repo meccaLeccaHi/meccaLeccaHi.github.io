@@ -509,7 +509,7 @@ Next, let's add our first post:
 >>> Post.query.get(1).resortname
 'Kentucky Snowbowl'
 ```
-It works- *hooray*! Now let's make our page actually reflect those changes by adding somewhere for the posts in our database to be viewed by the user. For our example, lets add the following loop to the template for `index.html`:
+Now let's make our page actually reflect those changes by adding somewhere for the posts in our database to be viewed by the user. For our example, lets add the following loop to the template for `index.html`:
 ```
 {{ "{% extends 'base.html' " }}%}
 
@@ -520,6 +520,9 @@ It works- *hooray*! Now let's make our page actually reflect those changes by ad
     {{ "{% endfor " }}%}
 {{ "{% endblock " }}%}
 ```
+It works- *hooray*! 
+{% include figure.html url="/assets/images/flask/adding_posts_index.png" caption="Viewing posts in home page." width="55%" %}
+
 > See drafts/snowblog-0.2
 
 <a id="comment_view"></a>
