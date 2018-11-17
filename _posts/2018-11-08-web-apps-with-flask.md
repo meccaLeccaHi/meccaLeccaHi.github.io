@@ -408,12 +408,11 @@ We can use the same pattern for adding any Flask extension: we first initialize 
 <a id="database_models"></a>
 ## Database Models
 
-In order for ORM to properly translate between objects and databases, we need to define our 'database models'. Our goal is to create the following two tables. 
+In order for the ORM to properly translate between objects and databases, we need to define our 'database models'. Our goal is to create the following two tables. 
 
-{% include figure_link.html url="/assets/images/flask/db_models.png" href="http://ondras.zarovi.cz/sql/demo" caption="Database tables (made with WWW SQL Designer)" width="45%" %}
+{% include figure_link.html url="/assets/images/flask/db_models.png" href="http://ondras.zarovi.cz/sql/demo" caption="Database tables (made with WWW SQL Designer)" width="55%" %}
 
-
-...
+In both tables, `id` serves as the 'primary key', while the rows in `Resort` refer to ski resorts and the rows in `Post` refer to posts about those resorts. As defined below, `resortname`, `state`, `url`, and `body` fields expect strings as their entries, whereas `id`, `latitude`, and `longitude` are purely numeric.
 
 
 <figcaption><i>app/models.py</i> - Creating database models.<br>&nbsp;</figcaption>  
@@ -446,14 +445,36 @@ class Post(db.Model):
 		return '<Post {}>'.format(self.body)
 ```
 
+Here we've defined two classes (`Resort` and `User`), which inherit from `db.Model`. The `__repr__` method returns a printable representation of the object, which can be helpful for de-bugging.
 
+```
+>>> from app.models import Resort
+>>> r = Resort(resortname='Kentucky Snowbowl', state='KY', latitude=20, longitude=-20, url='www.kysnowbowl.com')
+>>> r
+<Resort Kentucky Snowbowl>
+```
 
+Now, we can create the migration repository for snowblog by running `flask db init`.
+With that in place, we finally complete the first migration of our database to the new format. We can do so automatically, using the schema defined by our models, with the `flask db migrate` command. Notice that this command creates a migration script, and the location is provided upon running the `migrate` command (see below). Although we won't cover it here, you are free to manipulate the migration script yourself, as you see fit.
 
-
+```
+(venv) flask db migrate
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.autogenerate.compare] Detected added table 'post'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_post_resortname' on '['resortname']'
+INFO  [alembic.autogenerate.compare] Detected added table 'resort'
+INFO  [alembic.autogenerate.compare] Detected added index 'ix_resort_resortname' on '['resortname']'
+  Generating /home/Jerry/snowblog/migrations/versions/c544f524e5ed_.py ... done
+```
+With the migration script now ready, we can apply the changes to the database via `flask db upgrade`.
 
 <a id="html_css"></a>
 ## HTML/CSS
 
+
+
+From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. **Have fun!**
 
 <a id="topic-review"></a>
 ## Topic Review
