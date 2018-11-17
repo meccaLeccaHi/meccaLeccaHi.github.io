@@ -39,7 +39,8 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
     - [Using Data From Forms](#form_data)
 - [Databases](#databases)
     - [Database Models](#database_models)
-
+    - [Interacting With Our Database](#interacting)
+	- [Adding Comment View](#comment_view)
 - [HTML/CSS](#html_css)
 - [Topic Review](#topic-review)
 
@@ -405,6 +406,9 @@ from app import routes, models
 ```
 We can use the same pattern for adding any Flask extension: we first initialize our Flask extension, then import `routes` and `models` modules. We've seen `routes` previously, and `models` is defined in the next section of this post.
 
+> See drafts/snowblog-0.1
+
+
 <a id="database_models"></a>
 ## Database Models
 
@@ -427,7 +431,7 @@ class Resort(db.Model):
 	state = db.Column(db.String(2))
 	latitude = db.Column(db.Integer)
 	longitude = db.Column(db.Integer)
-	url = db.Column(db.String(128))
+	url = db.Column(db.String(128), unique=True)
 
 	# Define the representation of instances of this class
 	def __repr__(self):
@@ -438,7 +442,7 @@ class Post(db.Model):
 	# Define table columns
 	id = db.Column(db.Integer, primary_key=True)
 	body = db.Column(db.String(256))
-	resortname = db.Column(db.String(64), index=True)
+	resortname = db.Column(db.String(64))
 
 	# Define the representation of instances of this class
 	def __repr__(self):
@@ -467,11 +471,65 @@ INFO  [alembic.autogenerate.compare] Detected added table 'resort'
 INFO  [alembic.autogenerate.compare] Detected added index 'ix_resort_resortname' on '['resortname']'
   Generating /home/Jerry/snowblog/migrations/versions/c544f524e5ed_.py ... done
 ```
-With the migration script now ready, we can apply the changes to the database via `flask db upgrade`.
+With the migration script now ready, we can apply the changes to the database via `flask db upgrade`. Now, let's give our newly created databases a test drive, shall we?
+
+<a id="interacting"></a>
+### Interacting With Our Database
+
+From within Python run the following to import our database and the models associated with it:
+```
+>>> from app import db
+>>> from app.models import Resort, Post
+```
+Let's query the database to get back all resorts:
+```
+>>> Resort.query.all()
+[]
+```
+Notice that our database currently has no resorts. So, let's add one! Feel free to alter this example.
+```
+>>> r = Resort(resortname='Kentucky Snowbowl', state='KY', latitude=20, longitude=-20, url='www.kysnowbowl.com')
+>>> db.session.add(r)
+>>> db.session.commit()
+```
+Now if we query the database using either of the following methods, we get back the resort we just added:
+```
+>>> Resort.query.all()
+[<Resort Kentucky Snowbowl>]
+>>> Resort.query.get(1)
+<Resort Kentucky Snowbowl>
+```
+Next, let's add our first post:
+```
+>>> p = Post(body='This place rocks!', resortname=r.resortname)
+>>> db.session.add(p)
+>>> db.session.commit()
+>>> Post.query.all()
+[<Post This place rocks!>]
+>>> Post.query.get(1).resortname
+'Kentucky Snowbowl'
+```
+It works- *hooray*! Now let's make our page actually reflect those changes by adding somewhere for the posts in our database to be viewed by the user. For our example, lets add the following loop to the template for `index.html`:
+```
+{{ "{% extends 'base.html' " }}%}
+
+{{ "{% block content " }}%}
+	<h1>{{ "{{ user " }}}}'s snowblog</h1>
+	{{ "{% for post in posts " }}%}
+		<div><p>People said this about <b>{{ post.resortname }}</b>:{{ post.body }}</p></div>
+    {{ "{% endfor " }}%}
+{{ "{% endblock " }}%}
+```
+> See drafts/snowblog-0.2
+
+<a id="comment_view"></a>
+## Adding Comment View
+#### *UNDER CONSTRUCTION*
+> See drafts/snowblog-0.3
 
 <a id="html_css"></a>
 ## HTML/CSS
-
+#### *UNDER CONSTRUCTION*
 
 
 From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. **Have fun!**
