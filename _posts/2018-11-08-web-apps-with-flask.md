@@ -40,7 +40,8 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
 - [Databases](#databases)
     - [Database Models](#database_models)
     - [Interacting With Our Database](#interacting)
-	- [Adding Comment View](#comment_view)
+- [Adding Comment View](#comment_view)
+    - [Google Places API](#google_places)
 - [HTML/CSS](#html_css)
 - [Topic Review](#topic-review)
 
@@ -266,7 +267,7 @@ Now, let's add a new function to our `routes` module that defines the new `/loca
 
 <figcaption><i>app/routes.py</i> - Adding location view.<br>&nbsp;</figcaption>  
 ```
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect
 from app import app
 from app.forms import LocateForm
 
@@ -303,7 +304,7 @@ While this may look nice, anyone who was brave enough to click on 'submit' would
 
 <figcaption><i>app/routes.py</i> - Adding user feedback.<br>&nbsp;</figcaption>  
 ```
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect
 # ...
 
 # 'Locate ski resorts' view
@@ -325,7 +326,7 @@ To make this work, we just need to add some way of rendering those flashed messa
 
 <figcaption><i>app/templates/base.html</i> - Adding flashed messages.<br>&nbsp;</figcaption>  
 ```
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect
 # ...
 
 # 'Locate ski resorts' view
@@ -527,7 +528,76 @@ It works- *hooray*!
 
 <a id="comment_view"></a>
 ## Adding Comment View
+The next chapter focuses entirely on creating the last remaining view needed for our snowblog to be complete, and very much like Voltron, our webpage will be come far more awesome once it's assembled into its final form. See let's get to it!
+
+To create the comment page, let's start by adding the `/comment` route to our app.
+
+<figcaption><i>app/routes.py</i> - Adding '/comment' view.<br>&nbsp;</figcaption>  
+```
+# ...
+
+# 'Comment' view
+@app.route('/comment', methods=['GET', 'POST'])
+def comment():
+	# Get data from form
+	form = CommentForm()
+	# Check validity
+	if form.validate_on_submit():
+
+		# Add comments to database
+		post = Post(body=form.comment.data, resortname=form.comment_resort.data)
+		db.session.add(post)
+		db.session.commit()
+
+		# Provide user feedback and re-direct to 'Home' view
+		flash('Your feedback is now live!')
+		return redirect('/index')
+
+	return render_template('comment.html', title="Share your experiences", form=form)
+```
+Next, we create the `comment.html` template:
+<figcaption><i>app/templates/comment.html</i> - `comment.html` template.<br>&nbsp;</figcaption>  
+```
+{{ "{% extends "base.html" " }}%}
+
+{{ "{% block content " }}%}
+	<h1>Leave notes on ski resorts</h1>
+	<form action="" method="post" novalidate>
+		{{ "{{ form.hidden_tag() " }}}}
+		<p>
+			{{ "{{ form.comment_resort.label " }}}}<br>
+            {{ "{{ form.comment_resort " }}}}<br>
+			{{ "{{ form.comment.label " }}}}<br>
+			{{ "{{ form.comment(size=100) " }}}}<br>
+			{{ "{% for error in form.comment.errors " }}%}
+			<span style="color: red;">{{ "{{ error " }}}}</span>
+			{{ "{% endfor " }}%}
+		</p>
+		<p>{{ form.submit() }}</p>
+	</form>
+{{ "{% endblock " }}%}
+```
+That's it. Our new view is complete. That's all it takes to add another page to your website in Flask! Let's make it accessible through a link in the navigation bar:
+<figcaption><i>app/templates/base.html</i> - Adding link to `comment.html` template.<br>&nbsp;</figcaption>  
+```
+<html>
+    <head>
+		<title>Welcome to Snowblog</title>
+	</head>
+    <body>
+        <div>
+            Snowblog:
+            <a href="/index">Home</a>
+            <a href="/locate">Locate</a>
+			<a href="/comment">Comment</a>
+        </div>
+...
+```
+
+<a id="google_places"></a>
+### Google Places API
 #### *UNDER CONSTRUCTION*
+
 > See drafts/snowblog-0.3
 
 <a id="html_css"></a>
@@ -535,11 +605,12 @@ It works- *hooray*!
 #### *UNDER CONSTRUCTION*
 
 
-From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. **Have fun!**
 
+From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. ***Have fun!***
+
+---
 <a id="topic-review"></a>
 ## Topic Review
----
 - We learned about the use of virtual environments in Python.
 - We saw how environmental variables are set in the shell.
 - We learned how to use templates and forms to quickly construct a 'lightweight' application that allows us to focus on website functionality and not on the presentation/HTML.
