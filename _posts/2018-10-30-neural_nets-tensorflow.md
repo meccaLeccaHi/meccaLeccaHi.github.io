@@ -15,8 +15,6 @@ author: adam
 description: A Juptyter notebook on Neural Networks using Tensorflow
 ---
 
-{% include figure.html url="/assets/images/neural_nets/brain_machine.png" width="40%" %}
-
 >Adapted from numerous sources, including: 
 >- [*Neural Networks and Deep Learning*](http://neuralnetworksanddeeplearning.com/chap1.html) by *Michael Nielsen*
 >- [*Not another MNIST tutorial with TensorFlow*](https://www.oreilly.com/learning/not-another-mnist-tutorial-with-tensorflow) by *Justin Francis*
@@ -59,7 +57,7 @@ description: A Juptyter notebook on Neural Networks using Tensorflow
 ## Installing Dependencies
 - Numpy
 - Matplotlib
-- TensorFlow.*
+- TensorFlow*
 >* For 'simple' installation: `$ pip install --upgrade tensorflow`
 >  For more info, see: https://www.tensorflow.org/install/
 
