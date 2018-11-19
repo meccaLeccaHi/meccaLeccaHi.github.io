@@ -15,6 +15,8 @@ author: adam
 description: A Juptyter notebook on Neural Networks using Tensorflow
 ---
 
+<img src="/assets/images/neural_nets/brain_machine.png" style="float: center; height: 50px">
+
 >Adapted from numerous sources, including: 
 >- [*Neural Networks and Deep Learning*](http://neuralnetworksanddeeplearning.com/chap1.html) by *Michael Nielsen*
 >- [*Not another MNIST tutorial with TensorFlow*](https://www.oreilly.com/learning/not-another-mnist-tutorial-with-tensorflow) by *Justin Francis*
@@ -143,10 +145,8 @@ A.dot(B)
 
 
 
-
     array([[ 58,  64],
            [139, 154]])
-
 
 
 <a id='intro'></a>
