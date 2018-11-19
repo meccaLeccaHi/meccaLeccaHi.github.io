@@ -58,7 +58,7 @@ description: A Juptyter notebook on Neural Networks using Tensorflow
 - Numpy
 - Matplotlib
 - TensorFlow*
->* For 'simple' installation: `$ pip install --upgrade tensorflow`
+>/* For 'simple' installation: `$ pip install --upgrade tensorflow`
 >  For more info, see: https://www.tensorflow.org/install/
 
 ```python
