@@ -299,9 +299,6 @@ output= \left[
 \right] 
 $$
 
-{% include figure.html url="/assets/images/neural_nets/bias_input.png" width="35%" %}
-
-
 <a id="logic"></a>
 #### Background: Logic Gates
 We've seen how a perceptron can be employed to integrate the influence of many inputs in order to arrive at some decision, but we haven't considered how these same units can perform more 'logical', gate-type functions, as well. As we'll see in the example below, by incorporating a bias into the output of each perceptron, we can evaluate computational functions such as AND, OR, and NAND.
