@@ -296,6 +296,8 @@ $$\begin{equation*}
     \text{so} \ output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 
+foo
+
 $$ 
 b=-threshold\\
 output= \left[
