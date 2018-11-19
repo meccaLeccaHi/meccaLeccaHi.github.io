@@ -254,24 +254,24 @@ Although these models were structured to behave like neurons, their behavior can
 >
 >$$\begin{equation*}
     \ \mathbf{X} \cdotp \vec{w} = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
-    \times [\begin{array}{c} 9 \\ 5 \\ 7 \end{array}] = 
+    \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
 	[\begin{array}{c} 16, 21, 12 \end{array}] \\
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
+>
 > And of course, we could start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 <a id='nn-practical'></a>
 ## Practical Considerations
-
+---
 <a id="structure"></a>
 ### Network Structure
-Although the model we just described was useful for illustrating the basic components of the 'decision-making' process in a neural network, it's ultimately not much of an improvement (if any) on the linear models we've seen so far. This is because, as you might have guessed, typical neural networks are of much greater complexity. These networks typically consist of one or more columns of stacked perceptrons (or *'layers'*). 
+Although the model we just described was useful for illustrating the basic components of the 'decision-making' process in a neural network, it's ultimately not much of an improvement (if any) on the linear models we've seen before. This is because (as you might have guessed) typical neural networks are of much greater complexity. These networks usually consist of one or more columns of stacked perceptrons (or *'layers'*). 
 
 
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" href="https://en.wikipedia.org/wiki/Neural_network" caption="Image source: wikipedia.com" width="40%" %}
 
-
-Each perceptron feeds into every perceptron in the layer following its own, and so on until the final output. With all of these decisions going on, it's becomes easier to see now why neural networks are capable of such subtle (and sometimes nuanced) decision-making.
+In the model above, each circle represents an artifical neuron, more specifically the perceptron we saw in the last section. Each perceptron feeds into every perceptron in the layer following its own, and so on until the final output. With all of these decisions going on, it's becomes easier to see now why neural networks are capable of such subtle (and sometimes nuanced) decision-making.
 
 Let's explore some of the practical consequences of the arrangement above-
 The perceptrons in the first layer will learn to make decisions based purely on the 'raw' input to the model. As the output of each is 'fed-forward', the second layer will receive input which has already been transformed somewhat by the decisions made in the first layer. As a result, each layer could be described as learning to use more abstract features than the layer before it.
