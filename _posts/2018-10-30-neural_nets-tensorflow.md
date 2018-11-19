@@ -194,8 +194,6 @@ $$\begin{equation*}
 So, as is often the case, we set a __threshold__ and declare that as the cut-off point for whether to _'fire'_ (output a one), or not (output a zero).
 
 
-{% include figure.html url="/assets/images/neural_nets/perc_function.png" width="40%" %}
-
 $$\begin{equation*}
   output=\left\{
   \begin{array}{@{}ll@{}}
