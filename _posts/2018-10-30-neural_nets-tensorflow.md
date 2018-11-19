@@ -247,7 +247,7 @@ Although these models were structured to behave like neurons, their behavior can
 
 > *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days, and use our model to decide when to go. 
 >$${\begin{equation*}
-\mathbf{X}   = \begin{bmatrix}1,0,1\\\1,0,1\end{bmatrix}
+\mathbf{X}   = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
 \end{equation*}}$$
 
 
