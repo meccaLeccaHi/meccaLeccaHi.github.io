@@ -220,7 +220,7 @@ Although these models were structured to behave like neurons, their behavior can
 	\vec{w}   = [9,5,1]
 \end{equation*}$$
 
->I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use *14 as our cut-off* for this example.
+>I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide before-hand on some cut-off, above which I will take the trip and below which I will not. Let's use *14 as our cut-off* for this example.
 >
 >$$\begin{equation*}
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
