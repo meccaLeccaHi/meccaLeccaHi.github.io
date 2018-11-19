@@ -223,11 +223,13 @@ Although these models were structured to behave like neurons, their behavior can
 >I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide before-hand on some cut-off, above which I will take the trip and below which I will not. Let's use *14 as our cut-off* for this example.
 >
 >$$\begin{equation*}
+	\ threshold = 14 \\
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 16 \\
 	\ 16 > threshold \\
 	output=1
 \end{equation*}$$
+
 >$$\begin{equation*}
 	\ threshold = 14 \\
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 1 \end{array} \right]
