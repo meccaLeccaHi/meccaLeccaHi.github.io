@@ -15,7 +15,7 @@ author: adam
 description: A Juptyter notebook on Neural Networks using Tensorflow
 ---
 
-<img src="/assets/images/neural_nets/brain_machine.png" style="float: center; height: 50px">
+{% include figure.html url="/assets/images/neural_nets/brain_machine.png" width="80%" %}
 
 >Adapted from numerous sources, including: 
 >- [*Neural Networks and Deep Learning*](http://neuralnetworksanddeeplearning.com/chap1.html) by *Michael Nielsen*
