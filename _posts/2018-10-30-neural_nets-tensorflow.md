@@ -251,7 +251,7 @@ Although these models were structured to behave like neurons, their behavior can
 >
 > So now we can do the same thing as we did before with vectors (since vectors are just 1-d matrices):  
 >$$\begin{equation*}
-    \ \mathbf{X} \cdotp \vec{w} = \left[\begin{array}1,0,1\\1,1,1\\0,1,1\end{array} \right]
+    \ \mathbf{X} \cdotp \vec{w} = [1,0,1\\1,1,1\\0,1,1]
     \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
 	[\begin{array}{c} 16, 21, 12 \end{array}] \\
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
