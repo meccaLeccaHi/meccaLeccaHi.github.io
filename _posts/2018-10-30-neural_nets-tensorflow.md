@@ -259,7 +259,7 @@ Although these models were structured to behave like neurons, their behavior can
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 >
-> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday. Pretty handy, eh?
+> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday. Pretty handy, eh?  
 > Of course, we could then start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 <a id='nn-practical'></a>
@@ -293,7 +293,7 @@ $$ b=-threshold\\
 output= \left[
 \begin{array}
 \ 0 & \text{if}\ w \cdotp x +b \leq 0 \\
-1 & \text{if}\ w \cdotp x +b > 0
+1 & \text{if}\ w \cdotp x +b \gt 0
 \end{array}
 \right] $$
 
