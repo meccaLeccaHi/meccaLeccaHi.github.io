@@ -226,7 +226,7 @@ Although these models were structured to behave like neurons, their behavior can
 	\ threshold = 14 \\
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 1 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 10 \\
-    \ 10 $\lt$ threshold \\
+    \ 10 \lt threshold \\
 	so, output=0
 \end{equation*}$$
 >
@@ -236,7 +236,7 @@ Although these models were structured to behave like neurons, their behavior can
 >$$\begin{equation*}
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 16 \\
-	\ 16 $\gt$ threshold \\
+	\ 16 \gt threshold \\
 	so, output=1
 \end{equation*}$$
 >
