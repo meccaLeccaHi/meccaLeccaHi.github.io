@@ -242,10 +242,8 @@ Although these models were structured to behave like neurons, their behavior can
 >
 >So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment. The output has consequently increased and crossed our threshold. We get to go skiing!!!
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
-
-
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
-
+>
 > *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days at once, and use our model to decide when to go.  
 >$${\begin{equation*}
 \mathbf{X}   = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
@@ -253,8 +251,8 @@ Although these models were structured to behave like neurons, their behavior can
 > So now we can do the same thing as we did before with vectors (since vectors are just 1-d matrices):
 >$$\begin{equation*}
     \ \vec{w} \cdotp \mathbf{X} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
-    \times \left[\begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix} \right] = 
-	\begin{array}{c} 16 \\ 21 \\ 12 \end{array} \\
+    \times \left[\begin{array}1,0,1\\1,1,1\\0,1,1\end{array} \right] = 
+	[\begin{array}{c} 16, 21, 12 \end{array}] \\
      \ 16 > threshold \\
      output=1
 \end{equation*}$$
