@@ -72,11 +72,12 @@ import tensorflow as tf
 %matplotlib inline
 ```
 
-
+---
 <a id="linear-algebra-review"></a>
 ## Quick Linear Algebra Review
----
-**Objective:** Compute dot products and matrix multiplications using NumPy
+Before we can talk about neural networks, we need to brush up on some of the mathematical operations that we'll be performing. Don't worry, there are only two main ideas we need to discuss.
+
+**Objective:** Compute **dot products** and **matrix multiplications** using NumPy.
 
 
 <a id="dot-product"></a>
