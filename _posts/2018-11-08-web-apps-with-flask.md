@@ -630,7 +630,11 @@ Check it out! It works!
 ## Adding Google Places API
 The last step before our website is fully functional is to give Flask more complicated directions for handling user input. Currently, we are reassured that our location view pages is working since we see our input shown as flashed messages on the home page. Ultimately, however, we will want our page return some results that are actually useful. In order to upgrade our location view to return the closest ski resorts, we'll use the API calls to [Google Gecode](https://developers.google.com/maps/documentation/geocoding/start) via a [Python client library](https://github.com/googlemaps/google-maps-services-python), so we can find the closest resorts based on the latitude and longitude of the user.
 
-**Importantly**, as with most API's, a user-specific **key** is required for anyone who wants to access the Google Geocode API. As we've set this as one of our configurate variables (`GOOGLE_KEY`), you just need to acquire you own key, then set it as an environmental variable just like we saw at the beginning of this guide:
+**Importantly**, as with most API's, a user-specific **key** is required for anyone who wants to access the Google Geocode API. First, we set this as one of our configuration variables by adding the following line just below the definition of (`SECRET_KEY`):
+```
+GOOGLE_KEY = os.environ.get('GOOGLE_KEY')
+```
+Now, you just need to acquire you own key, then set it as an environmental variable just like we saw at the beginning of this guide:
 ```
 $ export GOOGLE_KEY='API_KEY_HERE'
 ```
