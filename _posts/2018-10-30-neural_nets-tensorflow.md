@@ -241,7 +241,7 @@ Although these models were structured to behave like neurons, their behavior can
      output=1
 \end{equation*}$$
 >
-> Now, the output has increased and crossed our threshold. We get to go skiing!!!
+> Now, the output has increased and crossed our threshold. *We get to go skiing!!!*
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
 >
