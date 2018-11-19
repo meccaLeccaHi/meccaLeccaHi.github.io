@@ -244,14 +244,14 @@ Although these models were structured to behave like neurons, their behavior can
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
 >
-> *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days at once, and use our model to decide when to go.  
+> *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days at once (e.g. Friday, Saturday, Sun), and use our model to decide when to go.  
 >$${\begin{equation*}
 	\ \mathbf{X}   = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
 \end{equation*}}$$
 >
 > So now we can do the same thing as we did before with vectors (since vectors are just 1-d matrices):  
 >$$\begin{equation*}
-    \ \mathbf{X} \cdotp \vec{w} = [1,0,1\\1,1,1\\0,1,1]
+    \ \mathbf{X} \cdotp \vec{w} = [\begin{array}1,0,1\\1,1,1\\0,1,1\end{array}]
     \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
 	[\begin{array}{c} 16, 21, 12 \end{array}] \\
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
