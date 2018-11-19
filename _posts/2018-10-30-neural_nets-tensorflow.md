@@ -223,7 +223,7 @@ Although these models were structured to behave like neurons, their behavior can
 >I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use **14** as our cut-off for this example.
 >
 >$$\begin{equation*}
-	threshold = 14
+	threshold = 14 \\
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 1 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 10 \\
      \ 10 \leq threshold \\
@@ -246,7 +246,7 @@ Although these models were structured to behave like neurons, their behavior can
 >
 > *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days at once (e.g. Friday, Saturday, Sun), and use our model to decide when to go.  
 >$${\begin{equation*}
-	\ \mathbf{X}   = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
+	\ \mathbf{X}   = \left\begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}\right
 \end{equation*}}$$
 >
 > So now we can do the same thing as we did before with vectors (since vectors are just 1-d matrices):  
