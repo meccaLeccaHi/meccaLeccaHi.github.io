@@ -197,7 +197,7 @@ So, as is often the case, we set a __threshold__ and declare that as the cut-off
 $$\begin{equation*}
   output=\left\{
   \begin{array}
-    \0, \text{if}\ \sum_{j=1}^n w_j x_j \leq threshold \\
+    \ 0, \text{if}\ \sum_{j=1}^n w_j x_j \leq threshold \\
     1, \text{if} \sum_{j=1}^n w_j x_j \gt threshold \\
   \end{array}\right.
 \end{equation*}$$
