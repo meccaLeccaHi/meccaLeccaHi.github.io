@@ -250,7 +250,7 @@ Although these models were structured to behave like neurons, their behavior can
 \mat{x}   = [1,0,1\\1,0,1]
 \end{equation*}}$$
 >
-$\begin{bmatrix}a & b\\c & d\end{bmatrix}$
+$\begin{bmatrix}a & b\\\c & d\end{bmatrix}$
 
 <a id='nn-practical'></a>
 ## Practical Considerations
