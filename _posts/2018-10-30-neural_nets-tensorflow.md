@@ -227,7 +227,7 @@ Although these models were structured to behave like neurons, their behavior can
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 1 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 10 \\
     \ 10 \lt threshold \\
-	so, output=0
+	\text{so} \ output=0
 \end{equation*}$$
 >
 >One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.
@@ -237,7 +237,7 @@ Although these models were structured to behave like neurons, their behavior can
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 16 \\
 	\ 16 \gt threshold \\
-	so, output=1
+	\text{so} \ output=1
 \end{equation*}$$
 >
 > Now, the output has increased and crossed our threshold. *We get to go skiing!!!*
