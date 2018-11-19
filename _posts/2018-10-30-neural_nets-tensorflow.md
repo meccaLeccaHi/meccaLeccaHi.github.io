@@ -244,7 +244,7 @@ Although these models were structured to behave like neurons, their behavior can
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
 >
-> *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days at once (e.g. Fri., Sat., Sun.), and use our model to decide when to go.
+> *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days at once (e.g. Sun., Mon., Tues.), and use our model to decide when to go.
 >
 >$${\begin{equation*}
     \ \mathbf{X}   = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
@@ -259,8 +259,9 @@ Although these models were structured to behave like neurons, their behavior can
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 >
-> In one swift operation we found that our model suggests we go 
-> And of course, we could start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
+> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday.
+>
+> Of course, we could then start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 <a id='nn-practical'></a>
 ## Practical Considerations
