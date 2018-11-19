@@ -220,7 +220,7 @@ Although these models were structured to behave like neurons, their behavior can
 \vec{w}   = [9,5,1]
 \end{equation*}$$
 
->I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use **14** as our cut-off for this example.
+>I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use 14 as our cut-off for this example.
 >
 >$$\begin{equation*}
 	threshold = 14 \\
@@ -254,10 +254,11 @@ Although these models were structured to behave like neurons, their behavior can
 >
 >$$\begin{equation*}
     \ \mathbf{X} \cdotp \vec{w} = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
-    \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
+    \times [\begin{array}{c} 9 \\ 5 \\ 7 \end{array}] = 
 	[\begin{array}{c} 16, 21, 12 \end{array}] \\
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
+> And of course, we could start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 <a id='nn-practical'></a>
 ## Practical Considerations
