@@ -229,7 +229,6 @@ Although these models were structured to behave like neurons, their behavior can
      \ 10 < threshold \\
   output=0
 \end{equation*}$$
-
 >
 >One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.
 >So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment.
