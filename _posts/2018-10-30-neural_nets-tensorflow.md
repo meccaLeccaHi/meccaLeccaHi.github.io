@@ -291,10 +291,10 @@ But, it also leads to some convenient notational simplifications regarding the c
 
 $$\begin{equation*}
     b=-threshold\\
-	\ output = \begin{bmatrix}0\1\\1\1\end{bmatrix}
+	\ output = \begin{bmatrix}0 1\\1 1\end{bmatrix}
 \end{equation*}$$
 
-bar
+foo
 
 $$ 
 b=-threshold\\
