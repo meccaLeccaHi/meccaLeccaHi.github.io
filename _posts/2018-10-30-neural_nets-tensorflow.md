@@ -289,11 +289,19 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
+$$\begin{equation*}
+    \ \mathbf{X} \cdotp \vec{w} = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
+    \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
+	[\begin{array}{c} 16, 21, 12 \end{array}] \\
+    \text{so} \ output=[\begin{array}{c} 1, 1, 0 \end{array}]
+\end{equation*}$$
+
 $$ 
 b=-threshold\\
 output= \left[
 	\begin{array}
-		\ 0 & \text{if}\ w \cdotp x +b \leq 0
+		\ 0 & \text{if}\ w \cdotp x +b \leq 0 \\
+		\1 & \text{if}\ w \cdotp x +b \gt 0
 	\end{array}
 \right] 
 $$
