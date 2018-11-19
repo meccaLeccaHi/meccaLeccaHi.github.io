@@ -250,7 +250,8 @@ Although these models were structured to behave like neurons, their behavior can
     \ \mathbf{X}   = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
 \end{equation*}}$$
 >
-> So now we can do the same thing as we did before with vectors (since vectors are just 1-d matrices):  
+> So now we can do the same thing as we did before with vectors (since vectors are just 1-d matrices):
+>
 >$$\begin{equation*}
     \ \mathbf{X} \cdotp \vec{w} = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
     \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
