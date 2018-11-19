@@ -291,10 +291,10 @@ But, it also leads to some convenient notational simplifications regarding the c
 
 $$\begin{equation*}
     b=-threshold\\
-	\ output = \left[\begin{array}{c} 9 & 1 \\ 5 & 1 \end{array} \right]
+	\ output = \begin{bmatrix} 0 & 1 \\ 1 & 1 \end{bmatrix}
 \end{equation*}$$
 
-bar
+foo
 
 $$ 
 b=-threshold\\
