@@ -115,6 +115,7 @@ v.dot(w)
 
 <a id="matrix-multiplication"></a>
 ### Matrix Multiplication
+This operation is key to understanding how neural network function. We'll discuss the reasons for this later on. But first, let's start with an example.
 
 $$ \mathbf{A}_{mn} \times \mathbf{B}_{ij} $$
 
@@ -125,7 +126,7 @@ $$ \mathbf{A}_{mn} \times \mathbf{B}_{ij} $$
 The dot product illustrated above is: $1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 = 58$. 
 Can you compute the rest of the dot products by hand?
 
-If the product is the $2$ x $2$ matrix $\mathbf{C}_{mj}$, then:
+If the product is the $2 \times 2$ matrix $\mathbf{C}_{mj}$, then:
 
 + Matrix entry $c_{12}$ (its *first row* and *second column*) is the dot product of the *first row* of $\mathbf{A}$ and the *second column* of $\mathbf{B}$.
 
@@ -244,6 +245,12 @@ Although these models were structured to behave like neurons, their behavior can
 
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
 
+> *Bonus*: To understand why matrix multiplication is useful for us, imagine we now want to consider several potential days, and use our model to decide when to go. 
+>$${\begin{equation*}
+\mat{x}   = [1,0,1\\1,0,1]
+\end{equation*}}$$
+>
+$\begin{bmatrix}a & b\\c & d\end{bmatrix}$
 
 <a id='nn-practical'></a>
 ## Practical Considerations
