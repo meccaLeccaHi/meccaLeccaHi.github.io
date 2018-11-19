@@ -55,10 +55,11 @@ description: A Juptyter notebook on Neural Networks using Tensorflow
 
 <a id="dependencies"></a>
 ## Installing Dependencies
+While the following example is relatively simple, it while depend on a few additional libraries that probably will not be present if you haven't installed them. These include:
 - Numpy
 - Matplotlib
 - TensorFlow*
->/* For 'simple' installation: `$ pip install --upgrade tensorflow`
+>\* For 'simple' installation: `$ pip install --upgrade tensorflow`
 >  For more info, see: https://www.tensorflow.org/install/
 
 ```python
