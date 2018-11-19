@@ -205,16 +205,16 @@ Although these models were structured to behave like neurons, their behavior can
 >
 >You could imagine the decision coming down to the influence of three different factors:
 >1. Is the weather forecast good (what kind of conditions can you expect on the slopes)?
->2. Is it a weekend (traffic, crowds, etc)?
+>2. Is it a weekday (less traffic, fewer crowds, etc)?
 >3. Can I spare the money (for lift tickets cost, etc)?
 >
->On any given day we could represent the answer to each of these questions by a vector of 3 binary values (each a 0 or a 1). For example, if it was forecast to be good weather on a Tuesday, and I had just gotten a bonus at work (extra money to spare), I could represent that as:
+>On any given day we could represent the answer to each of these questions by a vector of 3 binary values (each a 0 or a 1). For example, if it was forecast to be good weather on a Sunday, and I had just gotten a bonus at work (extra money to spare), I could represent that as:
 >
 >$${\begin{equation*}
 \vec{x}   = [1,0,1]
 \end{equation*}}$$
 >
->But each of these factors could (and most certainly, would) have different influences on the final decision, relative to each other. So we could represent this with a set of numbers or _'weights'_, (_w<sub>1</sub>_ to _w<sub>n</sub>_). If, for example, the weather was really important to me, and the day-of-the-week less so, but the money was relatively un-important, I might assign:
+>But each of these factors could (and most certainly, would) have different influences on the final decision, relative to each other. So we could represent this with a set of numbers or _'weights'_, (_w<sub>1</sub>_ to _w<sub>n</sub>_). If, for example, the weather was really important to me, the day-of-the-week less so, and the money was relatively un-important, I might assign:
 >
 >$$\begin{equation*}
 \vec{w}   = [9,5,1]
@@ -231,8 +231,8 @@ Although these models were structured to behave like neurons, their behavior can
 \end{equation*}$$
 
 >
->One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.
->
+>One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.  
+>So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment.  
 >$$\begin{equation*}
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 16 \\
@@ -240,7 +240,7 @@ Although these models were structured to behave like neurons, their behavior can
      output=1
 \end{equation*}$$
 >
->So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment. The output has consequently increased and crossed our threshold. We get to go skiing!!!
+> Now, the output has increased and crossed our threshold. We get to go skiing!!!
 >- In the future, however, if money gets tight, this model is less likely to let us go skiing.
 ><img src="/assets/images/neural_nets/ski_guy.gif" style="height: 150px">
 >
@@ -259,6 +259,7 @@ Although these models were structured to behave like neurons, their behavior can
      output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 >
+> In one swift operation we found that our model suggests we go 
 > And of course, we could start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 <a id='nn-practical'></a>
