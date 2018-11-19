@@ -217,7 +217,7 @@ Although these models were structured to behave like neurons, their behavior can
 >But each of these factors could (and most certainly, would) have different influences on the final decision, relative to each other. So we could represent this with a set of numbers or _'weights'_, (_w<sub>1</sub>_ to _w<sub>n</sub>_). If, for example, the weather was really important to me, the day-of-the-week less so, and the money was relatively un-important, I might assign:
 >
 >$$\begin{equation*}
-\vec{w}   = [9,5,1]
+	\vec{w}   = [9,5,1]
 \end{equation*}$$
 
 >I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use 14 as our cut-off for this example.
@@ -226,8 +226,8 @@ Although these models were structured to behave like neurons, their behavior can
 	threshold = 14 \\
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 1 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 10 \\
-     \ 10 < threshold \\
-  output=0
+    \ 10 < threshold \\
+	output=0
 \end{equation*}$$
 >
 >One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.
@@ -236,8 +236,8 @@ Although these models were structured to behave like neurons, their behavior can
 >$$\begin{equation*}
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \cdotp \left[\begin{array}{c} 1 \\ 0 \\ 1 \end{array} \right] = 16 \\
-     \ 16 > threshold \\
-     output=1
+	\ 16 > threshold \\
+	output=1
 \end{equation*}$$
 >
 > Now, the output has increased and crossed our threshold. *We get to go skiing!!!*
