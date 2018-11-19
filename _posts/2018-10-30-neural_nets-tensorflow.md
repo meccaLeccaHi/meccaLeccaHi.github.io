@@ -256,7 +256,7 @@ Although these models were structured to behave like neurons, their behavior can
     \ \mathbf{X} \cdotp \vec{w} = \begin{bmatrix}1,0,1\\1,1,1\\0,1,1\end{bmatrix}
     \times \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right] = 
 	[\begin{array}{c} 16, 21, 12 \end{array}] \\
-     output=[\begin{array}{c} 1, 1, 0 \end{array}]
+    \text{so} \ output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 >
 > In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday. Pretty handy, eh?  
@@ -293,8 +293,7 @@ $$
 b=-threshold\\
 output= \left[
 	\begin{array}
-		\ 0 & \text{if}\ w \cdotp x +b \leq 0 \\
-		\1 & \text{if}\ w \cdotp x +b \gt 0
+		\ 0 & \text{if}\ w \cdotp x +b \leq 0
 	\end{array}
 \right] 
 $$
