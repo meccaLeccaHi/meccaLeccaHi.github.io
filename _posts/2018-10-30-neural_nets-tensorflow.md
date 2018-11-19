@@ -127,9 +127,9 @@ Can you compute the rest of the dot products by hand?
 
 If the product is the $2$ x $2$ matrix $\mathbf{C}_{mj}$, then:
 
-+ Matrix entry $c_{12}$ (its FIRST row and SECOND column) is the dot product of the FIRST row of $\mathbf{A}$ and the SECOND column of $\mathbf{B}$.
++ Matrix entry $c_{12}$ (its *first* row and *second* column) is the dot product of the *first* row of $\mathbf{A}$ and the *second* column of $\mathbf{B}$.
 
-+ Matrix entry $c_{21}$ (its SECOND row and FIRST column) is the dot product of the SECOND row of $\mathbf{A}$ and the FIRST column of $\mathbf{B}$.
++ Matrix entry $c_{21}$ (its SECOND row and *first* column) is the dot product of the *second* row of $\mathbf{A}$ and the *first* column of $\mathbf{B}$.
 
 Note that if the first matrix is $m$ x $n$ ($m$ rows and $n$ columns) and the second is  $i$ x $j$ (where $n = i$), then the final matrix will be $m$ x $j$. For example, below we have $2$ x $3$ multiplied by $3$ x $2$, which results in a $2$ x $2$ matrix. Can you see why?
 
@@ -146,7 +146,6 @@ A.dot(B)
 
 
 <a id='intro'></a>
-
 ## Intro To Neural Networks
 
 <a id="nn-special"></a>
