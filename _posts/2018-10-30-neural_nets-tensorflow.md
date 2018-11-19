@@ -127,11 +127,11 @@ Can you compute the rest of the dot products by hand?
 
 If the product is the $2$ x $2$ matrix $\mathbf{C}_{mj}$, then:
 
-+ Matrix entry $c_{12}$ (its *first* row and *second* column) is the dot product of the *first* row of $\mathbf{A}$ and the *second* column of $\mathbf{B}$.
++ Matrix entry $c_{12}$ (its *first row* and *second column*) is the dot product of the *first row* of $\mathbf{A}$ and the *second column* of $\mathbf{B}$.
 
-+ Matrix entry $c_{21}$ (its SECOND row and *first* column) is the dot product of the *second* row of $\mathbf{A}$ and the *first* column of $\mathbf{B}$.
++ Matrix entry $c_{21}$ (its *second row* and *first column*) is the dot product of the *second row* of $\mathbf{A}$ and the *first column* of $\mathbf{B}$.
 
-Note that if the first matrix is $m$ x $n$ ($m$ rows and $n$ columns) and the second is  $i$ x $j$ (where $n = i$), then the final matrix will be $m$ x $j$. For example, below we have $2$ x $3$ multiplied by $3$ x $2$, which results in a $2$ x $2$ matrix. Can you see why?
+Note that if the first matrix is $m \times n$ ($m$ rows and $n$ columns) and the second is  $i \times j$ (where $n = i$), then the final matrix will be $m \times j$. For example, below we have $2 \times 3$ multiplied by $3 \times 2$, which results in a $2 \times 2$ matrix. Can you see why?
 
 
 ```python
