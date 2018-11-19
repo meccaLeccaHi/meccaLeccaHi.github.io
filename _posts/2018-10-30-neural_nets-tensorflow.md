@@ -289,19 +289,12 @@ The purpose of the bias input is to influence the likelihood of triggering a giv
 
 But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
 
-$$\begin{equation*}
-    b=-threshold\\
-	\ output = \begin{bmatrix}0 1\\1 1\end{bmatrix}
-\end{equation*}$$
-
-foo
-
 $$ 
 b=-threshold\\
 output= \left[
 	\begin{array}
-		\ 0 \text{if}\ w \cdotp x +b \leq 0 \\
-		\1 \text{if}\ w \cdotp x +b \gt 0
+		\ 0, \text{if}\ w \cdotp x +b \leq 0 \\
+		1, \text{if}\ w \cdotp x +b \gt 0
 	\end{array}
 \right] 
 $$
