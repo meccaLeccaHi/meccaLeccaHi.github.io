@@ -59,7 +59,7 @@ While the following example is relatively simple, it while depend on a few addit
 - Numpy
 - Matplotlib
 - TensorFlow*
->\* For 'simple' installation: `$ pip install --upgrade tensorflow`
+>\* For 'simple' installation: `$ pip install --upgrade tensorflow`  
 >  For more info, see: https://www.tensorflow.org/install/
 
 ```python
