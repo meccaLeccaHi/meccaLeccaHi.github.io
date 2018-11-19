@@ -197,7 +197,7 @@ So, as is often the case, we set a __threshold__ and declare that as the cut-off
 $$\begin{equation*}
   output=\left\{
   \begin{array}
-    0, \text{if}\ \sum_{j=1}^n w_j x_j \leq threshold \\
+    \0, \text{if}\ \sum_{j=1}^n w_j x_j \leq threshold \\
     1, \text{if} \sum_{j=1}^n w_j x_j \gt threshold \\
   \end{array}\right.
 \end{equation*}$$
@@ -225,7 +225,7 @@ Although these models were structured to behave like neurons, their behavior can
 >$$\begin{equation*}
 	\vec{w}   = [9,5,1]
 \end{equation*}$$
-
+>
 >I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use *14 as our cut-off* for this example.
 >
 >$$\begin{equation*}
