@@ -115,7 +115,7 @@ v.dot(w)
 
 <a id="matrix-multiplication"></a>
 ### Matrix Multiplication
-$$\mathbf{A}_{mn} \cdot \mathbf{B}_{ij}$$  
+$$\mathbf{A}_{mn} \times \mathbf{B}_{ij}$$  
 **Matrix multiplication** is only valid when the left matrix has the same number of columns as the right matrix has rows ($n = i$). 
 
 {% include figure_link.html url="/assets/images/neural_nets/matrix_multiply.gif" href="https://www.mathsisfun.com/" caption="Each entry is the dot product of corresponding row and column vectors. Image source: mathisfun.com" width="60%" %}
