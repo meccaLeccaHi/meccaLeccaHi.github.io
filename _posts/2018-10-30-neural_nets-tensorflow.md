@@ -15,7 +15,7 @@ author: adam
 description: A Juptyter notebook on Neural Networks using Tensorflow
 ---
 
-{% include figure.html url="/assets/images/neural_nets/brain_machine.png" width="80%" %}
+{% include figure.html url="/assets/images/neural_nets/brain_machine.png" width="40%" %}
 
 >Adapted from numerous sources, including: 
 >- [*Neural Networks and Deep Learning*](http://neuralnetworksanddeeplearning.com/chap1.html) by *Michael Nielsen*
@@ -115,7 +115,9 @@ v.dot(w)
 
 <a id="matrix-multiplication"></a>
 ### Matrix Multiplication
-$$\mathbf{A}_{mn} \times \mathbf{B}_{ij}$$  
+
+$$ \mathbf{A}_{mn} \times \mathbf{B}_{ij} $$
+
 **Matrix multiplication** is only valid when the left matrix has the same number of columns as the right matrix has rows ($n = i$). 
 
 {% include figure_link.html url="/assets/images/neural_nets/matrix_multiply.gif" href="https://www.mathsisfun.com/" caption="Each entry is the dot product of corresponding row and column vectors. Image source: mathisfun.com" width="60%" %}
@@ -138,8 +140,6 @@ B = np.array([[7, 8], [9, 10], [11, 12]])
 
 A.dot(B)
 ```
-
-
 
     array([[ 58,  64],
            [139, 154]])
@@ -398,7 +398,6 @@ ax.tick_params(axis='both', which='major', labelsize=15)
 ax.legend(['Step Function', 'Sigmoid Function'], fontsize=20);
 ```
 
-
 ![png](/assets/images/neural_nets/output_38_0.png)
 
 
@@ -545,9 +544,7 @@ Just for kicks, let's take a look at what the classifier sees and look at some o
 display_mult_flat(0,400)
 ```
 
-
 ![png](/assets/images/neural_nets/output_60_0.png)
-
 
 <a id='tensorflow'></a>
 ### Using TensorFlow
@@ -633,23 +630,14 @@ These are the predictions of the model for the three training samples we provide
 sess.run(tf.nn.softmax(tf.zeros([4])))
 ```
 
-
-
-
     array([0.25, 0.25, 0.25, 0.25], dtype=float32)
-
-
 
 
 ```python
 sess.run(tf.nn.softmax(tf.constant([0.1, 0.005, 2])))
 ```
 
-
-
-
     array([0.11634309, 0.10579926, 0.7778576 ], dtype=float32)
-
 
 
 <a id="loss-function"></a>
@@ -811,7 +799,6 @@ for i in range(10):
 plt.pyplot.show()
 ```
 
-
 ![png](/assets/images/neural_nets/output_97_0.png)
 
 
@@ -852,12 +839,7 @@ print(answer)
 answer.argmax()
 ```
 
-
-
-
     7
-
-
 
 Play with `display_compare()` below and try to do the following:
 - Find some examples where the model guesses incorrectly. Do they make sense?
@@ -879,7 +861,6 @@ def display_compare(num):
      
 display_compare(ran.randint(0, 55000))    
 ```
-
 
 ![png](/assets/images/neural_nets/output_103_0.png)
 
