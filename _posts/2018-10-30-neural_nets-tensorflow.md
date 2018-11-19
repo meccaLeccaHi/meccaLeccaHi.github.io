@@ -291,10 +291,11 @@ But, it also leads to some convenient notational simplifications regarding the c
 
 $$\begin{equation*}
     b=-threshold\\
-	\ output = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
+	\ output = \left[\begin{array}{c} 0 & w \\ 
+	\1 & x \end{array} \right]
 \end{equation*}$$
 
-foo
+bar
 
 $$ 
 b=-threshold\\
