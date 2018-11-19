@@ -291,17 +291,17 @@ But, it also leads to some convenient notational simplifications regarding the c
 
 $$\begin{equation*}
     b=-threshold\\
-	\ output = \begin{bmatrix}0&nbsp;1\\1&nbsp;1\end{bmatrix}
+	\ output = \begin{bmatrix}0 1\\1 1\end{bmatrix}
 \end{equation*}$$
 
-bar
+foo
 
 $$ 
 b=-threshold\\
 output= \left[
 	\begin{array}
-		\ 0 & \text{if}\ w \cdotp x +b \leq 0 \\
-		\1 & \text{if}\ w \cdotp x +b \gt 0
+		\ 0 \text{if}\ w \cdotp x +b \leq 0 \\
+		\1 \text{if}\ w \cdotp x +b \gt 0
 	\end{array}
 \right] 
 $$
