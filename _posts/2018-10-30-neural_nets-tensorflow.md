@@ -253,8 +253,7 @@ Although these models were structured to behave like neurons, their behavior can
     \ \vec{w} \cdotp \mathbf{X} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
     \times \left[\begin{array}1,0,1\\1,1,1\\0,1,1\end{array} \right] = 
 	[\begin{array}{c} 16, 21, 12 \end{array}] \\
-     \ 16 > threshold \\
-     output=1
+     output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 
 <a id='nn-practical'></a>
