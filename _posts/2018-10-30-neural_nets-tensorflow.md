@@ -315,21 +315,21 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 {% include figure_link.html url="/assets/images/neural_nets/logic_gates.png" href="http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html" caption="Image source: schoolphysics.co.uk" width="80%" %}
 
 
->**Example:**
->Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
->
-><img src="/assets/images/neural_nets/perc_example.png" style="float: center; height: 250px">
->
->We can further imagine that we provide the model with `[0,0]`, and we see:
->
->$$
+**Example:**
+Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
+
+{% include figure.html url="/assets/images/neural_nets/perc_example.png" width="40%" %}
+
+We can further imagine that we provide the model with `[0,0]`, and we see:
+
+$$
     (-2)*0+(-2)*0+3=3\\
     \text{so} \ output=1
 $$
->
->The same process would reveal the following results:
->
-><center><table style="border: none">
+
+The same process would reveal the following results:
+
+<center><table style="border: none">
 <tr>
 	<td style=""><b>$x_1$</b></td>
 	<td style=""><b>$x_2$</b></td>
@@ -356,7 +356,7 @@ $$
 	<td style="text-align: center">0</td>
 </tr>
 </table></center>
->
+
 >It's a **NAND gate**!
 
 The above is a *very* simple example of how single perceptrons are capable of implementing logical computations. But, in practice, neural networks can collectively compute *any* logical function possible! 
