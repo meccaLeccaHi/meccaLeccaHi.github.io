@@ -176,13 +176,13 @@ In other words, our brains must first process an object's 'simple' features (col
 <a id="neuron"></a>
 ### The Neuron
 
-Neural networks were initially proposed as a way of understanding how the brain works. In the case of recognizing handwriting or the identity of faces, artificial neurons (such as the perceptron below) each make a yes or no (or 'binary') decision, before passing their output to the next perceptron in the network for the next decision. 
-
+Neural networks were initially proposed as a way of representing the processing performed by individual brain cells, or 'neurons', such as the one shown below. Neurons (such as this one) each make a yes or no (or 'binary') decision, before passing their output to the next perceptron in the network for the next decision. In the case of recognizing the identity of faces, each neuron may convey only a small part of the overall 'picture' (e.g. the shape of someone's chin or the color of their hair).
 
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/4/44/Neuron3.png" href="https://en.wikipedia.org/wiki/Artificial_neural_network" caption="The theoretical basis of the function mapping $X$ inputs (see image left) to the $Y$ outputs (see image right). Image source: wikipedia.com" width="70%" %}
 
+In the 1950's,  Frank Rosenblatt proposed the idea of the perceptron, which was meant to simulate this behavior, including a relatively simple rule for computing the output.
 
-In the example shown above, the perceptron has three binary inputs, _x<sub>1</sub>_, _x<sub>2</sub>_, and _x<sub>3</sub>_, and produces a single binary output. When the perceptron was proposed in the 1950's by Frank Rosenblatt, he included a relatively simple rule for computing the output. Weights (_w<sub>1</sub>_ to _w<sub>n</sub>_) are assigned to each input to represent their relative importance. 
+In the example below, the perceptron has three binary inputs, _x<sub>1</sub>_, _x<sub>2</sub>_, and _x<sub>3</sub>_, and produces a single binary output. Weights (_w<sub>1</sub>_ to _w<sub>n</sub>_) are assigned to each input to represent their relative importance.
 
 {% include figure.html url="/assets/images/neural_nets/perceptron.png" caption="Basic representation of an artificial neuron (perceptron)." width="80%" %}
 
@@ -449,7 +449,7 @@ The only constraint on the **input layer** is that it must correspond to the sha
 The only constraint on the **output layer** is that it must correspond to the shape of the intended prediction. 
 >For example: if I want to predict a _binary_ outcome (`True` or `False`), I can represent that with a single neuron. As we'll see later, if we want to predict a _multi-class_ outcome (integers: `0:9`), we need n-1 neurons to represent it ($n-1=9$, in this case).
 
-Although the design of the input and output layers are relatively simple, choosing the arrangement of the intermediate or "hidden" layers, can be much less so. In general, this is another instance in which a trade-off exists, which is our responsibility to optimize. In this case, the trade-off is between the complexity of the network, and the time required to train it. Hopefully this idea is already somewhat familiar, though, as it applies to all of the statistical models we've encountered in this course.
+Although the design of the input and output layers are relatively simple, choosing the arrangement of the intermediate or "hidden" layers, can be much less so. In general, this is another instance where a trade-off exists, which is our responsibility to optimize. In this case, the trade-off is between the complexity of the network, and the time required to train it. Hopefully this idea is already somewhat familiar, though, as it applies to all of the statistical models we've encountered in this course.
 
 The materials in this course (such as the examples in this notebook) will focus exclusively on *feed-forward* networks. These are networks in which there are no 'loops' capable of outputting signals in the backwards direction. But, now is a good time to introduce you an alternative model that you may like to use in the future. These models contain 'feed-back' loops and are referred to as [recurrent neural networks](http://en.wikipedia.org/wiki/Recurrent_neural_network).
 
