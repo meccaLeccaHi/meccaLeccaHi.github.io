@@ -6,7 +6,7 @@ math: true
 category: blog
 comments: true
 tag:
-- bayesian statistics
+- Bayesian statistics
 - iris database
 - supervised classification
 author: adam
