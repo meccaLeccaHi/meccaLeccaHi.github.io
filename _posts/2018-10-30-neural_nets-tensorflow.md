@@ -282,12 +282,16 @@ Although these models were structured to behave like neurons, their behavior can
 Although the model we just described was useful for illustrating the basic components of the 'decision-making' process in a neural network, it's ultimately not much of an improvement (if any) on the linear models we've seen before. This is because (as you might have guessed) typical neural networks are of much greater complexity. These networks usually consist of one or more columns of stacked perceptrons (or *'layers'*). 
 
 
-{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" href="https://en.wikipedia.org/wiki/Neural_network" caption="Image source: wikipedia.com" width="40%" %}
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" href="https://en.wikipedia.org/wiki/Neural_network" caption="The varying thickness of each line corresponds to the weights of connections between neurons. Image source: wikipedia.com" width="40%" %}
 
 In the model above, each circle represents an artifical neuron, more specifically the perceptron we saw in the last section. In this 'densely-connected' example, each perceptron feeds into every perceptron in the layer following its own, and so on until the final output. With all of these decisions occuring during each prediction, it becomes easier to see why neural networks are capable of such subtle (and sometimes nuanced) decision-making.
 
-Let's explore some of the practical consequences of the arrangement above-  
-The units in the first layer will learn to make decisions based purely on the 'raw' input to the model. As the output of each is 'fed-forward', the second layer will receive input which has already been transformed somewhat by the decisions made in the first layer. As a result, each layer could be described as learning to use more abstract features than the layer before it.
+Let's explore some of the practical consequences of the arrangement above:
+- The units in the first layer will learn to make decisions based purely on the 'raw' input to the model.
+- As the output of each is 'fed-forward', the second layer will receive input which has already been transformed somewhat by the decisions made in the first layer.
+- As a result, each layer could be described as learning to use more abstract features than the layer before it.
+
+> It's worth highlighting, at this point, that this is another aspect of neural networks that bears a striking resemblance to the way the brain works.
 
 <a id="function"></a>
 ### Network Function
@@ -299,7 +303,7 @@ We should also clarify how we decide what threshold is a good one to use. But be
 
 The purpose of the bias input is to influence the likelihood of triggering a given perceptron to 'fire', or more specifically, output a one instead of a zero. The greater the bias, the less input is required to trigger a perceptron (and vice-versa).
 
-But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we'll refer to the 'bias', instead of the 'threshold', from now on.
+But, it also leads to some convenient notational simplifications regarding the calculation of our output (see below). Because of these advantages, we can just refer to the 'bias' instead of the 'threshold' from now on.
 
 $$ 
 b=-threshold\\
@@ -313,15 +317,18 @@ $$
 
 <a id="logic"></a>
 #### Background: Logic Gates
-We've seen how a perceptron can be employed to integrate the influence of many inputs in order to arrive at some decision, but we haven't considered how these same units can perform more 'logical', gate-type functions, as well. As we'll see in the example below, by incorporating a bias into the output of each perceptron, we can evaluate computational functions such as AND, OR, and NAND.
 
-***Quick* review of logic gates**
+***Quick* logic gates review**
+
+'Logic gates' are the elementary building blocks of digital circuits.
 
 {% include figure_link.html url="/assets/images/neural_nets/logic_gates.png" href="http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html" caption="Image source: schoolphysics.co.uk" width="80%" %}
 
+We've seen how a perceptron can be employed to integrate the influence of many inputs in order to arrive at some decision, but we haven't considered how these same units can perform more 'logical', gate-type functions, as well. As we'll see in the next example, by incorporating a bias into the output of each perceptron, we can evaluate computational functions such as AND, OR, and NAND.
+
 
 **Example:**
-Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
+Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below.
 
 {% include figure.html url="/assets/images/neural_nets/perc_example.png" width="40%" %}
 
@@ -329,7 +336,7 @@ We can further imagine that we provide the model with `[0,0]`, and we see:
 
 $$
     (-2)*0+(-2)*0+3=3\\
-    \text{so} \ output=1
+    \text{so  } \ output=1
 $$
 
 The same process would reveal the following results:
@@ -455,7 +462,7 @@ The only constraint on the **output layer** is that it must correspond to the sh
 
 Although the design of the input and output layers are relatively simple, choosing the arrangement of the intermediate or "hidden" layers, can be much less so. In general, this is another instance where a trade-off exists, which is our responsibility to optimize. In this case, the trade-off is between the complexity of the network, and the time required to train it. Hopefully this idea is already somewhat familiar, though, as it applies to all of the statistical models we've encountered in this course.
 
-The materials in this course (such as the examples in this notebook) will focus exclusively on *feed-forward* networks. These are networks in which there are no 'loops' capable of outputting signals in the backwards direction. But, now is a good time to introduce you an alternative model that you may like to use in the future. These models contain 'feed-back' loops and are referred to as [recurrent neural networks](http://en.wikipedia.org/wiki/Recurrent_neural_network).
+The materials in this post will focus exclusively on *feed-forward* networks. These are networks in which there are no 'loops' capable of outputting signals in the backwards direction. But, now is a good time to introduce you to an alternative model that you may like to use in the future. These models contain 'feed-back' loops and are referred to as [recurrent neural networks](http://en.wikipedia.org/wiki/Recurrent_neural_network).
 
 Because neurons in these loops undergo sustained bouts of activity, rather than isolated events, recurrent feed-back can result in cascades of neurons firing, which happens to be much closer to the behavior of actual neurons in your brain. Although they can be more difficult to train, they are sometimes capable of solving harder problems than feed-forward networks, particularly those involving NLP.
 
@@ -681,7 +688,7 @@ For this application, we will use the 'cross entropy' loss function.
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
 ```
 
-The cross entropy loss function is the product of the log of our prediction(s) `y` (values between 0 and 1) and the observed value `y_`. The details are outside of the scope of today's class, but the important thing to know is that it penalizes the classifier (indicates loss) with a large number if the prediction is incorrect and with a small number if it's correct.
+The cross entropy loss function is the product of the log of our prediction(s) `y` (values between 0 and 1) and the observed value `y_`. The details are outside of the scope of this post, but the important thing to know is that it penalizes the classifier (indicates loss) with a large number if the prediction is incorrect and with a small number if it's correct.
 >Take a look at the example below to see what softmax is doing.
 >- In the first imaginary example, the model is very confident that the digit it's seeing is a 3.  
 
@@ -811,7 +818,7 @@ for i in range(train_steps+1):
     Training Step:2500  Accuracy =  0.9067  Loss = 0.23929422
 
 
-Exactly what gradient descent is doing to improve accuracy is outside the scope of this article. But having used it to optimize our weights, we can now visualize each set to see how the network is 'focusing its attention'.
+Exactly what gradient descent is doing to improve accuracy is outside the scope of this article (but may be the topic of a future post). But having used it to optimize our weights, we can now visualize each set to see how the network is 'focusing its attention'. 
 >When reading the figure below, just remember that more red means more positive, white is near zero, and more blue means more negative.
 
 
@@ -831,9 +838,11 @@ plt.pyplot.show()
 ![png](/assets/images/neural_nets/output_97_0.png)
 
 
-Our final figure shows the weights for each digit 0 through 9. These are by far the most important factor in determining whether your model will succeed or fail. The majority of effort in machine learning is spent in the optimization of these weights, which are what provide us with the model we can use to make predictions on future data. 
+The very elaborate figure above shows the weights for each digit 0 through 9. These are by far the most important factor in determining whether your model will succeed or fail. The majority of effort in machine learning is spent in the optimization of these weights, which are what provide us with the model we can use to make predictions on future data. 
 
 >Keep in mind that this sort of visualization becomes less meaningful/interpretable as the size and complexity of the model (particularly, the number of layers) grows beyond the relatively simple model that we've implemented in this example.
+
+Finally, after all our hard work, we can play with our model! Let's test it out and see how this very simple model neural network performs on some examples.
 
 
 ```python
