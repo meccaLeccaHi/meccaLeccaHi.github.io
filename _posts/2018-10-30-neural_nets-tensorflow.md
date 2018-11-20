@@ -226,7 +226,7 @@ Although these models were structured to behave like neurons, their behavior can
 	\vec{w}   = [9,5,1]
 \end{equation*}$$
 >
->I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use *14 as our cut-off* for this example.
+>I'm now in a position to multiply each element in $\vec{x}$ by each element in $\vec{w}$ to get a single output telling me whether I should take the ski trip or not. All that's left is to decide _before-hand_ on some cut-off, above which I will take the trip and below which I will not. Let's use *14* as our cut-off* for this example.
 >
 >$$\begin{equation*}
 	\ threshold = 14 \\
@@ -265,7 +265,7 @@ Although these models were structured to behave like neurons, their behavior can
     \text{so} \ output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 >
-> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday. Pretty handy, eh?  
+> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday, based on the weights we've assigned to each category. Pretty handy, eh?  
 > Of course, we could then start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 <a id='nn-practical'></a>
@@ -278,10 +278,10 @@ Although the model we just described was useful for illustrating the basic compo
 
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Neural_network_example.svg/220px-Neural_network_example.svg.png" href="https://en.wikipedia.org/wiki/Neural_network" caption="Image source: wikipedia.com" width="40%" %}
 
-In the model above, each circle represents an artifical neuron, more specifically the perceptron we saw in the last section. Each perceptron feeds into every perceptron in the layer following its own, and so on until the final output. With all of these decisions going on, it's becomes easier to see now why neural networks are capable of such subtle (and sometimes nuanced) decision-making.
+In the model above, each circle represents an artifical neuron, more specifically the perceptron we saw in the last section. In this 'densely-connected' example, each perceptron feeds into every perceptron in the layer following its own, and so on until the final output. With all of these decisions occuring during each prediction, it becomes easier to see why neural networks are capable of such subtle (and sometimes nuanced) decision-making.
 
-Let's explore some of the practical consequences of the arrangement above-
-The perceptrons in the first layer will learn to make decisions based purely on the 'raw' input to the model. As the output of each is 'fed-forward', the second layer will receive input which has already been transformed somewhat by the decisions made in the first layer. As a result, each layer could be described as learning to use more abstract features than the layer before it.
+Let's explore some of the practical consequences of the arrangement above-  
+The units in the first layer will learn to make decisions based purely on the 'raw' input to the model. As the output of each is 'fed-forward', the second layer will receive input which has already been transformed somewhat by the decisions made in the first layer. As a result, each layer could be described as learning to use more abstract features than the layer before it.
 
 <a id="function"></a>
 ### Network Function
@@ -365,22 +365,23 @@ It's a **NAND gate**!
 
 The above is a *very* simple example of how single perceptrons are capable of implementing logical computations. But, in practice, neural networks can collectively compute *any* logical function possible! 
 
-As impressive as this may sound, it actually overlooks the real value neural networks have in helping to solve complex problems. Like your brain, the perceptron is capable of adjusting its weights and biases following experience with external stimuli, in order to improve performance (and thus maximize reward) on a defined task. We shift our focus to this process in the next section.
+As impressive as this may sound, sometimes this requires a model so large that it's not practical to implement given limited time and computing power. So, always bear that in mind when applying neural networks to your particular project.
 
 
 <a id='nn-training'></a>
 ## Neural Network Training
 
-To make the daunting task of training our (potentially-complicated) network of perceptrons more tractable, we'd really like to be able to make small changes to our weights (and biases) and expect small changes in behavior as a result. That way we could carefully experiment with different values and eventually improve the quality of our predictions. Something like this would be ideal:
+Like your brain, the perceptron is capable of adjusting its weights and biases following experience with external stimuli, in order to improve performance (and thus maximize reward) on a defined task.
 
+To make the daunting task of training our (potentially-complicated) network of perceptrons more tractable, we'd really like to be able to make small changes to our weights (and biases) and expect small changes in behavior as a result. That way we could carefully experiment with different values and eventually improve the quality of our predictions. Something like this would be ideal:
 
 {% include figure_link.html url="http://neuralnetworksanddeeplearning.com/images/tikz8.png" href="http://neuralnetworksanddeeplearning.com" caption="The ideal context in which to experimentally-manipulate our model weights. Image source: http://neuralnetworksanddeeplearning.com" width="65%" %}
 
-
 But, the current model we have introduced does _not_ exhibit this behavior. If we implemented the current model, and manipulated our weights in order to improve our predictions, we could expect to see changes so severe that it was impossible to make any progress toward our goal of better prediction accuracy.
-So, what do we do?
+So, what to do?
 
-It is at this point that we say goodbye to the perceptron, and meet a new type of artificial neuron: the _sigmoid neuron_. Their behavior is largely similar, however, the sigmoid neurons respond less to changes in their weights and biases. 
+It is at this point that we say goodbye to the perceptron, and meet a new type of artificial neuron: the _sigmoid neuron_. Their behavior is largely similar, however, the sigmoid neurons respond less to changes in their weights and biases.
+
 This is a result of differences in their output; whereas, the perceptron could only produce binary values (0 or 1), the sigmoid neuron produces continuous values between 0 and 1. This is because the perceptron's rule was:
 
 $$\ \vec{w} \cdotp \vec{x} +b \ $$
@@ -410,10 +411,7 @@ step_output = 1.0*(z_vals>0)
 sig_output = 1/(1+np.exp(-z_vals))
 ```
 
-We can visualize the differences between these models more easily by comparing their respective shapes when plotted. 
-- First, we can consider the output of the perceptron to correspond to the step function (below, blue line). As we can see, this function returns a binary output depending on whether $z$ (the value of $w \cdotp x +b$) is positive or negative.
-- The sigmoid neuron (orange line), we can see, is a smoothed version of the step function- not too different from the step function, at first glance. But, it's the increased smoothness that decreases the slope around zero a tiny bit so that now, small changes ($\Delta w_j$) in the weights and ($\Delta b$) in the bias result in similarly small changes ($\Delta output$) in the output of the sigmoid neuron. It's actually possible to show that ($\Delta output$) is a linear function of ($\Delta w_j$) and ($\Delta b$). This linearity means we can now begin making progressively better and better predictions as a consequence of exposure to training samples.
-
+We can visualize the differences between these models more easily by comparing their respective shapes when plotted.
 
 ```python
 plt.rcParams["figure.figsize"] = [16,9]
@@ -424,6 +422,10 @@ ax.set_xlabel('Z', fontsize=25)
 ax.tick_params(axis='both', which='major', labelsize=15)
 ax.legend(['Step Function', 'Sigmoid Function'], fontsize=20);
 ```
+
+- First, we can consider the output of the perceptron to correspond to the step function (below, blue line). As we can see, this function returns a binary output depending on whether $z$ (the value of $w \cdotp x +b$) is positive or negative.
+- The sigmoid neuron (orange line), we can see, is a smoothed version of the step function- not too different from the step function, at first glance. But, it's the increased smoothness that decreases the slope around zero a tiny bit so that now, small changes ($\Delta w_j$) in the weights and ($\Delta b$) in the bias result in similarly small changes ($\Delta output$) in the output of the sigmoid neuron. It's actually possible to show that ($\Delta output$) is a linear function of ($\Delta w_j$) and ($\Delta b$). This linearity means we can now begin making progressively better and better predictions as a consequence of exposure to training samples.
+
 
 ![png](/assets/images/neural_nets/output_38_0.png)
 

@@ -639,11 +639,83 @@ Now, you just need to acquire you own key, then set it as an environmental varia
 $ export GOOGLE_KEY='API_KEY_HERE'
 ```
 
+Having done that, we can begin construction the functionality behind our `/locate` page. The majority of changes we need to make for this step are in `routes.py`.
+<figcaption><i>app/routes.py</i> - Making `locate.html` work.<br>&nbsp;</figcaption>  
+```
+from flask import render_template, flash, redirect
+from app import app, db
+from app.forms import LocateForm, CommentForm
+from app.models import Resort, Post
+from scipy.spatial import distance
+import googlemaps
+from config import Config
+import numpy as np
+
+# ...
+
+# 'Location' view
+@app.route('/locate', methods=['GET', 'POST'])
+def locate():
+	# Get data from form
+	form = LocateForm()
+	# Check validity
+	if form.validate_on_submit():
+		gmaps = googlemaps.Client(key=Config.GOOGLE_KEY)
+		
+		# Geocode address w/ Google API
+		geocoding_results = gmaps.geocode(form.address.data)
+		user_loc = geocoding_results[0]['geometry']['location']
+		
+		# Collect resort position data
+		resort_locs = [(i.latitude, i.longitude) for i in Resort.query.all()]
+
+		# Calculate the euclidean distance to each
+		dist = np.array([distance.euclidean(rl, (user_loc['lat'], user_loc['lng'])) for rl in resort_locs])
+
+		# Sort and select closest option
+		result = Resort.query.get(int(dist.argsort()[0]))
+
+	else:
+		result=[]
+
+	return render_template('locate.html', title="Find resorts", form=form, result=result)
+```
+
+Now we just need to make a few tweaks to the `locate.html` template, in order to be able to view the results of our search.
+
+<figcaption><i>app/templates/locate.html</i> - Tweaking `locate.html` to add results to page.<br>&nbsp;</figcaption>  
+```
+{{ "{% extends 'base.html' " }}%}
+
+{{ "{% block content " }}%}
+	<h1>Locate ski resorts</h1>
+	<form action="" method="post" novalidate>
+		{{ "{{ form.hidden_tag() " }}}}
+		<p>
+			<b>{{ "{{ form.address.label " }}}}</b><br>
+			{{ "{{ form.address(size=32) " }}}}<br>
+			{{ "{% for error in form.address.errors " }}%}
+			<span style="color: red;">{{ error }}</span>
+			{{ "{% endfor " }}%}
+		</p>
+		<p>{{ "{{ form.submit() " }}}}</p>
+	</form>
+	{{ "{% if result " }}%}
+	<span><b>Closest resort:</b></span><br>
+	<a href="{{ "{{ result.url " }}}}"><i>{{ "{{ result.resortname " }}}}</i></a>
+	{{ "{% endif " }}%}
+{{ "{% endblock " }}%}
+```
+And now our new page works! Note that we need to populate the database with resorts to make this actually work. In a future post, I'll show how to scrap that data from the web.
+{% include figure.html url="/assets/images/flask/locate_results.png" caption="Sweet, new 'location' page." width="55%" %}
+
+> See drafts/snowblog-0.4
+
 <a id="html_css"></a>
 ## HTML/CSS
-#### *UNDER CONSTRUCTION*
+In the final section of this post, we'll make some minor tweaks that will make a major difference in the look and feel of our web-page. 
 
-
+> See drafts/snowblog-0.5
 
 From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. ***Have fun!***
 
