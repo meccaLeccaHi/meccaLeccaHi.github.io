@@ -161,7 +161,7 @@ It can be useful to routinely visualize our model, if only for QA purposes. Kera
 
 In our current example (below), we can see that we're using a fully-connected network structure consisting of with three layers.
 
-{% include figure.html url="/assets/images/keras_tutorial/model.png" caption="Fully-connected model schematic." width="55%" %}
+{% include figure.html url="/assets/images/keras_tutorial/model.png" caption="Fully-connected model schematic." width="40%" %}
 
 We can specify the number of neurons in each layer, as well as the activation function, in the process of creating our model.
 

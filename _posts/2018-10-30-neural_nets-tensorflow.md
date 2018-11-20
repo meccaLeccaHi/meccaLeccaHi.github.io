@@ -1,5 +1,5 @@
 ---
-title: "Neural Networks"
+title: "Neural Networks with TensorFlow"
 date: 2018-10-30
 layout: post
 math: true
@@ -13,7 +13,7 @@ tag:
 - MNIST database
 - Tensorflow
 author: adam
-description: A Juptyter notebook on Neural Networks using Tensorflow
+description: A Juptyter notebook on Neural Networks using TensorFlow
 ---
 
 >Adapted from numerous sources, including: 
@@ -238,7 +238,10 @@ Although these models were structured to behave like neurons, their behavior can
 \end{equation*}$$
 >
 >One of the advantages of this approach is that if I don't like the output produced by my model (e.g. money becomes more important to me), I can just go back and adjust the weights for that particular variable and my predictions will change accordingly.
->So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.  Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment.
+>
+>So, by manipulating the weights of our models, we end up with different models and ultimately, different decisions.
+>
+>Imagine if, in our example, we decide to be more careful with money. In order to represent this, we can increase the relative importance of money in our model. In this case, we just got a bonus at work, so money is not a problem at the moment.
 >
 >$$\begin{equation*}
     \ \vec{w} \cdotp \vec{x} = \left[\begin{array}{c} 9 \\ 5 \\ 7 \end{array} \right]
@@ -266,7 +269,8 @@ Although these models were structured to behave like neurons, their behavior can
     \text{so} \ output=[\begin{array}{c} 1, 1, 0 \end{array}]
 \end{equation*}$$
 >
-> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday, based on the weights we've assigned to each category. Pretty handy, eh?  
+> In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday, based on the weights we've assigned to each category. Pretty handy, eh?
+>
 > Of course, we could then start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
 ---
