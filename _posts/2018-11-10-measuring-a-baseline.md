@@ -7,7 +7,6 @@ category: blog
 comments: true
 tag:
 - supervised classification
-- classification
 - regression
 author: adam
 description: A brief explanation on the rationale behind measuring a baseline accuracy score.
