@@ -1,5 +1,5 @@
 ---
-title: "Web apps with Flask"
+title: "Web Apps with Flask"
 date: 2018-11-08
 layout: post
 math: false
