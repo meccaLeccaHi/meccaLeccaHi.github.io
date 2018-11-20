@@ -43,6 +43,7 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
 - [Adding Comment View](#comment_view)
 - [Google Places API](#google_places)
 - [HTML/CSS](#html_css)
+	-[Bootstrap](#bootstrap)
 - [Topic Review](#topic-review)
 
 
@@ -714,7 +715,45 @@ And now our new page works! Note that we need to populate the database with reso
 ## HTML/CSS
 In the final section of this post, we'll make some minor tweaks that will make a major difference in the look and feel of our web-page. 
 
+Up until now, we've mainly focused on the functionality of our web-page, without much (if any) concern for the presentation side. But, it's definitely worth taking a few extra steps before showing off our new page to the world, if only to make things look that much cleaner and more professional. This topic is largely beyond the scope of this discussion, so we will only discuss it briefly.
+
+<a id="bootstrap"></a>
+### Bootstrap
+CSS frameworks make this possible by providing a variety of common user interfaces that have already been styled in a consistent fashion. The CSS framework that we'll be using is called [Bootstrap](http://getbootstrap.com/), and it was created by Twitter. Bootstrap handles lots of important components to our web page that we don't want to have to deal with:
+- Screen sizes on a variety of devices
+- Consistent rendering in a variety of browsers
+- Styling of navigation bars, buttons, alerts, etc.
+
+For this, we'll use another Flask extension -- [Flask-Bootstrap]() -- that provides us a template with the Bootstrap framework already installed. We can install it as we did with the other extensions previously using `pip`:
+```
+(venv) $ pip install flask-bootstrap
+```
+Like the other extensions we've seen, Flask-Bootstrap needs to be initialized like so:
+<figcaption><i>app/__init__.py</i> - Initializing Flask-Bootstrap<br>&nbsp;</figcaption>  
+```
+# ...
+from flask_migrate import Migrate
+from flask_bootstrap import Bootstrap
+from config import Config
+
+# Create instances of app components to be included
+app = Flask(__name__)
+# ...
+bootstrap = Bootstrap(app)
+
+from app import routes, models
+```
+
+Now we have our `bootstrap/base.html` template in place, and we can access it like any other template with the `extends` construct.
+
+
+
+
+
+####UNDER CONSTRUCTION
+
 > See [drafts/snowblog-0.5](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/blob/master/assets/code/snowblog-0.5.zip) for code up to this point.
+
 
 From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. ***Have fun!***
 

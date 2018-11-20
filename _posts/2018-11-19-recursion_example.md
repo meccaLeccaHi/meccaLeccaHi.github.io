@@ -1,8 +1,19 @@
+---
+title: "What the heck is recursion, anyway?"
+date: 2018-11-19
+layout: post
+category: blog
+comments: true
+tag:
+- recursive function
+- factorial function
+author: adam
+description: Brief introduction to the use of recursive functions in Python.
+---
 
 ### [Recursion](https://en.wikipedia.org/wiki/Recursion) example
 
-<img src='https://imgs.xkcd.com/comics/fixing_problems.png' style="float: center; height: 250px">
-Source: [xkcd.com](https://imgs.xkcd.com/comics/fixing_problems.png)
+{% include figure_link.html url="https://imgs.xkcd.com/comics/fixing_problems.png" href="https://imgs.xkcd.com/comics/fixing_problems.png" caption="Image source: xkcd.com" height="250px" %}
 
 The most common example people use to describe recursion involves the [factorial function](https://en.wikipedia.org/wiki/Factorial). 
 
