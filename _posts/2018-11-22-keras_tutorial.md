@@ -533,7 +533,7 @@ print(pd.Series(np.squeeze(predictions)).map(target_key).head())
 <a id="exercise"></a>
 ## Part 5. Exercise
 
-Now it's your turn. In the cell below:
+Now it's your turn. Update the code below to complete the following steps.
 
 1. **Train-test split**
 You probably already noticed one problem with our code- we're using the same data for training and testing (*oh no!*). Fix this. See what happens to our expectations regarding how the model will perform with future data.
