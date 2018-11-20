@@ -17,7 +17,7 @@ The purpose of this article is to highlight the importance of performing baselin
 in ML.
 
 >Let's start with an example. Say you had a bag of 100 marbles (40 green, 15 orange, 25 blue, and 20 red), and you trained a statistical model to predict the color using a series of attributes carefully collected with expensive scientific equipment.  
->Without stopping to consider the baseline score that our model should be a capable of, we might assume that our classifier is succeeding if it guesses color correctly more than 25% (1 out 4 [colors]).  
+>Without stopping to consider the baseline score that our model should be a capable of, we might assume that our classifier is succeeding if it guesses color correctly more than 25% (1 out 4 colors).  
 >However the more 'accurate' interpration of the true baseline accuracy (in this classification example), is the proportion of the most common prediction (e.g. 40%, corresponding to always guessing 'green' in our current example).  
 >In general, we can see here how consistent use of baseline accuracy measurement, can provide us with more reasonable expectations, and help us interpret our findings more readily.  
 
