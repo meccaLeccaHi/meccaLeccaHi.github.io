@@ -86,7 +86,9 @@ This project served as a nice opportunity for me to get more familiar with Flask
 ## Setting Up The Environment
 
 Obviously, we are going to use Python 3 in this post as we have for all the others. So, if it's not installed, we can change that like so:  
-`$ sudo apt-get -y install python3 python3-venv python3-dev`
+```
+$ sudo apt-get -y install python3 python3-venv python3-dev
+```
 
 <a id="virtual_environment"></a>
 ### Virtual Environments
@@ -96,19 +98,25 @@ A _virtual environment_ is an enclosed copy of the Python interpreter. By that I
 
 #### Create the environment
 We can start by creating a virtual environment inside the project we are working on. So, from within that directory, run:  
->`$ python -m venv venv`  
+```
+$ python -m venv venv
+```
 >Note: If we want to use a different interpreter (e.g. `python3` or `python2`), use that instead.
 
 This command asks Python to run the `venv` package, and creates a virtual environment named `venv` (feel free to change it as you wish). 
 
 Did you notice that a folder named `/venv` has now been created inside your project folder? 
 Now that the environmet has been created, we install it like so:
->`$ virtualenv venv`
+```
+$ virtualenv venv
+```
 
 
 #### Activating environments
 Having done so, we can `cd` into this package and 'activate' the appropriate virtual environment whenever we want like so:
->`$ source venv/bin/activate`   
+```
+$ source venv/bin/activate
+```
 
 Notice that the cursor will change from `$` to `(venv) $`
 
@@ -119,11 +127,15 @@ Now, we're ready to start customizing our environment!
 #### Bonus: Enumerating packages with 'requirements.txt'
 When installing software, and Python packages in particular, it's not un-common to end up with a lot of libraries installed.
 We can get a quick, comprehensive list of what packages we are using at any time with the commands below:  
-`$ pip freeze > requirements.txt`  
+```
+$ pip freeze > requirements.txt`
+```
 
 This directs the output of `pip freeze`, which lists all of the current Python package dependencies, to a text file named 'requirements.txt'. Open it up and take a look. 
 The beauty of it is that it allows someone else to immediately adopt the same environment by running:  
->`$ pip install -r requirements.txt`
+```
+$ pip install -r requirements.txt
+```
 
 <a id="environmental_environment"></a>
 ### Setting Environmental Variables
@@ -132,7 +144,7 @@ The beauty of it is that it allows someone else to immediately adopt the same en
 By convention, environmental variables are typically defined using all capital letters, which helps users distinguish environmental variables from other variable types.
 
 As with most variables, variable assignment consists of relating a key to a value, in most instances a string, using the following format:  
-`KEY="value with spaces"`
+>`KEY="value with spaces"`
 
 For example:
 ```
@@ -146,9 +158,9 @@ The variable `BASH` now exists within this current  environment, but will be des
 `export BASH`
 Our program will use two environmental variables. `FLASK_APP` and `GOOGLE_KEY`.
 - `FLASK_APP` tells Flask how to import our application:  
-`(venv) $ export FLASK_APP=microblog.py`
+>`(venv) $ export FLASK_APP=microblog.py`
 - `GOOGLE_KEY` provides the necessary API key for [googlemaps](https://github.com/googlemaps/google-maps-services-python)  
-`(venv)$ export GOOGLE_KEY='API_KEY_HERE'`
+>`(venv)$ export GOOGLE_KEY='API_KEY_HERE'`
 
 One last thing to mention is that we can, if we desire, include the creation of these variables during login by adding the `export` commands to our `~/.bashrc` file (at the bottom is fine).
 
@@ -215,6 +227,7 @@ Fortunately, Flask has an extension to handle web forms: [Flask-WTF](http://pack
 ```
 (venv) $ pip install flask-wtf
 ```
+
 <a id="locate_form"></a>
 ### Locate Resorts Form
 
