@@ -840,3 +840,5 @@ From this point, it should be fairly easy to continue to modify the existing cod
 - We learned how to use templates and forms to quickly construct a 'lightweight' application that allows us to focus on website functionality and not on the presentation/HTML.
 - We learned about the variety of database options available to use with Flask.
 - We saw how to apply a CSS framework (Bootstrap) to our application.
+
+**Questions?** Leave a comment below.

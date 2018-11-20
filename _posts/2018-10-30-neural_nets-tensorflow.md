@@ -11,6 +11,7 @@ tag:
 - perceptron
 - neural network
 - MNIST database
+- Tensorflow
 author: adam
 description: A Juptyter notebook on Neural Networks using Tensorflow
 ---
@@ -897,3 +898,5 @@ display_compare(ran.randint(0, 55000))
 - We were shown how to use Tensor flow to create convolutional neural network models that can be structured (i.e. shaped) to handle a wide-variety of prediction tasks.
 - We covered how to load the MNIST dataset in TensorFlow and generate plots of the dataset.
 - We saw how to reshape the MNIST dataset and develop a pretty simple (but well-performing) multi-layer perceptron model to tackle the problem.
+
+**Questions?** Leave a comment below.
