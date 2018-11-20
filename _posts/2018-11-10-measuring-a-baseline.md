@@ -13,7 +13,7 @@ author: adam
 description: A brief explanation on the rationale behind measuring a baseline accuracy score.
 ---
 
-	The purpose of this article is to highlight the importance of performing baseline measurements as a routine pre-cursor to evaluating the performance of your model(s). Although, the information provided by the baseline measurement is purely a conceptual one, it can't help us avoid some very common pit-falls
+The purpose of this article is to highlight the importance of performing baseline measurements as a routine pre-cursor to evaluating the performance of your model(s). Although, the information provided by the baseline measurement is purely a conceptual one, it can help us avoid some very common pit-falls
 in ML.
 
 >Let's start with an example. Say you had a bag of 100 marbles (40 green, 15 orange, 25 blue, and 20 red), and you trained a statistical model to predict the color using a series of attributes carefully collected with expensive scientific equipment. 
