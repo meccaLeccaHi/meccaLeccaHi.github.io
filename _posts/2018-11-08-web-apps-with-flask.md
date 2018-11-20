@@ -744,8 +744,53 @@ bootstrap = Bootstrap(app)
 from app import routes, models
 ```
 
-Now we have our `bootstrap/base.html` template in place, and we can access it like any other template with the `extends` construct.
+Now we have our `bootstrap/base.html` template in place, and we can access it like any other template with the `extends` construct. Let's update `base.html` to inherit from the Bootstrap base template like so:
 
+<figcaption><i>app/templates/base.html</i> - Tweaking `base.html` to inherit from Bootstrap base template.<br>&nbsp;</figcaption>  
+```
+{{ "{% extends 'bootstrap/base.html' " }}%}
+
+{{ "{% block title " }}%}
+    {{ "{% if title " }}%}{{ "{{ title " }}}} - Snowblog{{ "{% else " }}%}Welcome to Snowblog{{ "{% endif " }}%}
+{{ "{% endblock " }}%}
+
+{{ "{% block navbar " }}%}
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ "{{ url_for('index') " }}}}">Snowblog Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ "{{ url_for('locate') " }}}}">Locate nearest resorts</a></li>
+                    <li><a href="{{ "{{ url_for('comment') " }}}}">Leave notes on resorts</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+{{ "{% endblock " }}%}
+
+{{ "{% block content " }}%}
+    <div class="container">
+        {{ "{% with messages = get_flashed_messages() " }}%}
+        {{ "{% if messages " }}%}
+            {{ "{% for message in messages " }}%}
+            <div class="alert alert-info" role="alert">{{ "{{ message " }}}}</div>
+            {{ "{% endfor " }}%}
+        {{ "{% endif " }}%}
+        {{ "{% endwith " }}%}
+		{{ "{# application content needs to be provided in the app_content block " #}}}
+        {{ "{% block app_content " }}%}{{ "{% endblock " }}%}
+    </div>
+{{ "{% endblock " }}%}
+```
 
 
 

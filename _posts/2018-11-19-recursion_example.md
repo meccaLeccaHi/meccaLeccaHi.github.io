@@ -33,11 +33,7 @@ def factorial(n):
 factorial(5)
 ```
 
-
-
-
     120
-
 
 
 In general, recursion can be pretty opaque. But, we can get a clearer picture of what's happening inside our function from the example below.
@@ -54,11 +50,7 @@ factorial(4)                   # = 24
 24                             # = 24
 ```
 
-
-
-
     24
-
 
 
 **Pros:**
@@ -80,9 +72,6 @@ def string_flipper(string):
     
 string_flipper('worcestershire')
 ```
-
-
-
 
     'erihsretsecrow'
 
