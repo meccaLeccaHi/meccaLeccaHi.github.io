@@ -318,7 +318,7 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 >**Example:**
 >Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
 >
->{% include figure.html url="/assets/images/neural_nets/perc_example.png" width="40%" %}
+><img src="/assets/images/neural_nets/perc_example.png" style="float: center; height: 250px">
 >
 >We can further imagine that we provide the model with `[0,0]`, and we see:
 >
@@ -329,7 +329,7 @@ $$
 >
 >The same process would reveal the following results:
 >
-<center><table style="border: none">
+><center><table style="border: none">
 <tr>
 	<td style=""><b>$x_1$</b></td>
 	<td style=""><b>$x_2$</b></td>
