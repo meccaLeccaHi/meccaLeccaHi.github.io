@@ -53,7 +53,7 @@ When Jerry isn't [dodging yeti's](https://ski.ihoc.net/), he loves tearing up th
 - Understand how to set environment variables in shell.
 - Observe the utility of Flask as a powerful option for providing microservices via Python.
 - Explore templates, forms, and other essential elements of the Flask ecosystem through a simple example.
-
+- See how to apply a CSS framework (Bootstrap) to a Flask application.
 
 ### Try this app now at:
 [https://snowblogg.herokuapp.com/index](https://snowblogg.herokuapp.com/index)
@@ -408,7 +408,7 @@ from app import routes, models
 ```
 We can use the same pattern for adding any Flask extension: we first initialize our Flask extension, then import `routes` and `models` modules. We've seen `routes` previously, and `models` is defined in the next section of this post.
 
-> See [drafts/snowblog-0.1](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/blob/master/assets/code/snowblog-0.1.zip) for code up to this point.
+> See [drafts/snowblog-0.1](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/raw/master/assets/code/snowblog-0.1.zip) for code up to this point.
 
 <a id="database_models"></a>
 ## Database Models
@@ -524,7 +524,7 @@ Now let's make our page actually reflect those changes by adding somewhere for t
 It works- *hooray*! 
 {% include figure.html url="/assets/images/flask/adding_posts_index.png" caption="Viewing posts in home page." width="55%" %}
 
-> See [drafts/snowblog-0.2](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/blob/master/assets/code/snowblog-0.2.zip) for code up to this point.
+> See [drafts/snowblog-0.2](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/raw/master/assets/code/snowblog-0.2.zip) for code up to this point.
 
 <a id="comment_view"></a>
 ## Adding Comment View
@@ -623,7 +623,7 @@ That's it. Our new view is complete. That's all it takes to add another page to 
 ```
 Check it out! It works!
 {% include figure.html url="/assets/images/flask/comment_view.png" caption="Sweet, new 'comments' page." width="55%" %}
-> See [drafts/snowblog-0.3](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/blob/master/assets/code/snowblog-0.3.zip) for code up to this point.
+> See [drafts/snowblog-0.3](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/raw/master/assets/code/snowblog-0.3.zip) for code up to this point.
 
 
 <a id="google_places"></a>
@@ -709,7 +709,7 @@ Now we just need to make a few tweaks to the `locate.html` template, in order to
 And now our new page works! Note that we need to populate the database with resorts to make this actually work. In a future post, I'll show how to scrap that data from the web.
 {% include figure.html url="/assets/images/flask/locate_results.png" caption="Sweet, new 'location' page." width="55%" %}
 
-> See [drafts/snowblog-0.4](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/blob/master/assets/code/snowblog-0.4.zip) for code up to this point.
+> See [drafts/snowblog-0.4](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/raw/master/assets/code/snowblog-0.4.zip) for code up to this point.
 
 <a id="html_css"></a>
 ## HTML/CSS
@@ -791,16 +791,33 @@ Now we have our `bootstrap/base.html` template in place, and we can access it li
     </div>
 {{ "{% endblock " }}%}
 ```
+This may look really complicated, but it was just adapted from the Bootstrap documentation.  
+
+And although this file became more complicated, this actually simplifies greatly our remaining templates because they simply import the Flask-WTF form as an Python object.
+
+<figcaption><i>app/templates/comment.html</i> - User comment template.<br>&nbsp;</figcaption>  
+```
+{{ "{% extends 'base.html' " }}%}
+{{ "{% import 'bootstrap/wtf.html' as wtf " }}%}
+
+{{ "{% block app_content " }}%}
+    <h1>Leave notes on ski resorts</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ "{{ wtf.quick_form(form) " }}}}
+        </div>
+    </div>
+{{ "{% endblock " }}%}
+```
+
+See how *smooth* that is? Nice and neat. Take a look at the before and after.
+{% include figure.html url="/assets/images/flask/html.png" caption="Before" width="55%" %}
+{% include figure.html url="/assets/images/flask/css.png" caption="After" width="55%" %}
+
+> See [drafts/snowblog-0.5](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/raw/master/assets/code/snowblog-0.5.zip) for code up to this point.
 
 
-
-
-####UNDER CONSTRUCTION
-
-> See [drafts/snowblog-0.5](https://github.com/meccaLeccaHi/meccaLeccaHi.github.io/blob/master/assets/code/snowblog-0.5.zip) for code up to this point.
-
-
-From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. ***Have fun!***
+From this point, it should be fairly easy to continue to modify the existing code to suite your specific needs. There are a *million* directions you could go from here. ***Have fun!***
 
 ---
 <a id="topic-review"></a>
@@ -809,3 +826,4 @@ From this point, it should be fairly easy to continue to modify the existing cod
 - We saw how environmental variables are set in the shell.
 - We learned how to use templates and forms to quickly construct a 'lightweight' application that allows us to focus on website functionality and not on the presentation/HTML.
 - We learned about the variety of database options available to use with Flask.
+- We saw how to apply a CSS framework (Bootstrap) to our application.
