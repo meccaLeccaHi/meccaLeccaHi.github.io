@@ -52,7 +52,7 @@ description: A Juptyter notebook on Neural Networks using Tensorflow
 - Define the working components of a basic, feed-forward neural network.
 - Determine how to apply neural networks to the prediction problem of your choosing.
 
-
+---
 <a id="dependencies"></a>
 ## Installing Dependencies
 While the following example is relatively simple, it while depend on a few additional libraries that probably will not be present if you haven't installed them. These include:
@@ -145,7 +145,7 @@ A.dot(B)
     array([[ 58,  64],
            [139, 154]])
 
-
+---
 <a id='intro'></a>
 ## Intro To Neural Networks
 
@@ -268,9 +268,10 @@ Although these models were structured to behave like neurons, their behavior can
 > In one swift operation we found that our model suggests we go on Sunday and Monday, but not Friday, based on the weights we've assigned to each category. Pretty handy, eh?  
 > Of course, we could then start comparing different models just as easily by expanding $\vec{w}$ to be a matrix $\mathbf{W}$ and performing the same operation as above. But that's as far as we'll go with this example.
 
+---
 <a id='nn-practical'></a>
 ## Practical Considerations
----
+
 <a id="structure"></a>
 ### Network Structure
 Although the model we just described was useful for illustrating the basic components of the 'decision-making' process in a neural network, it's ultimately not much of an improvement (if any) on the linear models we've seen before. This is because (as you might have guessed) typical neural networks are of much greater complexity. These networks usually consist of one or more columns of stacked perceptrons (or *'layers'*). 
@@ -313,23 +314,21 @@ We've seen how a perceptron can be employed to integrate the influence of many i
 
 {% include figure_link.html url="/assets/images/neural_nets/logic_gates.png" href="http://www.schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html" caption="Image source: schoolphysics.co.uk" width="80%" %}
 
-----
-**Example:**
- Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
 
-
-{% include figure.html url="/assets/images/neural_nets/perc_example.png" width="40%" %}
-
-
-We can further imagine that we provide the model with `[0,0]`, and we see:
-
-$$
+>**Example:**
+>Imagine we have a simple perceptron with just two inputs, both with the same weight (-2), with a bias input of 3. Our perceptron would look something like the example below:
+>
+>{% include figure.html url="/assets/images/neural_nets/perc_example.png" width="40%" %}
+>
+>We can further imagine that we provide the model with `[0,0]`, and we see:
+>
+>$$
     (-2)*0+(-2)*0+3=3\\
     \text{so} \ output=1
 $$
-
-The same process would reveal the following results:
-
+>
+>The same process would reveal the following results:
+>
 <center><table style="border: none">
 <tr>
 	<td style=""><b>$x_1$</b></td>
@@ -357,17 +356,14 @@ The same process would reveal the following results:
 	<td style="text-align: center">0</td>
 </tr>
 </table></center>
-
-It's a **NAND gate**!
-
-
-----
+>
+>It's a **NAND gate**!
 
 The above is a *very* simple example of how single perceptrons are capable of implementing logical computations. But, in practice, neural networks can collectively compute *any* logical function possible! 
 
 As impressive as this may sound, sometimes this requires a model so large that it's not practical to implement given limited time and computing power. So, always bear that in mind when applying neural networks to your particular project.
 
-
+---
 <a id='nn-training'></a>
 ## Neural Network Training
 
@@ -432,6 +428,7 @@ ax.legend(['Step Function', 'Sigmoid Function'], fontsize=20);
 
 It's worth considering, before moving on, the unique interpretations of step vs. sigmoid function output (with regard to making a prediction). While the former case makes interpretation straight-forward by providing a binary output, the latter can be more problematic, as it can be any real number between 0 and 1. But again, the most common solution is simply assigning a 'reasonable' threshold to use. In cases like this, .5 is usually a safe place to start.
 
+---
 <a id='nn-architecture'></a>
 ## Neural Network Architecture
 
@@ -445,11 +442,9 @@ As an example, we could describe the network above as a four-layer network conta
 
 Although, the specific arrangement of our layers is often straightforward, it's worth considering the different possibilities for each.
 
----
 The only constraint on the **input layer** is that it must correspond to the shape of the intended input. 
 >For example: if I want to predict purchasing behavior based on 20 different variables (age, weight, gender, etc.), then my input layer needs to contain 20 neurons. If I want to make predictions using a 120x150 image, then my input layer needs to contain 18,000 neurons ($120\times150=18,000$).
 
----
 The only constraint on the **output layer** is that it must correspond to the shape of the intended prediction. 
 >For example: if I want to predict a _binary_ outcome (`True` or `False`), I can represent that with a single neuron. As we'll see later, if we want to predict a _multi-class_ outcome (integers: `0:9`), we need n-1 neurons to represent it ($n-1=9$, in this case).
 
@@ -459,8 +454,8 @@ The materials in this course (such as the examples in this notebook) will focus 
 
 Because neurons in these loops undergo sustained bouts of activity, rather than isolated events, recurrent feed-back can result in cascades of neurons firing, which happens to be much closer to the behavior of actual neurons in your brain. Although they can be more difficult to train, they are sometimes capable of solving harder problems than feed-forward networks, particularly those involving NLP.
 
+---
 <a id='nn-digits'></a>
-
 ## Using Neural Nets To Recognize Handwritten Digits
 
 The idea is to first train the model on a large number of samples of handwritten digits (see examples below), for which we know the true label (e.g. '7' or '3'). These are known as _training examples_ and _training labels_, respectively.
@@ -893,10 +888,9 @@ display_compare(ran.randint(0, 55000))
 
 ![png](/assets/images/neural_nets/output_103_0.png)
 
-
+---
 <a id="topic-review"></a>
 ## Topic Review
----
 
 - We explored the decision-making capacity of single artificial neurons, and the role of weights in adjusting the outcome of our decision.
 - We saw how the structure of these networks make it possible to represent relatively complex relationships in the data.
