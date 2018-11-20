@@ -96,8 +96,8 @@ A _virtual environment_ is an enclosed copy of the Python interpreter. By that I
 
 #### Create the environment
 We can start by creating a virtual environment inside the project we are working on. So, from within that directory, run:  
->`$ python -m venv venv`\*  
->\*If we want to use a different interpreter (e.g. `python3` or `python2`), use that instead.
+>`$ python -m venv venv`  
+>Note: If we want to use a different interpreter (e.g. `python3` or `python2`), use that instead.
 
 This command asks Python to run the `venv` package, and creates a virtual environment named `venv` (feel free to change it as you wish). 
 
