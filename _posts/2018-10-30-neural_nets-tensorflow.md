@@ -842,7 +842,7 @@ The very elaborate figure above shows the weights for each digit 0 through 9. Th
 
 >Keep in mind that this sort of visualization becomes less meaningful/interpretable as the size and complexity of the model (particularly, the number of layers) grows beyond the relatively simple model that we've implemented in this example.
 
-Finally, after all our hard work, we can play with our model! Let's test it out and see how this very simple model neural network performs on some examples.
+Finally, after all of our hard work, we can play with our model! Let's test it out and see how this very simple model neural network performs on some examples.
 
 
 ```python
@@ -902,6 +902,8 @@ display_compare(ran.randint(0, 55000))
 
 ![png](/assets/images/neural_nets/output_103_0.png)
 
+---
+> In case you're still not sufficiently impressed, here is an awesome old video from Yann Lecun (one of the pioneers of artificial intelligence research) showing how well neural networks can perform on this particular task. Check it out [here](https://www.youtube.com/watch?v=yxuRnBEczUU).
 ---
 <a id="topic-review"></a>
 ## Topic Review
