@@ -16,9 +16,9 @@ We had a question come up about the difference between 'in-place' and 'out-of-pl
 
 ---
 
-> The main idea behind these two things are the amount of space being used by each. The in-place avoids duplication of data. So naturally, it's more efficient computationally. Although, in practice, this is often of little concern, it's best to at least understand the difference between them. Certainly, confusion between them has led to more than a few bugs in most programmers' code.
+> The main difference behind these two things is in the amount of space being used by each. The in-place avoids duplication of data. So naturally, it's more efficient computationally. Although, in practice, this is often of little concern, it's best to at least understand the difference between them. Certainly, confusion between them has led to more than a few bugs in many programmers' code.
 
-To put it more *simply*: non-in-place methods don't alter their object; instead, they return a copy of that object. An example of this behavior is shown below.
+To put it more *simply*: non-in-place (i.e. 'out-of-place') methods *don't alter their object*; instead, they return a copy of that object. An example of this behavior is shown below.
 
 
 ```python
