@@ -9,6 +9,7 @@ tag:
 - Bayesian statistics
 - iris database
 - supervised classification
+- machine learning
 author: adam
 description: A quick primer on Bayes' Theorem. 
 ---
@@ -19,14 +20,8 @@ Can Bayes' theorem help us to solve a classification problem, namely predicting 
 
 > See this excellent [discussion](https://www.youtube.com/watch?v=eDMGDhyDxuY) of Bayesian/frequentist approaches for greater background, if desired/required.
 
-<a id="learning-objectives"></a>
-## Learning Objectives
-
-- Identify the types of problems Bayes Theorem is useful for.
-- Observe an application of Bayes Theorem to example medical data.
-- Determine how to apply Bayes Theorem to the prediction problem of your choosing.
-
-### Topic Guide
+## Topic Guide
+- [Learning Objectives](#learning-objectives)
 - [Background](#background)
 	- [Example: Medical Data](#example)
 - [Preparing the Data](#preparing)
@@ -34,6 +29,15 @@ Can Bayes' theorem help us to solve a classification problem, namely predicting 
 - [Calculating the Probability of Each Species](#calculating)
 - [Summary](#summary)
 - [Bonus: The Intuition Behind Bayes' Theorem](#bonus)
+
+
+<a id="learning-objectives"></a>
+## Learning Objectives
+
+- Identify the types of problems Bayes Theorem is useful for.
+- Observe an application of Bayes Theorem to example medical data.
+- Determine how to apply Bayes Theorem to the prediction problem of your choosing.
+
 
 <a id="background"></a>
 ## Background
