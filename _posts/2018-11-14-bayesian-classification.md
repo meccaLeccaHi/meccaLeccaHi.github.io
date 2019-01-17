@@ -22,32 +22,20 @@ Can Bayes' theorem help us to solve a classification problem, namely predicting 
 <a id="learning-objectives"></a>
 ## Learning Objectives
 
-- Identify the types of problems a neural network is likely to succeed at.
-- Explain the similarities/differences between real and artificial neurons.
-- Define the working components of a basic, feed-forward neural network.
-- Determine how to apply neural networks to the prediction problem of your choosing.
+- Identify the types of problems Bayes Theorem is useful for.
+- Observe an application of Bayes Theorem to example medical data.
+- Determine how to apply Bayes Theorem to the prediction problem of your choosing.
 
 ### Topic Guide
-- [Linear Algebra Review](#linear-algebra-review)
-	- [Dot Product](#dot-product)
-	- [Matrix Multiplication](#matrix-multiplication)
-- [Introduction to Neural Networks](#intro)
-	- [What Makes Neural Networks Special?](#nn-special)
-	- [The Neuron](#neuron)
-	- [An Example](#example)
-- [Practical Considerations](#nn-practical)
-	- [Network Structure](#structure)
-    - [Network Function](#function)
-        - [Bias Input](#bias)
-        - [Logic Gates](#logic)
-- [Neural Network Training](#nn-training)
-- [Neural Network Architecture](#nn-architecture)
-- [Using Neural Nets To Recognize Handwritten Digits](#nn-digits)
-    - [Using TensorFlow](#tensorflow)
-        - [Loss Function: Cross-Entropy Loss](#loss-function)
-    - [Model Training With TensorFlow](#training-tf)
-- [Topic Review](#topic-review)
+- [Background](#background)
+	- [Example: Medical Data](#example)
+- [Preparing the Data](#preparing)
+- [Deciding How to Make a Prediction](#prediction)
+- [Calculating the Probability of Each Species](#calculating)
+- [Summary](#summary)
+- [Bonus: The Intuition Behind Bayes' Theorem](#bonus)
 
+<a id="background"></a>
 ## Background
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
 From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
@@ -56,6 +44,7 @@ Wikipedia further explains that Bayes Theorem "describes the probability of an e
 
 $$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
 
+<a id="example"></a>
 > ### Example: Medical Data
 Imagine a routine medical test that tests for a certain medical condition; influenza, for example. Pretend this test is 99% sensitive and 99% specific. In other words, the test will be positive produce 99% of the time for people with the disease and 99% true negative results for people without.
 Now suppose that 0.5% of people have the disease. What is the probability that a randomly selected individual with a positive test has the disease?
@@ -68,8 +57,9 @@ Now suppose that 0.5% of people have the disease. What is the probability that a
 >
 > $$ \approx 33.2\%$$
 
-Now that we know how it works, can we use Bayes' theorem to help us to solve a classification problem, namely predicting the species of an iris?
+Now that we know how it works, can we use Bayes Theorem to help us to solve a classification problem, namely predicting the species of an iris?
 
+<a id="preparing"></a>
 ## Preparing the Data
 
 We'll read the iris data into a `DataFrame`, and round up all of the measurements to the next integer:
@@ -239,7 +229,7 @@ iris.head()
 </table>
 </div>
 
-
+<a id="prediction"></a>
 ## Deciding How to Make a Prediction
 
 Let's say  I have an out-of-sample iris with the following measurements: 7, 3, 5, 2. How might I predict the species?
@@ -457,6 +447,7 @@ $$
 	P(virginica \ | \ 7,3,5,2)
 $$
 
+<a id="calculating"></a>
 ## Calculating the Probability of Each Species
 
 Bayes' theorem gives us a way to calculate these conditional probabilities.
@@ -485,12 +476,14 @@ $$P(setosa \ | \ 7,3,5,2) = \frac {0 \times 0.33} {0.11} = 0$$
 
 We predict that the iris is a versicolor, since that species had the highest conditional probability.
 
+<a id="summary"></a>
 ## Summary
 
 1. We framed a classification problem as three conditional probability problems.
 2. We used Bayes' theorem to calculate those conditional probabilities.
 3. We made a prediction by choosing the species with the highest conditional probability.
 
+<a id="bonus"></a>
 ## Bonus: The Intuition Behind Bayes' Theorem
 
 Let's make some hypothetical adjustments to the data to demonstrate how Bayes' theorem makes intuitive sense:
