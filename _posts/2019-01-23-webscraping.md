@@ -40,7 +40,7 @@ description: Post demonstrating the use of Beautiful Soup and Google Maps to col
 
 It's no secret that I have what some might call an 'unhealthy' obsession with the tracking the snow that may or may not be headed our way. For years, one of my favorite tools for this was an awesome app (that disappeared years ago) called [FreshyMap](https://en.wikipedia.org/wiki/FreshyMap).
 
-{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/en/3/3f/FreshyMapshot.jpg" href="https://en.wikipedia.org/wiki/FreshyMap" caption="Screenshot of a FreshyMap session Image source: wikipedia.com" width="60%" %}
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/en/3/3f/FreshyMapshot.jpg" href="https://en.wikipedia.org/wiki/FreshyMap" caption="Screenshot of a FreshyMap session Image source: wikipedia.com" width="70%" %}
 
 > So, I sez: "Hey! What better opportunity to improve my skills with Flask, interact with some new APIs, and try out some hot new mapping platforms than to create my own homage to the late, great FreshyMap? 
 >
