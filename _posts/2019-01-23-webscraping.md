@@ -40,9 +40,7 @@ description: Post demonstrating the use of Beautiful Soup and Google Maps to col
 
 It's no secret that I have what some might call an 'unhealthy' obsession with the tracking the snow that may or may not be headed our way. For years, one of my favorite tools for this was an awesome app (that disappeared years ago) called [FreshyMap](https://en.wikipedia.org/wiki/FreshyMap).
 
-<img src="https://upload.wikimedia.org/wikipedia/en/3/3f/FreshyMapshot.jpg" style="width: 400px;"/>
-
-{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/en/3/3f/FreshyMapshot.jpg" href="https://en.wikipedia.org/wiki/FreshyMap" caption="Screenshot of a FreshyMap session Image source: wikipedia.com" width="40%" %}
+{% include figure_link.html url="https://upload.wikimedia.org/wikipedia/en/3/3f/FreshyMapshot.jpg" href="https://en.wikipedia.org/wiki/FreshyMap" caption="Screenshot of a FreshyMap session Image source: wikipedia.com" width="60%" %}
 
 > So, I sez: "Hey! What better opportunity to improve my skills with Flask, interact with some new APIs, and try out some hot new mapping platforms than to create my own homage to the late, great FreshyMap? 
 >
@@ -233,9 +231,8 @@ print("Scraping 'Forecasts': {}".format(forecasts))
 
 
 **Now we're in business!** Notice the correspondence between the forecast we see in the screenshot below and the data that we scraped? We've still got a bit of cleaning to do, but the data is in our hands!
-<img src='../assets/images/web_scraping/scrape_example.png' style="width: 500px;"/>
 
-{% include figure_link.html url="../assets/images/web_scraping/scrape_example.png" href="https:www.opensnow.com" caption="Screenshot of OpenSnow.com" width="40%" %}
+{% include figure_link.html url="../assets/images/web_scraping/scrape_example.png" href="https:www.opensnow.com" caption="Screenshot of OpenSnow.com" width="60%" %}
 
 > To **re-cap**, we currently have:
 > - the name of each state
@@ -331,8 +328,6 @@ print('Request response:\n', response.text, '\n')
        ],
        "status" : "OK"
     }
-     
-    
 
 
 **Look at all that data!** And because it's backed up by Google's super-powerful search engine, it's even *robust to minor errors*. 
