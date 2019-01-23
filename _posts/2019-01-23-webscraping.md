@@ -232,7 +232,7 @@ print("Scraping 'Forecasts': {}".format(forecasts))
 
 **Now we're in business!** Notice the correspondence between the forecast we see in the screenshot below and the data that we scraped? We've still got a bit of cleaning to do, but the data is in our hands!
 
-{% include figure_link.html url="../assets/images/web_scraping/scrape_example.png" href="https://www.opensnow.com" caption="Screenshot of OpenSnow.com" width="60%" %}
+{% include figure_link.html url="../assets/images/web_scraping/scrape_example.png" href="https://www.opensnow.com" caption="Screenshot of OpenSnow.com" width="65%" %}
 
 > To **re-cap**, we currently have:
 > - the name of each state
