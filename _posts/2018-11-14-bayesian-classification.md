@@ -61,7 +61,7 @@ where $A$ and $B$ are events and $P(B) \ne 0$.
 
 <a id="example"></a>
 > ### Example: Medical Data
-Imagine a routine medical test that tests for a certain medical condition; influenza, for example. Pretend this test is 99% *sensitive* and 99% *specific*. In other words, the test will be positive 99% of the time for people with the disease and 99% true negative results for people without the disease.
+Imagine a routine medical test that tests for a certain medical condition; influenza, for example. Pretend this test is 99% *sensitive* and 99% *specific*. In other words, the test will be positive 99% of the time for people with the disease and 99% true negative results for people without the disease. Think of it as being *'sensitive'* to positive cases, vs. being *'specific'* to positive test cases.
 >
 > Now suppose that 0.5% of people have the disease. What is the probability that a randomly selected individual with a positive test has the disease?
 >
