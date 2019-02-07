@@ -71,7 +71,8 @@ Imagine a routine medical test that tests for a certain medical condition; influ
 >
 > $$ = \frac {0.99 \times 0.005} {0.99 \times 0.005 + 0.01 \times 0.995}$$
 >
-> $$ \approx 33.2\%$$
+> $$ \approx 33.2\%$$!
+>
 > Notice how even a test with high sensitivity and specificity still has a pretty high number of false positives? Interesting - but slightly [off-topic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4389712/).
 
 Back to Bayes' Theorem: Now that we know how it works, can we use Bayes' Theorem to help us to solve a classification problem, namely predicting the species of an iris?
