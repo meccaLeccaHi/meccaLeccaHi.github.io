@@ -23,6 +23,7 @@ Can Bayes' theorem help us to solve a classification problem, namely predicting 
 ## Topic Guide
 - [Learning Objectives](#learning-objectives)
 - [Background](#background)
+	- [Formula](#formula)
 	- [Example: Medical Data](#example)
 - [Preparing the Data](#preparing)
 - [Deciding How to Make a Prediction](#prediction)
@@ -46,6 +47,7 @@ From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes wa
 
 Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
 
+<a id="formula"></a>
 ### Formula
 Bayes' theorem is stated as the following equation:
 
