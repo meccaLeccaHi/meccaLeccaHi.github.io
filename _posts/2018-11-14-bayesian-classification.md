@@ -50,7 +50,7 @@ Wikipedia further explains that Bayes Theorem "describes the probability of an e
 Bayes' theorem is stated as the following equation:
 $$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
 where $$A$$ and $$B$$ are events and $$P(B) \ne 0$$.
-- $$P(A \ | \ B)$$ is a **conditional probability**: the likelihood of event $$A$$ occurring given that $$B$$ is true.
+- $$ P(A \ | \ B) $$ is a **conditional probability**: the likelihood of event $$A$$ occurring given that $$B$$ is true.
 - $$P(B \ | \ A)$$ is also a conditional probability: the likelihood of event $$B$$ occurring given that $$A$$ is true.
 - $$P(A)$$ and $$P(B)$$ are the probabilities of observing $$A$$ and $$B$$ independently of each other; this is known as the **marginal probability**.
 
