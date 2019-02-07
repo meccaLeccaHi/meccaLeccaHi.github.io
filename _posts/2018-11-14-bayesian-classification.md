@@ -431,8 +431,6 @@ iris[(iris.sepal_length==7) & (iris.sepal_width==3) & (iris.petal_length==5) & (
 ```
 
 
-
-
     Iris-versicolor    13
     Iris-virginica      4
     Name: species, dtype: int64
@@ -442,8 +440,6 @@ Count the species for all observations.
 ```python
 iris.species.value_counts()
 ```
-
-
 
     Iris-virginica     50
     Iris-versicolor    50
