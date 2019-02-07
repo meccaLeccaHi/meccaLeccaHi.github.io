@@ -46,7 +46,13 @@ From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes wa
 
 Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
 
+### Formula
+Bayes' theorem is stated as the following equation:
 $$P(A \ | \ B) = \frac {P(B \ | \ A) \times P(A)} {P(B)}$$
+where $$A$$ and $$B$$ are events and $$P(B) \ne 0$$.
+- $$P(A \ | \ B)$$ is a **conditional probability**: the likelihood of event $$A$$ occurring given that $$B$$ is true.
+- $$P(B \ | \ A)$$ is also a conditional probability: the likelihood of event $$B$$ occurring given that $$A$$ is true.
+- $$P(A)$$ and $$P(B)$$ are the probabilities of observing $$A$$ and $$B$$ independently of each other; this is known as the **marginal probability**.
 
 <a id="example"></a>
 > ### Example: Medical Data
