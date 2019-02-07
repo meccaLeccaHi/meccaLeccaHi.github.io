@@ -1,5 +1,5 @@
 ---
-title: "Iris Classification with Bayes Theorem"
+title: "Iris Classification with Bayes' Theorem"
 date: 2018-11-14
 layout: post
 math: true
@@ -35,9 +35,9 @@ Can Bayes' theorem help us to solve a classification problem, namely predicting 
 <a id="learning-objectives"></a>
 ## Learning Objectives
 
-- Identify the types of problems Bayes Theorem is useful for.
-- Observe an application of Bayes Theorem to example medical data.
-- Determine how to apply Bayes Theorem to the prediction problem of your choosing.
+- Identify the types of problems Bayes' Theorem is useful for.
+- Observe an application of Bayes' Theorem to example medical data.
+- Determine how to apply Bayes' Theorem to the prediction problem of your choosing.
 
 
 <a id="background"></a>
@@ -45,7 +45,7 @@ Can Bayes' theorem help us to solve a classification problem, namely predicting 
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif" href="https://en.wikipedia.org/wiki/Thomas_Bayes" caption="Thomas Bayes (c. 1701 – 7 April 1761) Image source: wikipedia.com" width="40%" %}
 From [*Wikipedia*](https://en.wikipedia.org/wiki/Thomas_Bayes): "Thomas Bayes was an English statistician, philosopher and Presbyterian minister who is known for formulating a specific case of the theorem that bears his name: [*Bayes' theorem*](https://en.wikipedia.org/wiki/Bayes%27_theorem). Bayes never published what would become his most famous accomplishment; his notes were edited and published after his death".
 
-Wikipedia further explains that Bayes Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
+Wikipedia further explains that Bayes' Theorem "describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if cancer is related to age, then, using Bayes' theorem, a person's age can be used to more accurately assess the probability that they have cancer, compared to the assessment of the probability of cancer made without knowledge of the person's age."
 
 <a id="formula"></a>
 ### Formula
@@ -72,8 +72,9 @@ Imagine a routine medical test that tests for a certain medical condition; influ
 > $$ = \frac {0.99 \times 0.005} {0.99 \times 0.005 + 0.01 \times 0.995}$$
 >
 > $$ \approx 33.2\%$$
+> Notice how even a test with high sensitivity and specificity still has a pretty high number of false positives? Interesting - but slightly [off-topic](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4389712/).
 
-Now that we know how it works, can we use Bayes Theorem to help us to solve a classification problem, namely predicting the species of an iris?
+Back to Bayes' Theorem: Now that we know how it works, can we use Bayes' Theorem to help us to solve a classification problem, namely predicting the species of an iris?
 
 <a id="preparing"></a>
 ## Preparing the Data
