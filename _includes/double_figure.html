@@ -1,12 +1,10 @@
-<figure>
-  <p float="left">
-    <img src="{{ include.url1 }}" alt="{{ include.caption1 }}" class="center-image" style="width:{{ include.width }};"/>
-    {% if include.caption1 %}
-    <figcaption>{{ include.caption1 }}</figcaption>
-    {% endif %}
-    <img src="{{ include.url2 }}" alt="{{ include.caption2 }}" class="center-image" style="width:{{ include.width }};"/>
-    {% if include.caption2 %}
-    <figcaption>{{ include.caption2 }}</figcaption>
-    {% endif %}
-  </p>
+<figure class="half">
+  <img src="{{ include.url1 }}" alt="{{ include.caption1 }}" class="center-image" style="width:{{ include.width }};"/>
+  {% if include.caption1 %}
+  <figcaption>{{ include.caption1 }}</figcaption>
+  {% endif %}
+  <img src="{{ include.url2 }}" alt="{{ include.caption2 }}" class="center-image" style="width:{{ include.width }};"/>
+  {% if include.caption2 %}
+  <figcaption>{{ include.caption2 }}</figcaption>
+  {% endif %}
 </figure>
