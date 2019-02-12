@@ -66,13 +66,15 @@ When given the choice between collecting data from college freshman one-by-one o
 
 In order to visualize the perceived similarity (or *dis*-similarity) of these faces using the survey data we collected, we performed a simple form of dimensionality reduction using MDS. MDS is a useful way to visualize high-dimensional distance (or “dissimilarity”) data in a few dimensions — usually only two, for ease of visualization (see below).
 
-{% include figure.html url="./face_mds.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
+{% include figure.html url="./assets/images/web_scraping/scrape_example.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
 
 ---
 
 ### Record Linkage -- ***Fall 2017***
 [GitHub repo](https://github.com/meccaLeccaHi/record_linkage)
-As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it A) has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks. RL also has a few characteristic issues that routinely require attention including:
+As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks, just to name a few.
+
+RL also has a few ***characteristic issues*** that routinely require attention including:
 - Substantial class imbalances (number of non-matches *far* exceeds the number of matches).
 - There's a *huge* number of potential Cartesian pairs, so we maximize pairing with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
 - Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
