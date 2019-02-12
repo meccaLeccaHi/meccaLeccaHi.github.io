@@ -66,7 +66,7 @@ When given the choice between collecting data from college freshman one-by-one o
 
 In order to visualize the perceived similarity (or *dis*-similarity) of these faces using the survey data we collected, we performed a simple form of dimensionality reduction using MDS. MDS is a useful way to visualize high-dimensional distance (or “dissimilarity”) data in a few dimensions — usually only two, for ease of visualization (see below).
 
-{% include figure.html url="./assets/images/web_scraping/scrape_example.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
+{% include figure.html url="https://camo.githubusercontent.com/22c2049faf1f36ee5e7670e43ccebeed19355db4/687474703a2f2f692e696d6775722e636f6d2f4662795369754b2e706e673f31" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
 
 ---
 
@@ -78,7 +78,7 @@ RL also has a few ***characteristic issues*** that routinely require attention i
 - Substantial class imbalances (number of non-matches *far* exceeds the number of matches).
 - There's a *huge* number of potential Cartesian pairs, so we maximize pairing with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
 - Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
-In our case, we trained neural networks to match records across multiple SQL databases using ’fuzzy’ matching, resulting in a ≈75% reduction in non-matched records. As a result, we were able to **improve the accuracy of a medical record linkage system providing clinical performance metrics to more than 200 hospitals**.
+In our case, we trained neural networks to match records across multiple SQL databases using ’fuzzy’ matching, resulting in a **≈75% reduction in non-matched records**. As a result, we were able to improve the accuracy of a medical record linkage system providing clinical performance metrics to *more than 200 hospitals*.
 
 ---
 
