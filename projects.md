@@ -50,7 +50,7 @@ The code for this tool was written in MATLAB, so we decided not to use an open-s
 I would have to recommend creating a video game for anyone who loves old video games and/or wants to learn Python. Fortunately for me, I'm both! 
 
 This was actually really nostalgic. I needed to make a "fun", "gamified" platform for our neuroscience studies. So, naturally, I decided to use sound effects and transitions from some of my childhood favorites, including: Punch-Out!!, Super Mario Bros., Base-Wars, and of course, GoldenEye.
-This project relies heavily on [Psychopy](http://www.psychopy.org/), for presentation and timing and [PyGame](http://www.pygame.org/) for controls (mainly). Although we initially tried this using fancy eye-tracking software, ultimately, we discovered the good ol' X-Box controller to [work flawlessly](https://github.com/FRC4564/Xbox) and be way less of a pain for participants (thanks Microsoft!). Both the patients and I had a lot of fun with this one. I believe this one speaks for itself -- check it out [here](https://youtu.be/Fa7tWZQfb8c) or watch below.
+This project relies heavily on [Psychopy](http://www.psychopy.org/), for presentation and timing and [PyGame](http://www.pygame.org/) for controls (mainly). Although we initially tried this using fancy eye-tracking software, ultimately, we discovered the good ol' X-Box controller to [work flawlessly](https://github.com/FRC4564/Xbox) and be way less of a pain for participants (thanks Microsoft!). Both the patients and I had a lot of fun with this one. We even got ≈25% greater participation by the pediatric patients, which put a smile on my face :) I believe this one speaks for itself -- check it out below.
 
 {% include youtubePlayer.html id="Fa7tWZQfb8c" %}
 
@@ -59,10 +59,15 @@ This project relies heavily on [Psychopy](http://www.psychopy.org/), for present
 ### Perceptual Studies via AWS Mechanical Turk -- ***Summer 2017***
 [GitHub repo](https://github.com/meccaLeccaHi/mech_turk)
 
-[[Description goes here.]]
+When given the choice between collecting data from college freshman one-by-one or anonymous internet users hundreds or thousands at a time, it was easy to choose the latter. Although it required a little elbow-grease (see excellent [tutorial](https://bradylab.ucsd.edu/ttt/)), the time and money required to gather data with this approach was reduced by more than 90%.
 
+{% include figure.html url="https://camo.githubusercontent.com/22c2049faf1f36ee5e7670e43ccebeed19355db4/687474703a2f2f692e696d6775722e636f6d2f4662795369754b2e706e673f31" caption="Face similarity experiment, via Amazon mTurk." width="70%" %}
 
-{% include figure.html url="https://camo.githubusercontent.com/22c2049faf1f36ee5e7670e43ccebeed19355db4/687474703a2f2f692e696d6775722e636f6d2f4662795369754b2e706e673f31" caption="Multi-dimensional voice-space (with 8 different voices on the *spokes* and the average on the *hub*)." width="70%" %}
+In order to visualize the perceived similarity (or *dis*similarity) of these faces using the survey data we collected, we ,[[[[[[[[[[]]]]]]]]]]]]]]]]]
+
+{% include figure.html url="../assets/projects/face_mds.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
+
+---
 
 ### Record Linkage -- ***Fall 2017***
 [GitHub repo](https://github.com/meccaLeccaHi/record_linkage)
