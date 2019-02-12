@@ -90,16 +90,16 @@ Fortunately, a relatively large amount of attention has been paid to this subjec
 
 Critical Juncture, meanwhile, has created and maintains an online version of the [Federal Register](https://www.federalregister.gov/), which is a publication that provides access to the official text of federal laws, presidential documents, etc for a given day in the U.S.. Since the federal government has only recently digitized the archived content, none of the figures before a certain date (say, 1995) were able to be indexed quickly and/or easily.
 
-To resolve this, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
+In order to improve the overall readability and discoverability of decades of government documents, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
 1. The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
+{% include figure.html url="https://camo.githubusercontent.com/695b3b2aafe3ece038296095e87f2792ad6a47fc/68747470733a2f2f692e696d6775722e636f6d2f656a63367774592e706e673f31" caption="Semantic-category class examples." width="65%" %}
+2. Like other [examples](https://arxiv.org/pdf/1603.08511.pdf), predicting image rotation has the nice property of being practically "free": any image can be used as a training sample, simply
+by rotating the image as input and using the rotation as the supervisory signal.
+{% include figure.html url="https://camo.githubusercontent.com/4c72814164f684462451b9b1c03428bc7cc0c871/68747470733a2f2f692e696d6775722e636f6d2f324946763358542e706e673f31" caption="Image-rotation class examples." width="65%" %}
 
-
-
-
-
-
-This tool is intended to improve the overall readability and discoverability of decades of government documents.
-
+Because this problem was *so* well suited to image classification, our models performed with *extremely high accuracy* (**>98%**, see examples below).
+{% include figure.html url="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" caption="Semantic-category prediction example." width="65%" %}
+{% include figure.html url="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Image-rotation prediction examples." width="65%" %}
 
 ---
 
