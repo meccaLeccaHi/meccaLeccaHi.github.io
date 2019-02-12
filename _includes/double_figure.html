@@ -1,6 +1,6 @@
 <figure class="half">
-  <img src="{{ include.url1 }}" alt="{{ include.caption }}" style="width:{{ include.width1 }};"/>
-  <img src="{{ include.url2 }}" alt="{{ include.caption }}" style="width:{{ include.width2 }};"/>
+  <img src="{{ include.url1 }}" alt="{{ include.caption }}"  class="left-image" style="width:{{ include.width1 }};"/>
+  <img src="{{ include.url2 }}" alt="{{ include.caption }}"  class="right-image" style="width:{{ include.width2 }};"/>
   {% if include.caption %}
   <figcaption>{{ include.caption }}</figcaption>
   {% endif %}
