@@ -10,7 +10,7 @@ category: project
 
 </section>
 
-> #### You can find most of my work on [GitHub](https://github.com/meccaLeccaHi). Several posts on my [blog](blog/) are also related to these projects.
+> #### You can find most of my work on [GitHub](https://github.com/meccaLeccaHi). Several posts on my [blog](../blog/) are also related to these projects.
 
 ---
 
