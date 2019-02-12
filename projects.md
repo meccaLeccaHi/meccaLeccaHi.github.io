@@ -14,8 +14,7 @@ category: project
 
 ---
 
-### Face-morphing -- ***Spring 2016***
-[GitHub repo](https://github.com/meccaLeccaHi/face_morphing)
+### Face-morphing -- ***Spring 2016*** -- [GH repo](https://github.com/meccaLeccaHi/face_morphing)
 This was the first project that got me really hooked on the exciting possibilities in open-source programming.
 Starting in grad school, I had been on the lookout for a method of morphing faces without the tedium of manually-placing hundreds of 'points' on each face.
 Quite unexpectedly, I found that I was able to get really good results using image segmentation tools ([ANTs](http://stnava.github.io/ANTs/), namely), which had actually been designed application to MRI images of the brain. Here was a tool that excelled at unsupervised alignment of anatomical brain scans, and we were able to use it (quite successfully) to align (and transition between) different faces. This worked really well for morphing between stationary faces in an entirely 'unsupervised' fashion (see figure below).
@@ -30,8 +29,7 @@ Obviously, this required a substantial increase in the computational time involv
 
 ---
 
-### Voice-morphing -- ***Fall 2016***
-[GitHub repo](https://github.com/meccaLeccaHi/voice_morphing)
+### Voice-morphing -- ***Fall 2016*** -- [GH repo](https://github.com/meccaLeccaHi/voice_morphing)
 After beginning my post-doc, I also became interested in understanding how the brain represents different identities of voices, which, despite being less informative than faces, are still a hugely important cue to help us to determine a person's identity.
 In order to achieve test this, we planned to take the same approach we did with faces, but needed a completely different tool to morph between voices.
 
@@ -46,8 +44,7 @@ The code for this tool was written in MATLAB, so we decided not to use an open-s
 
 ---
 
-### Gaming/Eye-Tracking with Python -- ***Spring 2017***
-[GitHub repo](https://github.com/meccaLeccaHi/py_stimuli)
+### Gaming/Eye-Tracking with Python -- ***Spring 2017*** -- [GH repo](https://github.com/meccaLeccaHi/py_stimuli)
 I would have to recommend creating a video game for anyone who loves old video games or Python. Fortunately for me, both are true.
 
 This was actually really nostalgic. Unlike monkeys, human patients get bored *very easily*. I needed to make a "fun", "gamified" platform for our neuroscience studies. So, naturally, I decided to use leverage the sound effects, storylines, and transition effects from some of my childhood favorites (including): Punch-Out!!, Super Mario Bros., Base-Wars, and of course, GoldenEye.
@@ -57,8 +54,7 @@ This project relies heavily on [Psychopy](http://www.psychopy.org/), for present
 
 ---
 
-### Perceptual Studies via AWS Mechanical Turk -- ***Summer 2017***
-[GitHub repo](https://github.com/meccaLeccaHi/mech_turk)
+### Perceptual Studies via AWS Mechanical Turk -- ***Summer 2017*** -- [GH repo](https://github.com/meccaLeccaHi/mech_turk)
 
 When given the choice between collecting data from college freshman one-by-one or anonymous internet users hundreds or thousands at a time, it was easy to choose the latter. Although it required a little elbow-grease (see excellent [tutorial](https://bradylab.ucsd.edu/ttt/)), the time and money required to gather data with this approach was reduced by more than 90%.
 
@@ -70,8 +66,7 @@ In order to visualize the perceived similarity (or *dis*-similarity) of these fa
 
 ---
 
-### Record Linkage -- ***Fall 2017***
-[GitHub repo](https://github.com/meccaLeccaHi/record_linkage)
+### Record Linkage -- ***Fall 2017*** -- [GH repo](https://github.com/meccaLeccaHi/record_linkage)
 As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks, just to name a few.
 
 RL also has a few ***characteristic issues*** that routinely require attention including:
@@ -82,8 +77,7 @@ In our case, we trained neural networks to match records across multiple SQL dat
 
 ---
 
-### Image Classification -- ***Spring 2018***
-[GitHub repo](https://github.com/meccaLeccaHi/fed_detect)
+### Image Classification -- ***Spring 2018*** -- [GH repo](https://github.com/meccaLeccaHi/fed_detect)
 This was my first exposure to the super-trendy and constantly-evolving world of image classification. As I found out, when big deal AI researchers want to make a name for themselves, they sometimes compete in high-profile, annual competitions such as [ImageNet](https://www.kaggle.com/c/imagenet-object-localization-challenge) and tend to involve the application of highly-complicated, non-linear models. As a result, developments in this field can take place rapidly -- just getting up to speed can be challenging!
 
 Fortunately, a relatively large amount of attention has been paid to this subject, so the opportunities to learn about it are plentiful (e.g. [fast.ai](https://www.fast.ai/)). Around the same time, I had been trying my luck with some [Kaggle](https://www.kaggle.com/) competitions along the same lines (see my notebooks [here](https://github.com/meccaLeccaHi/kaggle)).
@@ -103,15 +97,13 @@ Because this problem was *so* well suited to image classification, our models pe
 ---
 
 ### Python Apps:
-#### Snowblog! -- ***Fall 2018***
-[GitHub repo](https://github.com/meccaLeccaHi/snowblog)  
+#### Snowblog! -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snowblog)  
 [Heroku link](https://snowblogg.herokuapp.com/index)
 
 [[*Description goes here.*]]
 
 
-#### FreshyFinder -- ***Fall 2018***
-[GitHub repo](https://github.com/meccaLeccaHi/snow_scraper)  
+#### FreshyFinder -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snow_scraper)  
 [Heroku link](https://snowscraper.herokuapp.com/)
 
 [[*Description goes here.*]]
@@ -119,8 +111,7 @@ Because this problem was *so* well suited to image classification, our models pe
 
 ---
 
-### pyAL: Cyborg moths  -- ***Currently underway***
-[GitHub repo](https://github.com/meccaLeccaHi/pyAL)  
+### pyAL: Cyborg moths  -- ***Currently underway*** -- [GH repo](https://github.com/meccaLeccaHi/pyAL)  
 [Source](https://github.com/charlesDelahunt/PuttingABugInML)
 
 [[*Description goes here.*]]
