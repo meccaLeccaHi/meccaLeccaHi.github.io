@@ -121,6 +121,6 @@ Because this problem was *so* well suited to image classification, our models pe
 
 ### pyAL: Cyborg moths  -- ***Currently underway***
 [GitHub repo](https://github.com/meccaLeccaHi/pyAL)  
-[Source repo](https://github.com/charlesDelahunt/PuttingABugInML)
+[Source](https://github.com/charlesDelahunt/PuttingABugInML)
 
 [[Description goes here.]]
