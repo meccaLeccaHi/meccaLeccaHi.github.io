@@ -110,7 +110,7 @@ With that, this app finds the ski resorts with the lowest euclidean distance, an
 #### FreshyFinder -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snow_scraper)  
 [Heroku link](https://snowscraper.herokuapp.com/)
 
-With this one, I wanted to focus more heavily on visualizations, specifically. So, I decided to incorporated [Plotly Dash](Plotly Dash) into my Flask app, as well as more map-specific plotting tools, such as [MapBox](MapBox). Since more elaborate data was required for this project, I relied more heavily on [BeautifulSoup]() than I have in past projects (see [blog post](./webscraping/) for more info).
+With this one, I wanted to focus more heavily on visualizations, specifically. So, I decided to incorporated [Plotly Dash](Plotly Dash) into my Flask app, as well as more map-specific plotting tools, such as [MapBox](MapBox). Since more elaborate data was required for this project, I relied more heavily on [BeautifulSoup]() than I have in past projects (see [blog post](../webscraping/) for more info).
 
 ---
 
