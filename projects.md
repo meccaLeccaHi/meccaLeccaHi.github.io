@@ -104,14 +104,14 @@ Because this problem was *so* well suited to image classification, our models pe
 
 ### Python Apps:
 #### Snowblog! -- ***Fall 2018***
-[GitHub repo](https://github.com/meccaLeccaHi/snowblog)
+[GitHub repo](https://github.com/meccaLeccaHi/snowblog)  
 [Heroku link](https://snowblogg.herokuapp.com/index)
 
 [[Description goes here.]]
 
 
 #### FreshyFinder -- ***Fall 2018***
-[GitHub repo](https://github.com/meccaLeccaHi/snow_scraper)
+[GitHub repo](https://github.com/meccaLeccaHi/snow_scraper)  
 [Heroku link](https://snowscraper.herokuapp.com/)
 
 [[Description goes here.]]
@@ -120,7 +120,7 @@ Because this problem was *so* well suited to image classification, our models pe
 ---
 
 ### pyAL: Cyborg moths  -- ***Currently underway***
-[GitHub repo](https://github.com/meccaLeccaHi/pyAL)
+[GitHub repo](https://github.com/meccaLeccaHi/pyAL)  
 [Source repo](https://github.com/charlesDelahunt/PuttingABugInML)
 
 [[Description goes here.]]
