@@ -13,9 +13,7 @@ category: project
 > You can find most of my work on [GitHub](https://github.com/meccaLeccaHi). Several posts on my [blog](blog/) are also related to these projects.
 > Please feel free to leave a comment below.
 
----
-
-### Face-morphing with ANTs -- ***Spring 2016***
+### Face-morphing -- ***Spring 2016***
 [GitHub repo](https://github.com/meccaLeccaHi/face_morphing)
 This was the first project that got me really hooked on the exciting possibilities in open-source programming.
 Starting in grad school, I had been on the lookout for a method of morphing faces without the tedium of manually-placing hundreds of 'points' on each face.
@@ -31,7 +29,7 @@ Obviously, this required a substantial increase in the computational time involv
 
 ---
 
-### Voice-morphing with STRAIGHT -- ***Fall 2016***
+### Voice-morphing -- ***Fall 2016***
 [GitHub repo](https://github.com/meccaLeccaHi/voice_morphing)
 After beginning my post-doc, I also became interested in understanding how the brain represents different identities of voices, which, despite being less informative than faces, are still a hugely important cue to help us to determine a person's identity.
 In order to achieve test this, we planned to take the same approach we did with faces, but needed a completely different tool to morph between voices.
@@ -43,9 +41,7 @@ The code for this tool was written in MATLAB, so we decided not to use an open-s
 
 {% include figure.html url="https://camo.githubusercontent.com/5da33cc0e49f4009465410603d0c15c2ea974f11/687474703a2f2f692e696d6775722e636f6d2f3233434a5935362e706e67" caption="Multi-dimensional voice-space (with 8 different voices on the *spokes* and the average on the *hub*)." width="70%" %}
 
-> Faces and voices [combined](https://youtu.be/N6N1gfzqQZA).
-
-{% include youtubePlayer.html id="N6N1gfzqQZA" %}
+{% include youtubePlayer.html id="N6N1gfzqQZA" width="70%" %}
 
 ---
 
