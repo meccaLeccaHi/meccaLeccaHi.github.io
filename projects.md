@@ -48,7 +48,7 @@ The code for this tool was written in MATLAB, so we decided not to use an open-s
 
 ### Gaming/Eye-Tracking with Python -- ***Spring 2017***
 [GitHub repo](https://github.com/meccaLeccaHi/py_stimuli)
-I would have to recommend creating a video game for anyone who loves old video games and/or wants to learn Python. Fortunately for me, I'm both!
+I would have to recommend creating a video game for anyone who loves old video games or Python. Fortunately for me, I'm both!
 
 This was actually really nostalgic. I needed to make a "fun", "gamified" platform for our neuroscience studies. So, naturally, I decided to use sound effects and transitions from some of my childhood favorites, including: Punch-Out!!, Super Mario Bros., Base-Wars, and of course, GoldenEye.
 This project relies heavily on [Psychopy](http://www.psychopy.org/), for presentation and timing and [PyGame](http://www.pygame.org/) for controls (mainly). Although we initially tried this using fancy eye-tracking software, ultimately, we discovered the good ol' X-Box controller to [work flawlessly](https://github.com/FRC4564/Xbox) and be way less of a pain for participants (thanks Microsoft!). Both the patients and I had a lot of fun with this one. We even got ≈25% greater participation by the pediatric patients, which put a smile on my face :) I believe this one speaks for itself -- check it out below.
