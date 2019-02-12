@@ -84,10 +84,10 @@ Fortunately, a relatively large amount of attention has been paid to this subjec
 
 Critical Juncture, meanwhile, has created and maintains an online version of the [Federal Register](https://www.federalregister.gov/), which is a publication that provides access to the official text of federal laws, presidential documents, etc for a given day in the U.S. Since the federal government has only recently digitized the archived content, none of the figures before a certain date (say, 1995) were able to be indexed quickly and/or easily.
 
-In order to improve the overall readability and discoverability of decades of government documents, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
-- The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
+In order to improve the overall readability and discoverability of decades of government documents, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:  
+**A.** The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
 {% include figure.html url="https://camo.githubusercontent.com/695b3b2aafe3ece038296095e87f2792ad6a47fc/68747470733a2f2f692e696d6775722e636f6d2f656a63367774592e706e673f31" caption="Semantic-category class examples." %}
-- Like other [examples](https://arxiv.org/pdf/1603.08511.pdf), predicting image rotation has the nice property of being practically "free": any image can be used as a training sample, simply
+**B.** Like other [examples](https://arxiv.org/pdf/1603.08511.pdf), predicting image rotation has the nice property of being practically "free": any image can be used as a training sample, simply
 by rotating the image as input and using the rotation as the supervisory signal.
 {% include figure.html url="https://camo.githubusercontent.com/4c72814164f684462451b9b1c03428bc7cc0c871/68747470733a2f2f692e696d6775722e636f6d2f324946763358542e706e673f31" caption="Image-rotation class examples." %}
 
