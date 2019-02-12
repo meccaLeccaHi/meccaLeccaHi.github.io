@@ -76,7 +76,7 @@ As my first major gig outside of academia, I spent a lot of time surveying the l
 
 RL also has a few ***characteristic issues*** that routinely require attention including:
 - Substantial class imbalances (number of non-matches *far* exceeds the number of matches).
-- There's a *huge* number of potential Cartesian pairs, so we maximize pairing with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
+- There's a *huge* number of potential Cartesian pairs to compare to test each possible match, so we *maximize pairing* with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
 - Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
 In our case, we trained neural networks to match records across multiple SQL databases using ’fuzzy’ matching, resulting in a **≈75% reduction in non-matched records**. As a result, we were able to improve the accuracy of a medical record linkage system providing clinical performance metrics to *more than 200 hospitals*.
 
@@ -84,8 +84,22 @@ In our case, we trained neural networks to match records across multiple SQL dat
 
 ### Image Classification -- ***Spring 2018***
 [GitHub repo](https://github.com/meccaLeccaHi/fed_detect)
+This was my first exposure to the super-trendy and constantly-evolving world of image classification. As I found out, when big deal AI researchers want to make a name for themselves, they sometimes compete in high-profile, annual competitions such as [ImageNet](https://www.kaggle.com/c/imagenet-object-localization-challenge) and tend to involve the application of highly-complicated, non-linear models. As a result, developments in this field can take place rapidly -- just getting up to speed can be challenging!
 
-[[Description goes here.]]
+Fortunately, a relatively large amount of attention has been paid to this subject, so the opportunities to learn about it are plentiful (e.g. [fast.ai](https://www.fast.ai/)). Around the same time, I had been trying my luck with some [Kaggle](https://www.kaggle.com/) competitions along the same lines (see my notebooks [here](https://github.com/meccaLeccaHi/kaggle)).
+
+Critical Juncture, meanwhile, has created and maintains an online version of the [Federal Register](https://www.federalregister.gov/), which is a publication that provides access to the official text of federal laws, presidential documents, etc for a given day in the U.S.. Since the federal government has only recently digitized the archived content, none of the figures before a certain date (say, 1995) were able to be indexed quickly and/or easily.
+
+To resolve this, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
+1. The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
+
+
+
+
+
+
+This tool is intended to improve the overall readability and discoverability of decades of government documents.
+
 
 ---
 
