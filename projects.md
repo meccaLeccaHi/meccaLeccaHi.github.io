@@ -94,6 +94,8 @@ by rotating the image as input and using the rotation as the supervisory signal.
 Because this problem was *so* well suited to image classification, our models performed with *extremely high accuracy* (**>98%**, see examples below).
 {% include double_figure.html url1="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" width1="35%" width2="30%"  url2="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Semantic-category (left) and image-rotation (right) prediction examples." %}
 
+> See [blog posts](../tags/#neural-network/) on neural networks for more info.
+
 ---
 
 ### Python Apps:
@@ -106,15 +108,20 @@ This app uses two data sources:
 2. API calls to [Google Geocode](https://developers.google.com/maps/documentation/geocoding/start) via [`googlemaps`](https://github.com/googlemaps/google-maps-services-python) (a Python client library), allowing the retrieval of the latitude and longitude of each resort, as well as that of the user.
 
 With that, this app finds the ski resorts with the lowest euclidean distance, and displays those to the user. It also provides a database for storing information on each resort following your visit.
+> Check out my [Flask tutorial](../web-apps-with-flask/) for more info.
 
 #### FreshyFinder -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snow_scraper)  
 [Heroku link](https://snowscraper.herokuapp.com/)
 
-With this one, I wanted to focus more heavily on visualizations, specifically. So, I decided to incorporated [Plotly Dash](Plotly Dash) into my Flask app, as well as more map-specific plotting tools, such as [MapBox](MapBox). Since more elaborate data was required for this project, I relied more heavily on [BeautifulSoup]() than I have in past projects (see [blog post](../webscraping/) for more info).
+With this one, I wanted to focus more heavily on visualizations, specifically. So, I decided to incorporated [Plotly Dash](Plotly Dash) into my Flask app, as well as more map-specific plotting tools, such as [MapBox](MapBox) (I used the [`googlemaps`](https://github.com/googlemaps/google-maps-services-python) API here, too). Since more elaborate data was required for this project, I relied more heavily on [BeautifulSoup]() than I have in past projects.
+> See [blog post](../webscraping/) on web-scraping for more info.
+
+In the end, I think it ended up being a really nice visualization tool, that conveys a ton of information in an *intuitive* way. Check out the link above and give it a try.
 
 ---
 
 ### pyAL: Cyborg moths  -- ***Currently underway*** -- [GH repo](https://github.com/meccaLeccaHi/pyAL)  
-[Source](https://github.com/charlesDelahunt/PuttingABugInML)
 
-[[*Description goes here.*]]
+I'm currently working on porting some very [interesting code](https://github.com/charlesDelahunt/PuttingABugInML) from Matlab to an open-source language (Python). What makes this code special is that it simulates the architecture and temporal dynamics of an insect olfactory system (specifically, that of the hawkmoth, *Manduca sexta*).
+
+Although the network fails to out-perform existing ML models in the long run, MothNet succeeds in **out-performing those methods when trained on very few samples** ([reference](https://arxiv.org/abs/1808.08124)). This makes sense, as these moths have been evolving to perform well on only a few samples for millions of years. Given how common it is for a ML model to struggle when trained on too few samples, the potential utility of this algorithm (to me), seems quite substantial. Check back soon for more info!
