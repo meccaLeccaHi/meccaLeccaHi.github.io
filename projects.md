@@ -100,14 +100,17 @@ Because this problem was *so* well suited to image classification, our models pe
 #### Snowblog! -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snowblog)  
 [Heroku link](https://snowblogg.herokuapp.com/index)
 
-[[*Description goes here.*]]
+This was a fun way to learn web-dev in Python ([Flask](http://flask.pocoo.org/), specifically), as well as a good excuse to learn which ski resorts I needed to visit and where they were located.
+This app uses two data sources:
+1. Pre-scraped data from [OpenSnow.com](https://www.opensnow.com), including the name and state/province of every ski resort in America and Canada, housed in a SQLite database.
+2. API calls to [Google Geocode](https://developers.google.com/maps/documentation/geocoding/start) via [`googlemaps`](https://github.com/googlemaps/google-maps-services-python) (a Python client library), allowing the retrieval of the latitude and longitude of each resort, as well as that of the user.
 
+With that, this app finds the ski resorts with the lowest euclidean distance, and displays those to the user. It also provides a database for storing information on each resort following your visit.
 
 #### FreshyFinder -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snow_scraper)  
 [Heroku link](https://snowscraper.herokuapp.com/)
 
-[[*Description goes here.*]]
-
+With this one, I wanted to focus more heavily on visualizations, specifically. So, I decided to incorporated [Plotly Dash](Plotly Dash) into my Flask app, as well as more map-specific plotting tools, such as [MapBox](MapBox). Since more elaborate data was required for this project, I relied more heavily on [BeautifulSoup]() than I have in past projects (see [blog post](./webscraping/) for more info).
 
 ---
 
