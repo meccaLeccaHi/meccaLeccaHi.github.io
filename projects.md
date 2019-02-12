@@ -94,6 +94,8 @@ by rotating the image as input and using the rotation as the supervisory signal.
 Because this problem was *so* well suited to image classification, our models performed with *extremely high accuracy* (**>98%**, see examples below).
 {% include double_figure.html url1="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" width1="35%" width2="30%"  url2="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Semantic-category (left) and image-rotation (right) prediction examples." %}
 
+bar
+
 > See [blog posts](../tags/#neural-network/) on neural networks for more info.
 
 ---
