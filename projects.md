@@ -41,9 +41,9 @@ Dr. Kawahara had determined the most important acoustic features in discriminati
 
 The code for this tool was written in MATLAB, so we decided not to use an open-source language to generate this stimuli. For the voices themselves, I enlisted the services of several different voice-over actors through the website [Fiverr](https://www.fiverr.com/), to impersonate the celebrity voice of my choosing (Arnold Schwarzenegger, Barack Obama, etc.). I really couldn't have been more pleased with the results (see below).
 
-{% include figure.html url="https://camo.githubusercontent.com/5da33cc0e49f4009465410603d0c15c2ea974f11/687474703a2f2f692e696d6775722e636f6d2f3233434a5935362e706e67" caption="Multi-dimensional voice-space (with 8 different voices on the _spokes_ and the average on the _hub_)." width="70%" %}
+{% include figure.html url="https://camo.githubusercontent.com/5da33cc0e49f4009465410603d0c15c2ea974f11/687474703a2f2f692e696d6775722e636f6d2f3233434a5935362e706e67" caption="Multi-dimensional voice-space (with 8 different voices on the spokes and the average on the hub)." width="70%" %}
 
-{% include youtubePlayer.html id="N6N1gfzqQZA" caption="Multi-dimensional voice-space (with 8 different voices on the _spokes_ and the average on the _hub_)." %}
+{% include youtubePlayer.html id="N6N1gfzqQZA" %}
 
 ---
 
@@ -54,7 +54,7 @@ I would have to recommend creating a video game for anyone who loves old video g
 This was actually really nostalgic. I needed to make a "fun", "gamified" platform for our neuroscience studies. So, naturally, I decided to use sound effects and transitions from some of my childhood favorites, including: Punch-Out!!, Super Mario Bros., Base-Wars, and of course, GoldenEye.
 This project relies heavily on [Psychopy](http://www.psychopy.org/), for presentation and timing and [PyGame](http://www.pygame.org/) for controls (mainly). Although we initially tried this using fancy eye-tracking software, ultimately, we discovered the good ol' X-Box controller to [work flawlessly](https://github.com/FRC4564/Xbox) and be way less of a pain for participants (thanks Microsoft!). Both the patients and I had a lot of fun with this one. We even got ≈25% greater participation by the pediatric patients, which put a smile on my face :) I believe this one speaks for itself -- check it out below.
 
-{% include youtubePlayer.html id="Fa7tWZQfb8c" %}
+{% include youtubePlayer.html id="Fa7tWZQfb8c" caption="Clips of the action from the hot new game: 'LazerMorph'!" %}
 
 ---
 
@@ -67,13 +67,13 @@ When given the choice between collecting data from college freshman one-by-one o
 
 In order to visualize the perceived similarity (or *dis*-similarity) of these faces using the survey data we collected, we performed a simple form of dimensionality reduction using MDS. MDS is a useful way to visualize high-dimensional distance (or “dissimilarity”) data in a few dimensions — usually only two, for ease of visualization (see below).
 
-{% include figure.html url="../assets/projects/face_mds.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
+{% include figure.html url="./assets/projects/face_mds.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
 
 ---
 
 ### Record Linkage -- ***Fall 2017***
 [GitHub repo](https://github.com/meccaLeccaHi/record_linkage)
-As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it A) has rich history and methodology going back as long people have been trying to keep track of each other (geneology, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks. RL also has a few characteristic issues that routinely require attention including:
+As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it A) has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks. RL also has a few characteristic issues that routinely require attention including:
 - substantial class imbalances (number of non-matches *far* exceeds the number of matches)
 - There's a *huge* number of potential Cartesian pairs, so we maximize pairing with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
 - Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
