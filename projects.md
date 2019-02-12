@@ -11,8 +11,6 @@ category: project
 </section>
 
 > You can find most of my work on [GitHub](https://github.com/meccaLeccaHi). Several posts on my [blog](blog/) are also related to these projects.
-> Please feel free to leave a comment below.
-
 ---
 
 ### Face-morphing -- ***Spring 2016***
