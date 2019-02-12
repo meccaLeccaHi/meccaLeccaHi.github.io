@@ -1,1 +1,6 @@
-<iframe width="810" height="481" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0"></iframe>
+<figure>
+  <iframe width="810" height="481" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0"></iframe>
+  {% if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

@@ -27,7 +27,7 @@ My main interest was in using 'life-like' clips of moving, talking faces, howeve
 
 Obviously, this required a substantial increase in the computational time involved in generating our stimuli. So, at this point, we decided to enlist the help of the University of Iowa's [high-performance computing cluster](https://hpc.uiowa.edu/). Using a distributed approach, we were able to generate our images in *hours instead of days*. The results were better than I had hoped for (see figure below).
 
-{% include figure.html url="https://cloud.githubusercontent.com/assets/15203083/21275286/b24b5ede-c391-11e6-8ae9-a3a71f14ba87.gif" caption="Animated, multi-dimensional face-space (with 8 different faces on the _spokes_ and the average on the _hub_)." width="70%" %}
+{% include figure.html url="https://cloud.githubusercontent.com/assets/15203083/21275286/b24b5ede-c391-11e6-8ae9-a3a71f14ba87.gif" caption="Animated, multi-dimensional face-space (with 8 different faces on the spokes and the average on the hub)." width="70%" %}
 
 ---
 
@@ -41,9 +41,9 @@ Dr. Kawahara had determined the most important acoustic features in discriminati
 
 The code for this tool was written in MATLAB, so we decided not to use an open-source language to generate this stimuli. For the voices themselves, I enlisted the services of several different voice-over actors through the website [Fiverr](https://www.fiverr.com/), to impersonate the celebrity voice of my choosing (Arnold Schwarzenegger, Barack Obama, etc.). I really couldn't have been more pleased with the results (see below).
 
-{% include figure.html url="https://camo.githubusercontent.com/5da33cc0e49f4009465410603d0c15c2ea974f11/687474703a2f2f692e696d6775722e636f6d2f3233434a5935362e706e67" caption="Multi-dimensional voice-space (with 8 different voices on the *spokes* and the average on the *hub*)." width="70%" %}
+{% include figure.html url="https://camo.githubusercontent.com/5da33cc0e49f4009465410603d0c15c2ea974f11/687474703a2f2f692e696d6775722e636f6d2f3233434a5935362e706e67" caption="Multi-dimensional voice-space (with 8 different voices on the _spokes_ and the average on the _hub_)." width="70%" %}
 
-{% include youtubePlayer.html id="N6N1gfzqQZA" width="70%" %}
+{% include youtubePlayer.html id="N6N1gfzqQZA" caption="Multi-dimensional voice-space (with 8 different voices on the _spokes_ and the average on the _hub_)." %}
 
 ---
 
