@@ -75,7 +75,7 @@ In order to visualize the perceived similarity (or *dis*-similarity) of these fa
 As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks, just to name a few.
 
 RL also has a few ***characteristic issues*** that routinely require attention including:
-- Substantial class imbalances (number of non-matches *far* exceeds the number of matches).
+- Substantial class imbalances (number of non-matches *far* exceeds the number of matches). For this issue, it's important to make sure you're not using the false-negative rate when assessing model performance.
 - There's a *huge* number of potential Cartesian pairs to compare to test each possible match, so we *maximize pairing* with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
 - Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
 In our case, we trained neural networks to match records across multiple SQL databases using ’fuzzy’ matching, resulting in a **≈75% reduction in non-matched records**. As a result, we were able to improve the accuracy of a medical record linkage system providing clinical performance metrics to *more than 200 hospitals*.
@@ -92,14 +92,14 @@ Critical Juncture, meanwhile, has created and maintains an online version of the
 
 In order to improve the overall readability and discoverability of decades of government documents, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
 1. The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
-{% include figure.html url="https://camo.githubusercontent.com/695b3b2aafe3ece038296095e87f2792ad6a47fc/68747470733a2f2f692e696d6775722e636f6d2f656a63367774592e706e673f31" caption="Semantic-category class examples." width="65%" %}
+{% include figure.html url="https://camo.githubusercontent.com/695b3b2aafe3ece038296095e87f2792ad6a47fc/68747470733a2f2f692e696d6775722e636f6d2f656a63367774592e706e673f31" caption="Semantic-category class examples." %}
 2. Like other [examples](https://arxiv.org/pdf/1603.08511.pdf), predicting image rotation has the nice property of being practically "free": any image can be used as a training sample, simply
 by rotating the image as input and using the rotation as the supervisory signal.
-{% include figure.html url="https://camo.githubusercontent.com/4c72814164f684462451b9b1c03428bc7cc0c871/68747470733a2f2f692e696d6775722e636f6d2f324946763358542e706e673f31" caption="Image-rotation class examples." width="65%" %}
+{% include figure.html url="https://camo.githubusercontent.com/4c72814164f684462451b9b1c03428bc7cc0c871/68747470733a2f2f692e696d6775722e636f6d2f324946763358542e706e673f31" caption="Image-rotation class examples." %}
 
 Because this problem was *so* well suited to image classification, our models performed with *extremely high accuracy* (**>98%**, see examples below).
-{% include figure.html url="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" caption="Semantic-category prediction example." width="65%" %}
-{% include figure.html url="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Image-rotation prediction examples." width="65%" %}
+{% include figure.html url="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" caption="Semantic-category prediction example." %}
+{% include figure.html url="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Image-rotation prediction examples." %}
 
 ---
 
