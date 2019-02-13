@@ -33,8 +33,8 @@ Obviously, this required a substantial increase in the computational time involv
 After beginning my post-doc, I also became interested in understanding how the brain represents different identities of voices, which, despite being less informative than faces, are still a hugely important cue to help us to determine a person's identity.
 In order to achieve test this, we planned to take the same approach we did with faces, but needed a completely different tool to morph between voices.
 
-Enter [Hideki Kawahara](http://www.wakayama-u.ac.jp/~kawahara/index-e.html), who was on sabbatical at Google UK at the time and had agreed to collaborate on our project.
-Dr. Kawahara had determined the most important acoustic features in discriminating between voices of different identities, and had created an algorithm to projects every voice into a reduced space, based on these dimensions (link [here](http://www.wakayama-u.ac.jp/~kawahara/STRAIGHTadv/index_e.html), *awesome* demo [here](https://youtu.be/vxiOu1HwQ-k?t=16)).
+Enter [Hideki Kawahara](http://www.wakayama-u.ac.jp/~kawahara/index-e.html), who was on sabbatical at Google in London at the time and had agreed to collaborate on our project.
+Dr. Kawahara's studies had highlighted the most importance of certain acoustic features in discriminating between voices of different identities, and had created an algorithm to project every voice into a reduced space, whose dimensions consisted of these features (link [here](http://www.wakayama-u.ac.jp/~kawahara/STRAIGHTadv/index_e.html), *really great* demo [here](https://youtu.be/vxiOu1HwQ-k?t=16)).
 
 The code for this tool was written in MATLAB, so we decided not to use an open-source language to generate this stimuli. For the voices themselves, I enlisted the services of several different voice-over actors through the website [Fiverr](https://www.fiverr.com/), to impersonate the celebrity voice of my choosing (Arnold Schwarzenegger, Barack Obama, etc.). I really couldn't have been more pleased with the results (see below).
 
