@@ -11,7 +11,7 @@ author: adam
 description: Post on setting up a 'standard' virtual environment on linux/unix systems
 ---
 
-This short guide focuses on setting up a 'standard' virtual environment on linux/unix systems.
+This short guide focuses on setting up a 'standard' virtual environment on Linux/UNIX systems.
 
 ## Topic Guide
 - [Learning Objectives](#learning-objectives)
@@ -26,7 +26,6 @@ A brief primer on setting up a 'standard' virtual environment on Linux/UNIX syst
 
 <a id="dependencies"></a>
 ## Installing Dependencies
-
 Obviously, we are going to use Python 3 in this post as we have for all the others. So, if it's not installed, we can change that like so:
 ```
 $ sudo apt-get -y install python3 python3-venv python3-dev
