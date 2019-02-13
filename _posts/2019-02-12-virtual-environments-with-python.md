@@ -8,10 +8,8 @@ comments: true
 tag:
 - Virtual environments
 author: adam
-description: Post on setting up a 'standard' virtual environment on linux/unix systems
+description: A brief primer on  on setting up a 'standard' virtual environment on linux/unix systems
 ---
-
-This short guide focuses on setting up a 'standard' virtual environment on Linux/UNIX systems.
 
 ## Topic Guide
 - [Learning Objectives](#learning-objectives)
@@ -22,7 +20,7 @@ This short guide focuses on setting up a 'standard' virtual environment on Linux
 ## Learning Objectives
 - Understand how to use virtual environments in Python.
 
-A brief primer on setting up a 'standard' virtual environment on Linux/UNIX systems.
+The following is a brief primer on setting up a 'standard' virtual environment on Linux/UNIX systems.
 
 <a id="dependencies"></a>
 ## Installing Dependencies
