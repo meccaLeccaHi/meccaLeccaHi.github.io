@@ -196,10 +196,13 @@ The `scipy.stats.zscore` function will convert a vector of values to their respe
 
 ```python
 import numpy as np
+from scipy import stats
+
 values = np.array([2,3,4,5,6])
 
-# Your code here:
+stats.zscore(a)
 ```
+    array([-1.41421356, -0.70710678,  0.        ,  0.70710678,  1.41421356])
 
 **Ask yourself:** 
 - What is the `scipy.stats.zscore` function doing to convert the vector of values?
