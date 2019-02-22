@@ -177,6 +177,8 @@ plt.show();
 <a id='z-score'></a>
 ### The z-score
 
+---
+
 While it's nice to have this 68-95-99.7 rule, we can get *more specific.*
 
 *The **z-score** of an observation quantifies **how many standard deviations the observation is away from the population mean**:*
