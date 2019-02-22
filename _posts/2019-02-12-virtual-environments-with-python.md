@@ -8,7 +8,7 @@ comments: true
 tag:
 - Virtual environments
 author: adam
-description: A brief primer on  on setting up a 'standard' virtual environment on linux/unix systems
+description: A brief primer on setting up a 'standard' virtual environment on linux/unix systems
 ---
 
 ## Topic Guide
