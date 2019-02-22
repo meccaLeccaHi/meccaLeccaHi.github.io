@@ -170,7 +170,6 @@ plt.show();
 100.01642077520381 14.989875844632797
 
 
-
 ![png](/assets/images/normal/normal_hist.png)
 
 
