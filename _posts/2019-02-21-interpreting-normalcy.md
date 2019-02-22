@@ -32,12 +32,8 @@ description: A brief intro to the wonders of the normal distribution and how we 
 ```python
 import numpy as np
 import scipy.stats as stats
-# import seaborn as sns
 import matplotlib.pyplot as plt
 
-# sns.set_style('whitegrid')
-
-%config InlineBackend.figure_format = 'retina'
 %matplotlib inline
 ```
 
