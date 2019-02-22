@@ -77,7 +77,7 @@ Intelligence Quotient (IQ) follows a normal distribution by design. IQ is normal
 
 
 ```python
-#generate points on the x axis
+# generate points on the x-axis
 xpoints = np.linspace(40, 160, 500)
 
 # use stats.norm.pdf to get values on the probability density function for the normal distribution
@@ -167,7 +167,7 @@ ax.hist(xpoints, density=True, bins=100)
 plt.show();
 ```
 
-    100.01642077520381 14.989875844632797
+100.01642077520381 14.989875844632797
 
 
 
@@ -175,10 +175,7 @@ plt.show();
 
 
 <a id='z-score'></a>
-
 ### The z-score
-
----
 
 While it's nice to have this 68-95-99.7 rule, we can get *more specific.*
 
@@ -206,7 +203,6 @@ values = np.array([2,3,4,5,6])
 - What is the `scipy.stats.zscore` function doing to convert the vector of values?
 
 <a id='additional-resources'></a>
-
 > #### Additional resources
 >
 > - http://blog.vctr.me/posts/central-limit-theorem.html
