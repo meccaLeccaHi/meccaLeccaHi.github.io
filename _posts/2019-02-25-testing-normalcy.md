@@ -129,4 +129,4 @@ normality_test(dat_bias_raw)
 <a id='additional-resources'></a>
 > #### Additional resources
 >
-> - https://machinelearningmastery.com/a-gentle-introduction-to-normality-tests-in-python/
+> - [https://machinelearningmastery.com/a-gentle-introduction-to-normality-tests-in-python/](https://machinelearningmastery.com/a-gentle-introduction-to-normality-tests-in-python/)
