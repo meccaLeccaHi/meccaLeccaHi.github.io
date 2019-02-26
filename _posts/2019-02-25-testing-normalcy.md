@@ -99,7 +99,7 @@ Each test makes different assumptions and considers different aspects of the dat
 >- p <= alpha: reject H0, not normal.
 >- p > alpha: fail to reject H0, normal.
 
-To state that another way- We want larger p-value to confirm that our sample was likely drawn from a Gaussian distribution.
+To state that another way- *Larger p-value suggest that our sample was likely drawn from a Gaussian distribution.*
 
 
 ```python
