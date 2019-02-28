@@ -167,11 +167,11 @@ In other words, our brains must first process an object's 'simple' features (col
 {% include figure_link.html url="https://upload.wikimedia.org/wikipedia/commons/c/cd/Lisa_analysis.png" href="https://en.wikipedia.org/wiki/Visual_system" caption="The visual system processes increasingly abstract features of visual input at each processing stage. Image source: wikipedia.com" height="500px" %}
 
 
->This becomes even more apparent when we consider the complexity of the potential problem space, which, in this case, happens to include any potential combination of _mxn_ pixel-values. Put simply, the rules for reading hand-writing are hard to distill.
+> This becomes even more apparent when we consider the complexity of the potential problem space, which, in this case, happens to include any potential combination of _mxn_ pixel-values. Put simply, the rules for reading hand-writing are hard to distill.
 >
-><img src="https://i.imgur.com/dDYphPB.png" style="height: 250px">
+> <img src="https://i.imgur.com/dDYphPB.png" style="height: 250px">
 >
->But, complex, non-linear problems such as character recognition are exactly where the flexibility of **neural networks** start to become the most useful.
+> But, complex, non-linear problems such as character recognition are exactly where the flexibility of **neural networks** start to become the most useful.
 
 <a id="neuron"></a>
 ### The Neuron
