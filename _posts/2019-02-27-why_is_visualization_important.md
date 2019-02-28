@@ -1,6 +1,6 @@
 ---
 title: "Why is Visualization Important?"
-date: 2019-01-27
+date: 2019-02-27
 layout: post
 math: false
 category: blog
@@ -60,6 +60,7 @@ Instead, as we all know, the launch proceeded when the temperature was 36 degree
 > Rest assured, most of our visualizations won't be involved in life and death decision-making like they do at NASA...
 >
 > {% include figure.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Mort.jpg/440px-Mort.jpg" caption="A guy with an unenviable job. Image source: wikipedia.com" width="30%" %}
+>
 
 #### Additional resources:
 - [https://stanfordmag.org/contents/elemental-evidence](https://stanfordmag.org/contents/elemental-evidence)
