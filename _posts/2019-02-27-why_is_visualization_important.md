@@ -59,7 +59,7 @@ Instead, as we all know, the launch proceeded when the temperature was 36 degree
 >
 > Rest assured, most of our visualizations won't be involved in life and death decision-making like they do at NASA...
 >
-> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Mort.jpg/440px-Mort.jpg" style="height: 250px">
+> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Mort.jpg/440px-Mort.jpg" style="width: 250px">
 
 #### Additional resources:
 - [https://stanfordmag.org/contents/elemental-evidence](https://stanfordmag.org/contents/elemental-evidence)
