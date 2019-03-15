@@ -18,7 +18,7 @@ description: Quick explanation as to why we use seeds with random functions.
 
 ---
 
-#### Brace yourself: "Random" functions aren't realy random.
+#### Brace yourself: "Random" functions aren't really random.
 They actually just pick from very long list of 'pseudo-random' numbers every time we use them. Fortunately for us, this list is so long that these functions behave 'more-or-less' randomly, which is sufficient for most peoples' needs. Although any given sample of numbers from these functions will look close to random, they were actually generated using a deterministic process.
 
 As implied by the name, a random function's "seed" is an integer value describing where on this list that particular function starts selecting numbers from. This allows us to us random function in a more controlled fashion, particularly during development, than would otherwise be possible if our function returned a different value on every iteration (the default behavior). This allows us to focus on the behavior of the rest of our code during development.
