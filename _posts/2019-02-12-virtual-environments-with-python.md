@@ -66,7 +66,7 @@ Now, we're ready to start customizing our environment!
 When installing software, and Python packages in particular, it's not un-common to end up with a lot of libraries installed.
 We can get a quick, comprehensive list of what packages we are using at any time with the commands below:
 ```
-$ pip freeze > requirements.txt`
+$ pip freeze > requirements.txt
 ```
 
 This directs the output of `pip freeze`, which lists all of the current Python package dependencies, to a text file named 'requirements.txt'. Open it up and take a look.
