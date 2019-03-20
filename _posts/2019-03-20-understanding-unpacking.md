@@ -72,7 +72,7 @@ def min_max(nums):
 
 
 ```python
-# We can assign the returned list to a single variable,
+# We can assign the returned list to a single variable.
 min_and_max = min_max([1, 2, 3])
 
 print(min_and_max)
