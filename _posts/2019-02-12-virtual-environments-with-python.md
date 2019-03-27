@@ -34,6 +34,7 @@ $ sudo apt-get -y install python3 python3-venv python3-dev
 A _virtual environment_ is an enclosed copy of the Python interpreter. By that I mean that when you install Python packages in a virtual environment (as opposed to the system-wide Python interpreter), only the virtual environment is affected. This provides us greater freedom to experiment with numerous environments in parallel, while keeping the changes in each separate from the others.
 - This also allows others to re-create your environment more easily, as we'll see below.
 - Plus, they are 'owned' by the user who creates them, so they don't require a separate admin account.
+>Note: The `conda` command is the preferred interface for managing installations and virtual environments with the Anaconda Python distribution. As such, if you are using Conda, then you may prefer to use the `conda` command. See [here](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) for more info.
 
 #### Create the environment
 We can start by creating a virtual environment inside the project we are working on. So, from within that directory, run:
