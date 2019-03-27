@@ -36,7 +36,7 @@ A _virtual environment_ is an enclosed copy of the Python interpreter. By that I
 - Plus, they are 'owned' by the user who creates them, so they don't require a separate admin account.
 
 #### Create the environment
->Note: The `conda` command is the preferred interface for managing installations and virtual environments with the Anaconda Python distribution. As such, if you are using Conda, then you may prefer to use the `conda` command. See [here](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) for more info.
+>Note: The `conda` command is the preferred interface for managing installations and virtual environments with the Anaconda Python distribution. As such, if you are using Conda, then you may prefer to use the `conda` command to manage your virtual environments, instead of `virtualenv`. See [here](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) for more info.
 
 We can start by creating a virtual environment inside the project we are working on. So, from within that directory, run:
 ```
