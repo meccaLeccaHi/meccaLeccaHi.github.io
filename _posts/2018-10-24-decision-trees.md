@@ -12,7 +12,7 @@ tag:
 - iris database
 - GraphViz
 author: adam
-description: A Juptyter notebook on Decision Trees
+description: A quick introduction to Decision Trees
 ---
 
  
@@ -87,10 +87,7 @@ factorial(5)
 ```
 
 
-
-
     120
-
 
 
 In general, recursion can be pretty opaque. But, we can get a clearer picture of what's happening inside our function from the example below.
@@ -127,12 +124,6 @@ factorial(4)                   # = 24
 
 **Objective:** Understand the specific function of the decision tree model.
 
-We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
-
-
-{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" width="75%" %}
-
-
 Decision trees are like the game “*20 questions*”:
 
 - They make decision by answering a series of questions, most often binary questions (yes or no).
@@ -145,7 +136,14 @@ Decision trees are like the game “*20 questions*”:
 {% include figure.html url="/assets/images/decision_trees/dec_tree_ex_simple.png" caption="Highly-simplistic decision tree example." height="280px" %}
 
 
-In this notebook, we'll see how we can use _tree-based methods_ for regression and classification, by applying it to problems similar to those we've previously used linear methods to solve. As with other models, decision trees are just another way of _stratifying_ or _segmenting_ a given predictor space into 'meaningful' (_hopefully_) groups.
+We've all been exposed to tree diagrams before, since they are used widely as a tool for representing potentially complex, decision-like processes.
+
+
+{% include figure_link.html url="https://static01.nyt.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg" href="https://www.nytimes.com/" caption="Image source: nytimes.com" width="75%" %}
+
+
+In this article, we'll see how we can use _tree-based methods_ for regression and classification, by applying it to problems similar to those we've previously used linear methods to solve. 
+> As with other models, decision trees are just another way of _stratifying_ or _segmenting_ a given predictor space into 'meaningful' (_hopefully_) groups.
 
 <a id='why'></a>
 
@@ -265,7 +263,7 @@ We'll see how they are employed in today's lab.
 
 ### An Example
 
-Decision trees can be applied to both regression and classification problems, but we'll use a simple and familiar dataset for this notebook: the iris dataset.
+Decision trees can be applied to both regression and classification problems, but we'll use a simple and familiar dataset for this article: the iris dataset.
 
 
 ```python
@@ -286,8 +284,6 @@ clf.fit(X_train, y_train)
 ```
 
 
-
-
     DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
                 max_features=None, max_leaf_nodes=None,
                 min_impurity_decrease=0.0, min_impurity_split=None,
@@ -296,19 +292,13 @@ clf.fit(X_train, y_train)
                 splitter='best')
 
 
-
-
 ```python
 # Evaluate model
 clf.score(X_test, y_test)
 ```
 
 
-
-
     0.9210526315789473
-
-
 
 
 ```python
@@ -325,11 +315,7 @@ graphviz.Source(dot_data)
 ```
 
 
-
-
 ![svg](../assets/images/decision_trees/output_41_0.svg)
-
-
 
 
 ```python
