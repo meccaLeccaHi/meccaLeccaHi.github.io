@@ -14,8 +14,6 @@ description: Short primer on how to use unpacking in Python.
 
 {% include figure.html url="https://upload.wikimedia.org/wikipedia/commons/b/b1/Von_baer_milan_leather_travel_bag.jpg" caption="Image source: wikipedia.com" width="40%" %}
 
----
-
 *'Unpacking'* in itself allows us to break down the contents of an object and assign them to several variables simultaneously. Although, this feature may seem simple after you've already learned about it, it can be a little tricky to recall multiple assignment syntax when you need it most.
 
 #### Let's create a packed object (boxed), then unpack it using a `for` loop.

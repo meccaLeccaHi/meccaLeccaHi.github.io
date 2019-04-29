@@ -14,8 +14,6 @@ description: Quick explanation as to why we use seeds with random functions.
 
 {% include figure.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sunflower_Seeds_Kaldari.jpg/1200px-Sunflower_Seeds_Kaldari.jpg" caption="Image source: wikipedia.com" width="40%" %}
 
----
-
 #### Brace yourself: "Random" functions aren't really random.
 They actually just pick from very long list of 'pseudo-random' numbers every time we use them. Fortunately for us, this list is so long that these functions behave 'more-or-less' randomly, which is sufficient for most peoples' needs. Although any given sample of numbers from these functions will look close to random, they were actually generated using a deterministic process.
 
