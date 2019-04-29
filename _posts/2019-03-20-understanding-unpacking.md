@@ -12,8 +12,6 @@ author: adam
 description: Short primer on how to use unpacking in Python.
 ---
 
-# Understanding Unpacking
-
 {% include figure.html url="https://upload.wikimedia.org/wikipedia/commons/b/b1/Von_baer_milan_leather_travel_bag.jpg" caption="Image source: wikipedia.com" width="40%" %}
 
 ---

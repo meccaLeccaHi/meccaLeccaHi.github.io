@@ -11,8 +11,6 @@ author: adam
 description: Brief recollection of the events of January 1986.
 ---
 
-# Why is Visualization Important?
-
 ### Learning Objectives
 - Describe why data visualization is important.
 - Identify the characteristics of a great data visualization.

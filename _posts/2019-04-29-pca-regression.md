@@ -14,12 +14,11 @@ author: adam
 description: Demo on using unsupervised algos with supervised algos.
 ---
 
-# Dimensionality Reduction with PCA
-
 Principal components analysis (PCA) is one of the most popular methods available for reducing the number of variables in a data set.
 - We typically describe PCA as an unsupervised learning tool.
 - But, dimensionality reduction techniques are useful for supervised learning, too.
 > In this article, we describe its use as a dimensional reduction step for linear regression.
+
 ---
 
 We know that we can use linear regression to model the relationship between our dependent variable and one (or more) independent variables (i.e. 'features').

@@ -12,8 +12,6 @@ author: adam
 description: Quick explanation as to why we use seeds with random functions.
 ---
 
-# Question: *What are random seeds?*
-
 {% include figure.html url="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Sunflower_Seeds_Kaldari.jpg/1200px-Sunflower_Seeds_Kaldari.jpg" caption="Image source: wikipedia.com" width="40%" %}
 
 ---
