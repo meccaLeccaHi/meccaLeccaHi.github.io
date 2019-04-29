@@ -1,4 +1,3 @@
-
 ---
 title: "Dimensionality Reduction with PCA"
 date: 2019-04-29
@@ -17,17 +16,11 @@ description: Demo on using unsupervised algos with supervised algos.
 
 # Dimensionality Reduction with PCA
 
-<table>
-    <tr>
-    <td><img src="http://www.acheronanalytics.com/uploads/9/8/6/3/98636884/editor/51764130_1.jpg?1491762379" style="float: center; width: 200px"></td>
-    <td>
-        <b>Principal components analysis (PCA) is one of the most popular methods available<br>for reducing the number of variables in a data set.</b><br><br>
-        <li>We typically describe PCA as an unsupervised learning tool.</li><br>
-        <li>But, dimensionality reduction techniques are useful for supervised learning, too.</li><br>
-        <br><i>In this article,</i><br>we describe its use as a dimensional reduction step for linear regression.
-    </td>
-    </tr>
-</table>
+Principal components analysis (PCA) is one of the most popular methods available for reducing the number of variables in a data set.
+- We typically describe PCA as an unsupervised learning tool.
+- But, dimensionality reduction techniques are useful for supervised learning, too.
+> In this article, we describe its use as a dimensional reduction step for linear regression.
+---
 
 We know that we can use linear regression to model the relationship between our dependent variable and one (or more) independent variables (i.e. 'features').
 - Let's try using the principal components (the dimensions along which the data vary the most) as the features of our logistic regression and see how it affects our accuracy.
