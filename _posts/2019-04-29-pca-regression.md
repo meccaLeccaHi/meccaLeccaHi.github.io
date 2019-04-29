@@ -71,9 +71,7 @@ g = g.map_diag(plt.hist)
 plt.show()
 ```
 
-
 ![png](/assets/images/pca_regression/output_6_0.png)
-
 
 
 ```python
@@ -85,7 +83,6 @@ print(np.sqrt(-(orig_lr_scores).mean()))
 ```
 
     54.827882004879235
-
 
 
 ```python
@@ -130,7 +127,6 @@ for i, pc in enumerate(pc_names):
     PC4 weighting vector: [-0.4140095  -0.67986052  0.49982533 -0.01966734 -0.06839533 -0.16777384
      -0.07602005  0.0079212   0.26442742  0.08708624] 
     
-
 
 Transform the original data into the principal component space.
 
