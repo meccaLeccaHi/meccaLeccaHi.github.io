@@ -51,7 +51,7 @@ As we can see above, by changing `a`, we unknowingly changed `b`, as well.
 - We are basically telling Python: "Assign this list to variables `a` and `b`".
 > Like how 'William' and 'Bill' can refer to the same person.
 
-Several solutions exist to this problem. One way to make sure that each variable is an entirely separate object, is to use **index notation**.
+Several solutions to this problem exist. One way to make sure that each variable is an entirely separate object, is to use **index notation**.
 - We've seen how to use _indexing_ to slice arrays (e.g. `foo[4:10:2]`).
 - We'll use the same notation to effectively tell Python: "Assign all the contents of list `a` to the variable `b`".
 
