@@ -14,6 +14,76 @@ category: project
 
 ---
 
+### pymoth: Cyborg moths -- [GH repo](https://github.com/meccaLeccaHi/pymoth)  
+
+My most recent project is a biologically-inspired neural network, which simulates the olfactory system of the hawkmoth. What makes this code special is that it simulates the architecture and temporal dynamics of an insect olfactory system (specifically, that of the hawkmoth, *Manduca sexta*). It does so by running a time-stepped simulation of learning in the moth brain, in which it is trained on a cruder, non-spatial version of MNIST. This is meant to match with the architecture of the natural moth brain, in terms of size and complexity (~ 60 features).
+
+The Python package for this project ([pymoth](https://github.com/meccaLeccaHi/pymoth)) also compares the predictions of the moth brain to those of kNN and SVM models. [We find](https://github.com/meccaLeccaHi/pymoth#sample-results) that the moth brain out-performs the other ML methods when training was limited to less than 20 training samples per class ([reference](https://arxiv.org/abs/1808.08124)).
+
+{% include figure.html url="https://github.com/meccaLeccaHi/pymoth/raw/master/results/results_ROC_multi_sample.png" caption="Sample results for MothNet, kNN, and SVM models on downsampled MNIST." %}
+
+From a machine learning perspective, it's possible that this model's bio-inspired mechanisms are uniquely adapted to learn rapidly from very few samples. This makes sense, as these moths have been evolving to perform well on only a few samples for millions of years. Given how common it is for a ML model to struggle when trained on too few samples, the potential utility of this algorithm (to me), seems quite substantial.
+
+---
+
+### Image Classification -- ***Spring 2018*** -- [GH repo](https://github.com/meccaLeccaHi/fed_detect)
+This was my first exposure to the super-trendy and constantly-evolving world of image classification. As I found out, when big deal AI researchers want to make a name for themselves, they sometimes compete in high-profile, annual competitions such as [ImageNet](https://www.kaggle.com/c/imagenet-object-localization-challenge) and tend to involve the application of highly-complicated, non-linear models. As a result, developments in this field can take place rapidly -- just getting up to speed can be challenging!
+
+Fortunately, a relatively large amount of attention has been paid to this subject, so the opportunities to learn about it are plentiful (e.g. [fast.ai](https://www.fast.ai/)). Around the same time, I had been trying my luck with some [Kaggle](https://www.kaggle.com/) competitions along the same lines (see my notebooks [here](https://github.com/meccaLeccaHi/kaggle)).
+
+Critical Juncture, meanwhile, has created and maintains an online version of the [Federal Register](https://www.federalregister.gov/), which is a publication that provides access to the official text of federal laws, presidential documents, etc for a given day in the U.S. Since the federal government has only recently digitized the archived content, none of the figures before a certain date (say, 1995) were able to be indexed quickly and/or easily.
+
+In order to improve the overall readability and discoverability of decades of government documents, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
+- The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
+{% include figure.html url="https://camo.githubusercontent.com/695b3b2aafe3ece038296095e87f2792ad6a47fc/68747470733a2f2f692e696d6775722e636f6d2f656a63367774592e706e673f31" caption="Semantic-category class examples." %}
+- Like other [examples](https://arxiv.org/pdf/1603.08511.pdf), predicting image rotation has the nice property of being practically "free": any image can be used as a training sample, simply
+by rotating the image as input and using the rotation as the supervisory signal.
+{% include figure.html url="https://camo.githubusercontent.com/4c72814164f684462451b9b1c03428bc7cc0c871/68747470733a2f2f692e696d6775722e636f6d2f324946763358542e706e673f31" caption="Image-rotation class examples." %}
+
+Because this problem was *so* well suited to image classification, our models performed with *extremely high accuracy* (**>98%**, see examples below).
+
+{% include figure.html url="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" caption="Semantic-category prediction example." %}
+
+{% include figure.html url="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Image-rotation prediction examples." %}
+
+> See [blog posts](../tags/#neural-network/) on neural networks for more info.
+
+---
+
+### Record Linkage -- ***Fall 2017*** -- [GH repo](https://github.com/meccaLeccaHi/record_linkage)
+As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks, just to name a few.
+
+RL also has a few ***characteristic issues*** that routinely require attention including:
+- Substantial class imbalances (number of non-matches *far* exceeds the number of matches). For this issue, it's important to make sure you're not using the false-negative rate when assessing model performance.
+- There's a *huge* number of potential Cartesian pairs to compare to test each possible match, so we *maximize pairing* with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
+- Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
+In our case, we trained neural networks to match records across multiple SQL databases using ’fuzzy’ matching, resulting in a **≈75% reduction in non-matched records**. As a result, we were able to improve the accuracy of a medical record linkage system providing clinical performance metrics to *more than 200 hospitals*.
+
+---
+
+### Perceptual Studies via AWS Mechanical Turk -- ***Summer 2017*** -- [GH repo](https://github.com/meccaLeccaHi/mech_turk)
+
+When given the choice between collecting data from college freshman one-by-one or anonymous internet users hundreds or thousands at a time, it was easy to choose the latter. Although it required a little elbow-grease (see excellent [tutorial](https://bradylab.ucsd.edu/ttt/)), the time and money required to gather data with this approach was reduced by more than 90%.
+
+{% include figure.html url="https://camo.githubusercontent.com/22c2049faf1f36ee5e7670e43ccebeed19355db4/687474703a2f2f692e696d6775722e636f6d2f4662795369754b2e706e673f31" caption="Face similarity experiment, via Amazon mTurk." width="70%" %}
+
+In order to visualize the perceived similarity (or *dis*-similarity) of these faces using the survey data we collected, we performed a simple form of dimensionality reduction using MDS. MDS is a useful way to visualize high-dimensional distance (or “dissimilarity”) data in a few dimensions — usually only two, for ease of visualization (see below).
+
+{% include figure.html url="../assets/images/projects/face_mds.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
+
+---
+
+### Gaming/Eye-Tracking with Python -- ***Spring 2017*** -- [GH repo](https://github.com/meccaLeccaHi/py_stimuli)
+I would have to recommend creating a video game for anyone who loves old video games or Python. Fortunately for me, both are true.
+
+This was actually really nostalgic. Unlike monkeys, human patients get bored *very easily*. I needed to make a "fun", "gamified" platform for our neuroscience studies. So, naturally, I decided to use leverage the sound effects, storylines, and transition effects from some of my childhood favorites (including): Punch-Out!!, Super Mario Bros., Base-Wars, and of course, GoldenEye.
+This project relies heavily on [Psychopy](http://www.psychopy.org/), for presentation and timing and [PyGame](http://www.pygame.org/) for controls (mainly). Although we initially tried this using fancy eye-tracking software, ultimately, we discovered the good ol' X-Box controller to [work flawlessly](https://github.com/FRC4564/Xbox) and be way less of a pain for participants (thanks Microsoft!). Both the patients and I had a lot of fun with this one. We even got ≈25% greater participation by the pediatric patients, which put a smile on my face :) I believe this one speaks for itself -- check it out below.
+
+{% include youtubePlayer.html id="Fa7tWZQfb8c" caption="Clips of the action from the hot new game: 'LazerMorph'!" %}
+
+
+---
+
 ### Face-morphing -- ***Spring 2016*** -- [GH repo](https://github.com/meccaLeccaHi/face_morphing)
 This was the first project that got me really hooked on the exciting possibilities in open-source programming.
 Starting in grad school, I had been on the lookout for a method of morphing faces without the tedium of manually-placing hundreds of 'points' on each face.
@@ -44,63 +114,6 @@ The code for this tool was written in MATLAB, so we decided not to use an open-s
 
 ---
 
-### Gaming/Eye-Tracking with Python -- ***Spring 2017*** -- [GH repo](https://github.com/meccaLeccaHi/py_stimuli)
-I would have to recommend creating a video game for anyone who loves old video games or Python. Fortunately for me, both are true.
-
-This was actually really nostalgic. Unlike monkeys, human patients get bored *very easily*. I needed to make a "fun", "gamified" platform for our neuroscience studies. So, naturally, I decided to use leverage the sound effects, storylines, and transition effects from some of my childhood favorites (including): Punch-Out!!, Super Mario Bros., Base-Wars, and of course, GoldenEye.
-This project relies heavily on [Psychopy](http://www.psychopy.org/), for presentation and timing and [PyGame](http://www.pygame.org/) for controls (mainly). Although we initially tried this using fancy eye-tracking software, ultimately, we discovered the good ol' X-Box controller to [work flawlessly](https://github.com/FRC4564/Xbox) and be way less of a pain for participants (thanks Microsoft!). Both the patients and I had a lot of fun with this one. We even got ≈25% greater participation by the pediatric patients, which put a smile on my face :) I believe this one speaks for itself -- check it out below.
-
-{% include youtubePlayer.html id="Fa7tWZQfb8c" caption="Clips of the action from the hot new game: 'LazerMorph'!" %}
-
----
-
-### Perceptual Studies via AWS Mechanical Turk -- ***Summer 2017*** -- [GH repo](https://github.com/meccaLeccaHi/mech_turk)
-
-When given the choice between collecting data from college freshman one-by-one or anonymous internet users hundreds or thousands at a time, it was easy to choose the latter. Although it required a little elbow-grease (see excellent [tutorial](https://bradylab.ucsd.edu/ttt/)), the time and money required to gather data with this approach was reduced by more than 90%.
-
-{% include figure.html url="https://camo.githubusercontent.com/22c2049faf1f36ee5e7670e43ccebeed19355db4/687474703a2f2f692e696d6775722e636f6d2f4662795369754b2e706e673f31" caption="Face similarity experiment, via Amazon mTurk." width="70%" %}
-
-In order to visualize the perceived similarity (or *dis*-similarity) of these faces using the survey data we collected, we performed a simple form of dimensionality reduction using MDS. MDS is a useful way to visualize high-dimensional distance (or “dissimilarity”) data in a few dimensions — usually only two, for ease of visualization (see below).
-
-{% include figure.html url="../assets/images/projects/face_mds.png" caption="Normalized responses of mTurk workers are shown projected in the same 2-dimensional space following classical MDS." width="65%" %}
-
----
-
-### Record Linkage -- ***Fall 2017*** -- [GH repo](https://github.com/meccaLeccaHi/record_linkage)
-As my first major gig outside of academia, I spent a lot of time surveying the literature for this one, and I learned a *lot* as a result. RL turned out to be a great area for me to work in as it has rich history and methodology going back as long people have been trying to keep track of each other (genealogy, censuses, etc.). Consequently, there is a rich literature dedicated to the topic, including both well-established probabilistic approaches and more modern modern approaches using single- and multi-layer neural networks, just to name a few.
-
-RL also has a few ***characteristic issues*** that routinely require attention including:
-- Substantial class imbalances (number of non-matches *far* exceeds the number of matches). For this issue, it's important to make sure you're not using the false-negative rate when assessing model performance.
-- There's a *huge* number of potential Cartesian pairs to compare to test each possible match, so we *maximize pairing* with the [Kuhn-Munkres](https://pypi.python.org/pypi/munkres/) (i.e. Hungarian) Algorithm.
-- Research with HIPAA-protected data requires patient de-identification, making matching more challenging.
-In our case, we trained neural networks to match records across multiple SQL databases using ’fuzzy’ matching, resulting in a **≈75% reduction in non-matched records**. As a result, we were able to improve the accuracy of a medical record linkage system providing clinical performance metrics to *more than 200 hospitals*.
-
----
-
-### Image Classification -- ***Spring 2018*** -- [GH repo](https://github.com/meccaLeccaHi/fed_detect)
-This was my first exposure to the super-trendy and constantly-evolving world of image classification. As I found out, when big deal AI researchers want to make a name for themselves, they sometimes compete in high-profile, annual competitions such as [ImageNet](https://www.kaggle.com/c/imagenet-object-localization-challenge) and tend to involve the application of highly-complicated, non-linear models. As a result, developments in this field can take place rapidly -- just getting up to speed can be challenging!
-
-Fortunately, a relatively large amount of attention has been paid to this subject, so the opportunities to learn about it are plentiful (e.g. [fast.ai](https://www.fast.ai/)). Around the same time, I had been trying my luck with some [Kaggle](https://www.kaggle.com/) competitions along the same lines (see my notebooks [here](https://github.com/meccaLeccaHi/kaggle)).
-
-Critical Juncture, meanwhile, has created and maintains an online version of the [Federal Register](https://www.federalregister.gov/), which is a publication that provides access to the official text of federal laws, presidential documents, etc for a given day in the U.S. Since the federal government has only recently digitized the archived content, none of the figures before a certain date (say, 1995) were able to be indexed quickly and/or easily.
-
-In order to improve the overall readability and discoverability of decades of government documents, we set out to **train two image classification models: one for *semantic category* and one for the *rotation* of figures** embedded in the digital archives of the Federal Register. Each model consists of a pre-trained convolutional neural network with drop-out, and a partially un-frozen convolutional base, and **perform with very high (>98%) accuracy.** I attribute this to a couple things:
-- The similarity between different classes is low (see figure below), which presumably made it easier for the model to learn to distinguish between them.
-{% include figure.html url="https://camo.githubusercontent.com/695b3b2aafe3ece038296095e87f2792ad6a47fc/68747470733a2f2f692e696d6775722e636f6d2f656a63367774592e706e673f31" caption="Semantic-category class examples." %}
-- Like other [examples](https://arxiv.org/pdf/1603.08511.pdf), predicting image rotation has the nice property of being practically "free": any image can be used as a training sample, simply
-by rotating the image as input and using the rotation as the supervisory signal.
-{% include figure.html url="https://camo.githubusercontent.com/4c72814164f684462451b9b1c03428bc7cc0c871/68747470733a2f2f692e696d6775722e636f6d2f324946763358542e706e673f31" caption="Image-rotation class examples." %}
-
-Because this problem was *so* well suited to image classification, our models performed with *extremely high accuracy* (**>98%**, see examples below).
-
-{% include figure.html url="https://camo.githubusercontent.com/aa07576b4f9da35caf829c1b53b0ba69e9fbd27d/68747470733a2f2f692e696d6775722e636f6d2f6548656a75395a2e706e67" caption="Semantic-category prediction example." %}
-
-{% include figure.html url="https://camo.githubusercontent.com/249d6d81fae9779f219f30080d9f6fd0d3bcbd4d/68747470733a2f2f692e696d6775722e636f6d2f7a6959686e6b692e706e67" caption="Image-rotation prediction examples." %}
-
-> See [blog posts](../tags/#neural-network/) on neural networks for more info.
-
----
-
 ### Python Apps:
 #### Snowblog! -- ***Fall 2018*** -- [GH repo](https://github.com/meccaLeccaHi/snowblog)  
 [Heroku link](https://snowblogg.herokuapp.com/index)
@@ -121,10 +134,4 @@ With this one, I wanted to focus more heavily on visualizations, specifically. S
 
 In the end, I think it ended up being a really nice visualization tool, that conveys a ton of information in an *intuitive* way. Check out the link above and give it a try.
 
----
 
-### pyAL: Cyborg moths  -- ***Currently underway*** -- [GH repo](https://github.com/meccaLeccaHi/pyAL)  
-
-I'm currently working on porting some very [interesting code](https://github.com/charlesDelahunt/PuttingABugInML) from Matlab to an open-source language (Python). What makes this code special is that it simulates the architecture and temporal dynamics of an insect olfactory system (specifically, that of the hawkmoth, *Manduca sexta*).
-
-Although the network fails to out-perform existing ML models in the long run, MothNet succeeds in **out-performing those methods when trained on very few samples** ([reference](https://arxiv.org/abs/1808.08124)). This makes sense, as these moths have been evolving to perform well on only a few samples for millions of years. Given how common it is for a ML model to struggle when trained on too few samples, the potential utility of this algorithm (to me), seems quite substantial. Check back soon for more info!
