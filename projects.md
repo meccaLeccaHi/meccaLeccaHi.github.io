@@ -15,6 +15,10 @@ category: project
 ---
 
 ### pymoth: Cyborg moths -- [GH repo](https://github.com/meccaLeccaHi/pymoth)  
+[![Build Status](https://travis-ci.org/meccaLeccaHi/pymoth.svg?branch=master)](https://travis-ci.org/meccaLeccaHi/pymoth)
+[![Documentation Status](https://readthedocs.org/projects/pymoth/badge/?version=latest)](https://pymoth.readthedocs.io/?badge=latest)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
 My most recent project is a biologically-inspired neural network, which simulates the olfactory system of the hawkmoth. What makes this code special is that it simulates the architecture and temporal dynamics of an insect olfactory system (specifically, that of the hawkmoth, *Manduca sexta*). It does so by running a time-stepped simulation of learning in the moth brain, in which it is trained on a cruder, non-spatial version of MNIST. This is meant to match with the architecture of the natural moth brain, in terms of size and complexity (~ 60 features).
 
