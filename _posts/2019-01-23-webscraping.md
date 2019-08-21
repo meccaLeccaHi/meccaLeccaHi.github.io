@@ -271,7 +271,7 @@ print('Request response:\n', response.text, '\n')
 ```
 
     Request parameters:
-     {'address': 'Alyeska Alaska', 'key': 'AIzaSyC9rMVIW9RlR5KT8xaWDhNQY06FlXK6ErE'} 
+     {'address': 'Alyeska Alaska', 'key': 'some_key'} 
     
     Request response:
      {
