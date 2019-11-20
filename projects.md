@@ -24,7 +24,7 @@ My most recent project is a biologically-inspired neural network, which simulate
 
 The Python package for this project ([pymoth](https://github.com/meccaLeccaHi/pymoth)) also compares the predictions of the moth brain to those of kNN and SVM models. [We find](https://github.com/meccaLeccaHi/pymoth#sample-results) that the moth brain out-performs the other ML methods when training was limited to less than 20 training samples per class ([reference](https://arxiv.org/abs/1808.08124)).
 
-{% include figure.html url="https://github.com/meccaLeccaHi/pymoth/raw/master/results/results_ROC_multi_sample.png" caption="Sample results for MothNet, kNN, and SVM models on downsampled MNIST." %}
+{% include figure.html url="https://raw.githubusercontent.com/meccaLeccaHi/pymoth/master/pymoth/results/results_ROC_multi_sample.png" caption="Sample results for MothNet, kNN, and SVM models on downsampled MNIST." %}
 
 From a machine learning perspective, it's possible that this model's bio-inspired mechanisms are uniquely adapted to learn rapidly from very few samples. This makes sense, as these moths have been evolving to perform well on only a few samples for millions of years. Given how common it is for a ML model to struggle when trained on too few samples, the potential utility of this algorithm (to me), seems quite substantial.
 
